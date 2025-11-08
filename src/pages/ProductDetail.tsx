@@ -188,9 +188,9 @@ const ProductDetail = () => {
   return (
     <div className="min-h-screen pt-24">
       {/* Back Button */}
-      <div className="container mx-auto px-4 py-6">
+      <div className="container mx-auto px-4 py-8 bg-gradient-to-br from-slate-50 to-gray-100">
         <Link to="/products">
-          <Button variant="outline" className="group">
+          <Button variant="outline" className="group border-2 hover:border-navy">
             <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
             Back to Products
           </Button>
@@ -198,42 +198,46 @@ const ProductDetail = () => {
       </div>
 
       {/* Product Hero */}
-      <section className="py-12 bg-white">
+      <section className="py-16 bg-gradient-to-br from-slate-50 to-gray-100">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1">
-              <h1 className="text-4xl md:text-5xl font-bold text-navy mb-6 font-montserrat">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+            <div className="order-2 lg:order-1 animate-fade-in-up">
+              <h1 className="text-4xl md:text-6xl font-bold text-navy mb-6 font-poppins">
                 {product.title}
               </h1>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+              <p className="text-xl text-gray-600 leading-relaxed mb-8">
                 {product.description}
               </p>
               <Link to="/contact">
-                <Button size="lg" className="bg-gold hover:bg-gold/90 text-navy font-semibold">
+                <Button size="lg" className="bg-gradient-to-r from-gold to-amber-500 hover:from-amber-500 hover:to-gold text-navy font-bold text-lg px-10 py-7 shadow-lg">
                   Request a Quote
                 </Button>
               </Link>
             </div>
-            <div className="order-1 lg:order-2">
-              <img 
-                src={product.image} 
-                alt={product.title}
-                className="w-full h-auto rounded-2xl shadow-2xl"
-              />
+            <div className="order-1 lg:order-2 animate-scale-in">
+              <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+                <img 
+                  src={product.image} 
+                  alt={product.title}
+                  className="w-full h-auto"
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Features */}
-      <section className="py-16 bg-muted/20">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-navy mb-8 font-montserrat">Key Features</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-navy mb-12 font-poppins text-center">Key Features</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
             {product.features.map((feature: string, index: number) => (
-              <div key={index} className="flex items-start gap-3 p-4 bg-white rounded-lg">
-                <Check className="w-5 h-5 text-gold flex-shrink-0 mt-1" />
-                <span className="text-muted-foreground">{feature}</span>
+              <div key={index} className="flex items-start gap-4 p-6 bg-gradient-to-br from-slate-50 to-white rounded-2xl border border-gray-200 hover:shadow-lg transition-all duration-300 animate-fade-in-up" style={{ animationDelay: `${index * 0.05}s` }}>
+                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-emerald-500 to-green-500 flex items-center justify-center flex-shrink-0 shadow-lg">
+                  <Check className="w-5 h-5 text-white" />
+                </div>
+                <span className="text-gray-700 text-lg">{feature}</span>
               </div>
             ))}
           </div>
@@ -241,14 +245,14 @@ const ProductDetail = () => {
       </section>
 
       {/* Specifications */}
-      <section className="py-16 bg-white">
+      <section className="py-20 bg-gradient-to-br from-slate-50 to-gray-100">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-navy mb-8 font-montserrat">Technical Specifications</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-navy mb-12 font-poppins text-center">Technical Specifications</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
             {product.specifications.map((spec: any, index: number) => (
-              <div key={index} className="p-6 bg-gradient-to-br from-muted/20 to-white rounded-xl border border-border">
-                <div className="text-sm text-gold font-semibold mb-2">{spec.label}</div>
-                <div className="text-lg text-navy font-medium">{spec.value}</div>
+              <div key={index} className="p-8 bg-white rounded-2xl border border-gray-200 hover:shadow-xl transition-all duration-300 animate-fade-in-up" style={{ animationDelay: `${index * 0.05}s` }}>
+                <div className="text-sm text-gold font-bold mb-2 uppercase tracking-wide">{spec.label}</div>
+                <div className="text-xl text-navy font-semibold">{spec.value}</div>
               </div>
             ))}
           </div>
@@ -256,14 +260,18 @@ const ProductDetail = () => {
       </section>
 
       {/* Applications */}
-      <section className="py-16 bg-gradient-to-br from-navy to-charcoal text-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 font-montserrat">Applications</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <section className="relative py-28 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-navy via-blue-900 to-indigo-900" />
+        
+        <div className="relative z-10 container mx-auto px-4">
+          <h2 className="text-4xl md:text-6xl font-bold text-white mb-12 font-poppins text-center animate-fade-in-up">Applications</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {product.applications.map((app: string, index: number) => (
-              <div key={index} className="p-4 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20">
-                <span className="text-gold mr-2">•</span>
-                {app}
+              <div key={index} className="p-6 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl hover:bg-white/20 transition-all duration-300 animate-scale-in shadow-xl" style={{ animationDelay: `${index * 0.05}s` }}>
+                <div className="flex items-start gap-3">
+                  <span className="inline-block w-2 h-2 rounded-full bg-gold mt-2 flex-shrink-0" />
+                  <span className="text-white text-lg">{app}</span>
+                </div>
               </div>
             ))}
           </div>

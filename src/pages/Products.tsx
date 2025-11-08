@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
-import { Card } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
+import plainLabelsImg from "@/assets/products/plain-labels.jpg";
+import productLabelsImg from "@/assets/products/product-labels.jpg";
+import barcodeRibbonsImg from "@/assets/products/barcode-ribbons.jpg";
+import stretchFilmImg from "@/assets/products/stretch-film.jpg";
+import boppTapesImg from "@/assets/products/bopp-tapes.jpg";
+import printersImg from "@/assets/products/printers.jpg";
+import productsBg from "@/assets/backgrounds/products-showcase.jpg";
 
 const Products = () => {
   const products = [
@@ -9,95 +15,118 @@ const Products = () => {
       title: "Plain Labels",
       description: "High-quality blank labels in various sizes and materials. Perfect for thermal transfer and direct thermal printing applications.",
       features: ["Multiple sizes available", "Durable materials", "Superior adhesive strength", "Compatible with all major printers"],
-      image: "bg-gradient-to-br from-blue-500 to-blue-600"
+      image: plainLabelsImg,
+      gradient: "from-blue-500 to-cyan-500"
     },
     {
       id: "product-labels",
       title: "Product Labels",
       description: "Fully customizable labels designed to bring your brand identity to life with vibrant colors and premium finishes.",
       features: ["Custom designs", "Full-color printing", "Multiple finish options", "Brand-specific customization"],
-      image: "bg-gradient-to-br from-gold to-amber-500"
+      image: productLabelsImg,
+      gradient: "from-gold to-amber-500"
     },
     {
       id: "barcode-ribbons",
       title: "Barcode Ribbons",
       description: "Premium thermal transfer ribbons offering exceptional print quality for all your barcode and label printing needs.",
       features: ["Wax, resin, and wax-resin options", "Various widths: 40mm to 110mm", "High-density printing", "Smudge-resistant"],
-      image: "bg-gradient-to-br from-purple-500 to-purple-600"
+      image: barcodeRibbonsImg,
+      gradient: "from-purple-500 to-pink-500"
     },
     {
       id: "stretch-film",
       title: "Stretch Film",
       description: "High-performance stretch wrap film for efficient and secure packaging of pallets and large shipments.",
       features: ["Machine and hand grade", "Clear and colored options", "High puncture resistance", "Excellent load stability"],
-      image: "bg-gradient-to-br from-green-500 to-green-600"
+      image: stretchFilmImg,
+      gradient: "from-emerald-500 to-green-500"
     },
     {
       id: "bopp-tapes",
       title: "BOPP Tapes",
       description: "Reliable adhesive tapes for all packaging applications, offering strong bonding and durability.",
       features: ["Strong adhesion", "Weather resistant", "Custom printing available", "Various widths and colors"],
-      image: "bg-gradient-to-br from-red-500 to-red-600"
+      image: boppTapesImg,
+      gradient: "from-orange-500 to-red-500"
     },
     {
       id: "printers",
       title: "Label Printers",
       description: "Professional-grade thermal and inkjet label printers from leading manufacturers for industrial applications.",
       features: ["Desktop and industrial models", "High-speed printing", "Multiple connectivity options", "Service and support included"],
-      image: "bg-gradient-to-br from-indigo-500 to-indigo-600"
+      image: printersImg,
+      gradient: "from-indigo-500 to-blue-500"
     },
   ];
 
   return (
     <div className="min-h-screen pt-24">
-      {/* Header */}
-      <section className="py-16 bg-gradient-to-br from-navy to-charcoal text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 font-montserrat">
-            Our Products
+      {/* Hero Header */}
+      <section className="relative py-28 overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${productsBg})` }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/95 via-purple-900/90 to-pink-900/95" />
+        </div>
+        
+        <div className="relative z-10 container mx-auto px-4 text-center">
+          <div className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-full mb-8 animate-fade-in-up">
+            <span className="text-white/90 text-sm font-medium">Premium Packaging Solutions</span>
+          </div>
+
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 font-poppins text-white animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+            Our <span className="bg-gradient-to-r from-gold via-amber-400 to-gold bg-clip-text text-transparent bg-[length:200%_auto] animate-[shimmer_3s_linear_infinite]">Products</span>
           </h1>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto animate-fade-in-up leading-relaxed" style={{ animationDelay: "0.2s" }}>
             Comprehensive packaging and labeling solutions tailored to your industry needs
           </p>
         </div>
       </section>
 
       {/* Products Grid */}
-      <section className="py-16 bg-white">
+      <section className="py-24 bg-gradient-to-br from-slate-50 to-gray-100">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {products.map((product) => (
+            {products.map((product, index) => (
               <Link key={product.id} to={`/products/${product.id}`}>
-                <Card className="group h-full p-8 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer border-2 border-transparent hover:border-gold overflow-hidden relative">
-                  {/* Gradient Background */}
-                  <div className={`absolute inset-0 ${product.image} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
+                <div className="group h-full rounded-3xl bg-white border border-gray-200 overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 animate-fade-in-up" style={{ animationDelay: `${index * 0.05}s` }}>
+                  {/* Product Image */}
+                  <div className="relative h-64 overflow-hidden">
+                    <img 
+                      src={product.image} 
+                      alt={product.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className={`absolute inset-0 bg-gradient-to-br ${product.gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-500`} />
+                  </div>
                   
-                  <div className="relative">
-                    <div className={`w-full h-48 rounded-xl ${product.image} mb-6 group-hover:scale-105 transition-transform duration-300`} />
-                    
-                    <h3 className="text-2xl font-bold text-navy mb-3 font-montserrat group-hover:text-gold transition-colors">
+                  {/* Content */}
+                  <div className="p-8">
+                    <h3 className="text-2xl font-bold text-navy mb-3 font-poppins group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:bg-clip-text group-hover:from-navy group-hover:to-gray-600 transition-all">
                       {product.title}
                     </h3>
                     
-                    <p className="text-muted-foreground leading-relaxed mb-4">
+                    <p className="text-gray-600 leading-relaxed mb-6">
                       {product.description}
                     </p>
 
                     <ul className="space-y-2 mb-6">
                       {product.features.slice(0, 3).map((feature, idx) => (
-                        <li key={idx} className="text-sm text-muted-foreground flex items-start">
-                          <span className="text-gold mr-2">•</span>
+                        <li key={idx} className="text-sm text-gray-600 flex items-start">
+                          <span className={`inline-block w-1.5 h-1.5 rounded-full bg-gradient-to-r ${product.gradient} mr-3 mt-1.5`} />
                           {feature}
                         </li>
                       ))}
                     </ul>
 
-                    <div className="flex items-center text-gold font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className={`inline-flex items-center font-semibold bg-gradient-to-r ${product.gradient} bg-clip-text text-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300`}>
                       View Details
-                      <ArrowRight className="ml-2 w-4 h-4" />
+                      <ArrowRight className="ml-2 w-4 h-4 text-navy" />
                     </div>
                   </div>
-                </Card>
+                </div>
               </Link>
             ))}
           </div>

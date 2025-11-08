@@ -37,7 +37,7 @@ const Contact = () => {
       title: "Phone",
       content: "+971 XX XXX XXXX",
       link: "tel:+971",
-      gradient: "from-green-500 to-emerald-500"
+      gradient: "from-emerald-500 to-green-500"
     },
     {
       icon: Mail,
@@ -57,31 +57,36 @@ const Contact = () => {
   return (
     <div className="min-h-screen pt-24">
       {/* Hero Header */}
-      <section className="relative py-24 overflow-hidden">
+      <section className="relative py-28 overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center animate-[zoom_20s_ease-in-out_infinite_alternate]"
+          className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${contactBg})` }}
         >
           <div className="absolute inset-0 bg-gradient-to-br from-orange-900/95 via-red-900/90 to-pink-900/95" />
         </div>
         
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 font-poppins text-white animate-fade-in-up">
-            Get In <span className="bg-gradient-to-r from-gold via-yellow-400 to-gold bg-clip-text text-transparent">Touch</span>
+          <div className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-full mb-8 animate-fade-in-up">
+            <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
+            <span className="text-white/90 text-sm font-medium">Available 24/7 for Support</span>
+          </div>
+
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 font-poppins text-white animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+            Get In <span className="bg-gradient-to-r from-gold via-amber-400 to-gold bg-clip-text text-transparent bg-[length:200%_auto] animate-[shimmer_3s_linear_infinite]">Touch</span>
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+          <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto animate-fade-in-up leading-relaxed" style={{ animationDelay: "0.2s" }}>
             Let's discuss how we can help elevate your packaging and labeling solutions
           </p>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section className="py-24 bg-gradient-to-br from-slate-900 via-navy to-slate-900">
+      <section className="py-24 bg-gradient-to-br from-slate-50 to-gray-100">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Information */}
             <div className="space-y-6">
-              <h2 className="text-4xl font-bold text-white mb-8 font-poppins animate-fade-in-up">
+              <h2 className="text-4xl font-bold text-navy mb-8 font-poppins animate-fade-in-up">
                 Contact Information
               </h2>
               
@@ -90,21 +95,21 @@ const Contact = () => {
                 return (
                   <div
                     key={index}
-                    className="group p-6 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 rounded-2xl hover:border-gold/50 transition-all duration-500 hover:scale-105 animate-slide-in-left"
+                    className="group p-8 bg-white rounded-3xl border border-gray-200 hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 animate-slide-in-left"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     <div className="flex items-start gap-4">
-                      <div className={`w-14 h-14 rounded-full bg-gradient-to-br ${info.gradient} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300`}>
-                        <Icon className="w-7 h-7 text-white" />
+                      <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${info.gradient} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-500 shadow-lg`}>
+                        <Icon className="w-8 h-8 text-white" />
                       </div>
                       <div>
-                        <h3 className="font-bold text-white mb-2 text-lg">{info.title}</h3>
+                        <h3 className="font-bold text-navy mb-2 text-xl">{info.title}</h3>
                         {info.link ? (
-                          <a href={info.link} className="text-white/80 hover:text-gold transition-colors whitespace-pre-line">
+                          <a href={info.link} className="text-gray-600 hover:text-navy transition-colors whitespace-pre-line text-lg">
                             {info.content}
                           </a>
                         ) : (
-                          <p className="text-white/80 whitespace-pre-line">
+                          <p className="text-gray-600 whitespace-pre-line text-lg">
                             {info.content}
                           </p>
                         )}
@@ -117,8 +122,8 @@ const Contact = () => {
 
             {/* Contact Form */}
             <div className="animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-              <div className="p-8 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 rounded-2xl">
-                <h2 className="text-4xl font-bold text-white mb-8 font-poppins">
+              <div className="p-10 bg-white rounded-3xl border border-gray-200 shadow-xl">
+                <h2 className="text-4xl font-bold text-navy mb-8 font-poppins">
                   Send Us a Message
                 </h2>
                 
@@ -129,7 +134,7 @@ const Contact = () => {
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       required
-                      className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:border-gold h-12"
+                      className="h-14 text-lg border-gray-300 focus:border-navy focus:ring-navy"
                     />
                   </div>
 
@@ -140,7 +145,7 @@ const Contact = () => {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       required
-                      className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:border-gold h-12"
+                      className="h-14 text-lg border-gray-300 focus:border-navy focus:ring-navy"
                     />
                   </div>
 
@@ -151,7 +156,7 @@ const Contact = () => {
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       required
-                      className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:border-gold h-12"
+                      className="h-14 text-lg border-gray-300 focus:border-navy focus:ring-navy"
                     />
                   </div>
 
@@ -160,7 +165,7 @@ const Contact = () => {
                       placeholder="Company Name"
                       value={formData.company}
                       onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                      className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:border-gold h-12"
+                      className="h-14 text-lg border-gray-300 focus:border-navy focus:ring-navy"
                     />
                   </div>
 
@@ -171,14 +176,14 @@ const Contact = () => {
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       required
                       rows={6}
-                      className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:border-gold resize-none"
+                      className="text-lg border-gray-300 focus:border-navy focus:ring-navy resize-none"
                     />
                   </div>
 
                   <Button
                     type="submit"
                     size="lg"
-                    className="w-full bg-gradient-to-r from-gold to-secondary hover:from-secondary hover:to-gold text-navy font-bold text-lg py-6 transition-all duration-500 hover:scale-105"
+                    className="w-full bg-gradient-to-r from-gold to-amber-500 hover:from-amber-500 hover:to-gold text-navy font-bold text-lg py-7 transition-all duration-500 hover:scale-105 shadow-lg"
                   >
                     Send Message
                     <Send className="ml-2 w-5 h-5" />
