@@ -3,7 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
+import contactBg from "@/assets/backgrounds/contact-bg.jpg";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -24,149 +25,166 @@ const Contact = () => {
     setFormData({ name: "", email: "", phone: "", company: "", message: "" });
   };
 
+  const contactInfo = [
+    {
+      icon: MapPin,
+      title: "Address",
+      content: "SquarePack FZC\nDubai, United Arab Emirates",
+      gradient: "from-blue-500 to-cyan-500"
+    },
+    {
+      icon: Phone,
+      title: "Phone",
+      content: "+971 XX XXX XXXX",
+      link: "tel:+971",
+      gradient: "from-green-500 to-emerald-500"
+    },
+    {
+      icon: Mail,
+      title: "Email",
+      content: "info@squarepack.ae",
+      link: "mailto:info@squarepack.ae",
+      gradient: "from-purple-500 to-pink-500"
+    },
+    {
+      icon: Clock,
+      title: "Business Hours",
+      content: "Sunday - Thursday: 9:00 AM - 6:00 PM\nFriday - Saturday: Closed",
+      gradient: "from-orange-500 to-red-500"
+    }
+  ];
+
   return (
     <div className="min-h-screen pt-24">
-      {/* Header */}
-      <section className="py-16 bg-gradient-to-br from-navy to-charcoal text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 font-montserrat">
-            Get In Touch
+      {/* Hero Header */}
+      <section className="relative py-24 overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center animate-[zoom_20s_ease-in-out_infinite_alternate]"
+          style={{ backgroundImage: `url(${contactBg})` }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-br from-orange-900/95 via-red-900/90 to-pink-900/95" />
+        </div>
+        
+        <div className="relative z-10 container mx-auto px-4 text-center">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 font-poppins text-white animate-fade-in-up">
+            Get In <span className="bg-gradient-to-r from-gold via-yellow-400 to-gold bg-clip-text text-transparent">Touch</span>
           </h1>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
             Let's discuss how we can help elevate your packaging and labeling solutions
           </p>
         </div>
       </section>
 
-      <section className="py-16 bg-white">
+      {/* Contact Section */}
+      <section className="py-24 bg-gradient-to-br from-slate-900 via-navy to-slate-900">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Information */}
-            <div>
-              <h2 className="text-3xl font-bold text-navy mb-8 font-montserrat">
+            <div className="space-y-6">
+              <h2 className="text-4xl font-bold text-white mb-8 font-poppins animate-fade-in-up">
                 Contact Information
               </h2>
               
-              <div className="space-y-6">
-                <div className="flex items-start gap-4 p-6 bg-muted/20 rounded-xl">
-                  <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-6 h-6 text-gold" />
+              {contactInfo.map((info, index) => {
+                const Icon = info.icon;
+                return (
+                  <div
+                    key={index}
+                    className="group p-6 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 rounded-2xl hover:border-gold/50 transition-all duration-500 hover:scale-105 animate-slide-in-left"
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
+                    <div className="flex items-start gap-4">
+                      <div className={`w-14 h-14 rounded-full bg-gradient-to-br ${info.gradient} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300`}>
+                        <Icon className="w-7 h-7 text-white" />
+                      </div>
+                      <div>
+                        <h3 className="font-bold text-white mb-2 text-lg">{info.title}</h3>
+                        {info.link ? (
+                          <a href={info.link} className="text-white/80 hover:text-gold transition-colors whitespace-pre-line">
+                            {info.content}
+                          </a>
+                        ) : (
+                          <p className="text-white/80 whitespace-pre-line">
+                            {info.content}
+                          </p>
+                        )}
+                      </div>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-navy mb-1">Address</h3>
-                    <p className="text-muted-foreground">
-                      SquarePack FZC<br />
-                      Dubai, United Arab Emirates
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4 p-6 bg-muted/20 rounded-xl">
-                  <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-6 h-6 text-gold" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-navy mb-1">Phone</h3>
-                    <a href="tel:+971" className="text-muted-foreground hover:text-gold transition-colors">
-                      +971 XX XXX XXXX
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4 p-6 bg-muted/20 rounded-xl">
-                  <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-6 h-6 text-gold" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-navy mb-1">Email</h3>
-                    <a href="mailto:info@squarepack.ae" className="text-muted-foreground hover:text-gold transition-colors">
-                      info@squarepack.ae
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4 p-6 bg-muted/20 rounded-xl">
-                  <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center flex-shrink-0">
-                    <Clock className="w-6 h-6 text-gold" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-navy mb-1">Business Hours</h3>
-                    <p className="text-muted-foreground">
-                      Sunday - Thursday: 9:00 AM - 6:00 PM<br />
-                      Friday - Saturday: Closed
-                    </p>
-                  </div>
-                </div>
-              </div>
+                );
+              })}
             </div>
 
             {/* Contact Form */}
-            <div>
-              <h2 className="text-3xl font-bold text-navy mb-8 font-montserrat">
-                Send Us a Message
-              </h2>
-              
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <Input
-                    placeholder="Your Name *"
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    required
-                    className="bg-muted/20 border-border focus:border-gold"
-                  />
-                </div>
+            <div className="animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+              <div className="p-8 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 rounded-2xl">
+                <h2 className="text-4xl font-bold text-white mb-8 font-poppins">
+                  Send Us a Message
+                </h2>
+                
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div>
+                    <Input
+                      placeholder="Your Name *"
+                      value={formData.name}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      required
+                      className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:border-gold h-12"
+                    />
+                  </div>
 
-                <div>
-                  <Input
-                    type="email"
-                    placeholder="Email Address *"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    required
-                    className="bg-muted/20 border-border focus:border-gold"
-                  />
-                </div>
+                  <div>
+                    <Input
+                      type="email"
+                      placeholder="Email Address *"
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      required
+                      className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:border-gold h-12"
+                    />
+                  </div>
 
-                <div>
-                  <Input
-                    type="tel"
-                    placeholder="Phone Number *"
-                    value={formData.phone}
-                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    required
-                    className="bg-muted/20 border-border focus:border-gold"
-                  />
-                </div>
+                  <div>
+                    <Input
+                      type="tel"
+                      placeholder="Phone Number *"
+                      value={formData.phone}
+                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                      required
+                      className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:border-gold h-12"
+                    />
+                  </div>
 
-                <div>
-                  <Input
-                    placeholder="Company Name"
-                    value={formData.company}
-                    onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                    className="bg-muted/20 border-border focus:border-gold"
-                  />
-                </div>
+                  <div>
+                    <Input
+                      placeholder="Company Name"
+                      value={formData.company}
+                      onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                      className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:border-gold h-12"
+                    />
+                  </div>
 
-                <div>
-                  <Textarea
-                    placeholder="Tell us about your requirements... *"
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    required
-                    rows={6}
-                    className="bg-muted/20 border-border focus:border-gold resize-none"
-                  />
-                </div>
+                  <div>
+                    <Textarea
+                      placeholder="Tell us about your requirements... *"
+                      value={formData.message}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      required
+                      rows={6}
+                      className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:border-gold resize-none"
+                    />
+                  </div>
 
-                <Button
-                  type="submit"
-                  size="lg"
-                  className="w-full bg-gold hover:bg-gold/90 text-navy font-bold text-lg py-6"
-                >
-                  Send Message
-                </Button>
-              </form>
+                  <Button
+                    type="submit"
+                    size="lg"
+                    className="w-full bg-gradient-to-r from-gold to-secondary hover:from-secondary hover:to-gold text-navy font-bold text-lg py-6 transition-all duration-500 hover:scale-105"
+                  >
+                    Send Message
+                    <Send className="ml-2 w-5 h-5" />
+                  </Button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
