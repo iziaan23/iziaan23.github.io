@@ -58,7 +58,7 @@ const Contact = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-24">
+    <div className="min-h-screen pt-40 md:pt-44">
       <WhatsAppButton />
       <BrochureButton />
       <AdvisorBanner />

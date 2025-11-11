@@ -67,7 +67,7 @@ const Products = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-24">
+    <div className="min-h-screen pt-40 md:pt-44">
       <WhatsAppButton />
       <BrochureButton />
       <AdvisorBanner />
@@ -131,9 +131,9 @@ const Products = () => {
                       ))}
                     </ul>
 
-                    <div className={`inline-flex items-center font-semibold bg-gradient-to-r ${product.gradient} bg-clip-text text-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300`}>
+                    <div className={`inline-flex items-center font-semibold bg-gradient-to-r ${product.gradient} bg-clip-text text-transparent transition-all duration-300 group-hover:scale-110`}>
                       View Details
-                      <ArrowRight className="ml-2 w-4 h-4 text-navy" />
+                      <ArrowRight className="ml-2 w-4 h-4 text-navy group-hover:translate-x-1 transition-transform" />
                     </div>
                   </div>
                 </div>

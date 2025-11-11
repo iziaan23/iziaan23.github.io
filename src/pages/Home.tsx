@@ -25,7 +25,7 @@ const Home = () => {
 
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen pt-16 md:pt-20">
       <WhatsAppButton />
       <BrochureButton />
       <AdvisorBanner />
@@ -158,7 +158,7 @@ const Home = () => {
           />
         ))}
         
-        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/95 via-purple-900/90 to-pink-900/95" />
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/85 via-purple-900/80 to-pink-900/85" />
 
         <div className="relative z-10 container mx-auto px-4">
           <div className="max-w-5xl mx-auto text-center">
@@ -173,10 +173,10 @@ const Home = () => {
               From plain labels to industrial printers - everything you need for professional packaging
             </p>
             
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-10 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-10 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
               {["Plain Labels", "Product Labels", "Barcode Ribbons", "Stretch Film", "BOPP Tapes", "Label Printers"].map((product, idx) => (
-                <div key={idx} className="group p-6 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl hover:bg-white/20 hover:scale-105 transition-all duration-300">
-                  <span className="text-white font-semibold text-lg">{product}</span>
+                <div key={idx} className="group p-6 md:p-8 bg-white/15 backdrop-blur-lg border-2 border-white/30 rounded-2xl hover:bg-white/25 hover:scale-105 hover:border-gold/50 transition-all duration-300 shadow-xl hover:shadow-2xl">
+                  <span className="text-white font-bold text-base md:text-lg drop-shadow-lg">{product}</span>
                 </div>
               ))}
             </div>
