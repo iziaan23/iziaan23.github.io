@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Package, Award, Users, Factory, ShoppingBag, Mail, Play } from "lucide-react";
+import { ArrowRight, Package, ShoppingBag, Mail, Play, Award } from "lucide-react";
 import { Link } from "react-router-dom";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { BrochureButton } from "@/components/BrochureButton";
+import { AdvisorBanner } from "@/components/AdvisorBanner";
 import heroFallback from "@/assets/videos/hero-fallback.jpg";
-import aboutBg from "@/assets/backgrounds/about-bg.jpg";
 import showcase1 from "@/assets/products/showcase-1.jpg";
 import showcase2 from "@/assets/products/showcase-2.jpg";
 import showcase3 from "@/assets/products/showcase-3.jpg";
@@ -21,14 +23,13 @@ const Home = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const stats = [
-    { icon: Package, label: "Products Delivered", value: "10M+", color: "from-blue-500 to-cyan-500" },
-    { icon: Award, label: "ISO Certified", value: "9001", color: "from-gold to-amber-500" },
-    { icon: Users, label: "Happy Clients", value: "500+", color: "from-emerald-500 to-green-500" },
-  ];
 
   return (
     <div className="min-h-screen">
+      <WhatsAppButton />
+      <BrochureButton />
+      <AdvisorBanner />
+      
       {/* Hero Section with Video Background */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Video Background */}
@@ -55,8 +56,8 @@ const Home = () => {
         {/* Content */}
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-full mb-8 animate-fade-in-up">
-            <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
-            <span className="text-white/90 text-sm font-medium">Dubai's Premier Packaging Partner</span>
+            <Award className="w-5 h-5 text-gold" />
+            <span className="text-white/90 text-sm font-medium">15+ Years of Experience</span>
           </div>
 
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 animate-fade-in-up font-poppins leading-tight" style={{ animationDelay: "0.1s" }}>
@@ -66,9 +67,18 @@ const Home = () => {
             </span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto animate-fade-in-up leading-relaxed" style={{ animationDelay: "0.2s" }}>
-            Premium solutions for FMCG, healthcare, logistics, and industrial sectors across Dubai and beyond
+          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto animate-fade-in-up leading-relaxed" style={{ animationDelay: "0.2s" }}>
+            Premium solutions for FMCG, healthcare, logistics, and industrial sectors across UAE and beyond
           </p>
+          
+          <div className="mb-12 animate-fade-in-up" style={{ animationDelay: "0.25s" }}>
+            <p className="text-lg md:text-xl text-gold font-semibold mb-2">
+              "On-time, complete, and uncompromising quality — always."
+            </p>
+            <p className="text-base md:text-lg text-white/80">
+              Delivered On Time, On Price, On Service and On Quality
+            </p>
+          </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
             <Link to="/products">
@@ -108,58 +118,25 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
+      {/* Company Highlight */}
       <section className="py-20 bg-gradient-to-br from-slate-50 to-gray-100">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {stats.map((stat, index) => {
-              const Icon = stat.icon;
-              return (
-                <div
-                  key={index}
-                  className="group text-center p-10 rounded-3xl bg-white shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-200 animate-fade-in-up"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <div className={`inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br ${stat.color} mb-6 group-hover:scale-110 transition-transform duration-500 shadow-lg`}>
-                    <Icon className="w-10 h-10 text-white" />
-                  </div>
-                  <div className="text-5xl font-bold text-navy mb-3 font-poppins">
-                    {stat.value}
-                  </div>
-                  <div className="text-sm text-gray-600 font-medium">
-                    {stat.label}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* About Preview */}
-      <section className="relative py-28 overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${aboutBg})` }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-br from-navy/95 via-blue-900/90 to-indigo-900/95" />
-        </div>
-
-        <div className="relative z-10 container mx-auto px-4">
-          <div className="max-w-5xl mx-auto text-center">
-            <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-gold to-amber-500 mb-8 animate-scale-in shadow-xl">
-              <Factory className="w-10 h-10 text-white" />
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center justify-center w-24 h-24 rounded-2xl bg-gradient-to-br from-gold to-amber-500 mb-8 animate-scale-in shadow-xl">
+              <Award className="w-12 h-12 text-white" />
             </div>
             
-            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 font-poppins animate-fade-in-up">
-              Crafting Excellence Since 2009
+            <h2 className="text-4xl md:text-5xl font-bold text-navy mb-6 font-poppins animate-fade-in-up">
+              15+ Years of Experience
             </h2>
-            <p className="text-xl text-white/90 leading-relaxed mb-10 animate-fade-in-up max-w-3xl mx-auto" style={{ animationDelay: "0.1s" }}>
-              At SquarePack, we combine cutting-edge technology with artisanal precision to deliver 
-              packaging and labeling solutions that elevate your brand. ISO 9001 certified, trusted by 500+ companies.
+            <p className="text-xl text-gray-700 leading-relaxed mb-8 animate-fade-in-up max-w-3xl mx-auto" style={{ animationDelay: "0.1s" }}>
+              Square Pack recognizes that packaging and labeling go beyond mere containers and stickers; they play a crucial role in establishing a brand identity and elevating the customer experience. We are proud to offer businesses of all sizes an assortment of innovative, reliable packaging and label choices.
+            </p>
+            <p className="text-lg text-gray-600 leading-relaxed mb-10 animate-fade-in-up max-w-3xl mx-auto" style={{ animationDelay: "0.15s" }}>
+              As a business with extensive experience, we provide fresh, creative, and trustworthy packaging solutions for companies of any scale. <strong className="text-navy">ISO 9001 certified</strong>, trusted by <strong className="text-navy">500+ companies</strong> across UAE and the Middle East.
             </p>
             <Link to="/about" className="animate-fade-in-up inline-block" style={{ animationDelay: "0.2s" }}>
-              <Button size="lg" className="bg-white text-navy hover:bg-gray-100 font-bold text-lg px-10 py-7 shadow-xl">
+              <Button size="lg" className="bg-gradient-to-r from-gold to-amber-500 hover:from-amber-500 hover:to-gold text-navy font-bold text-lg px-10 py-7 shadow-xl">
                 Discover Our Story
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>

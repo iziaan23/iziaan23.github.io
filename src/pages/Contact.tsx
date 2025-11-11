@@ -4,6 +4,9 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { BrochureButton } from "@/components/BrochureButton";
+import { AdvisorBanner } from "@/components/AdvisorBanner";
 import contactBg from "@/assets/backgrounds/contact-bg.jpg";
 
 const Contact = () => {
@@ -29,21 +32,21 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Address",
-      content: "SquarePack FZC\nDubai, United Arab Emirates",
+      content: "Meydan freezone,\nMeydan road\nDubai, UAE",
       gradient: "from-blue-500 to-cyan-500"
     },
     {
       icon: Phone,
       title: "Phone",
-      content: "+971 XX XXX XXXX",
-      link: "tel:+971",
+      content: "+971 50 457 8900\n+971 50 992 9801",
+      link: "tel:+971504578900",
       gradient: "from-emerald-500 to-green-500"
     },
     {
       icon: Mail,
       title: "Email",
-      content: "info@squarepack.ae",
-      link: "mailto:info@squarepack.ae",
+      content: "mohammed@squarepack.net\nsales@squarepack.net",
+      link: "mailto:mohammed@squarepack.net",
       gradient: "from-purple-500 to-pink-500"
     },
     {
@@ -56,6 +59,10 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen pt-24">
+      <WhatsAppButton />
+      <BrochureButton />
+      <AdvisorBanner />
+      
       {/* Hero Header */}
       <section className="relative py-28 overflow-hidden">
         <div 

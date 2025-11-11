@@ -1,26 +1,28 @@
 import { Building2, Award, Users, TrendingUp, Target, Eye, Shield, Zap, Heart, Globe } from "lucide-react";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { BrochureButton } from "@/components/BrochureButton";
+import { AdvisorBanner } from "@/components/AdvisorBanner";
 import aboutBg from "@/assets/backgrounds/about-bg.jpg";
 import manufacturingBg from "@/assets/backgrounds/manufacturing-bg.jpg";
 
 const About = () => {
   const stats = [
-    { icon: Building2, label: "Years of Excellence", value: "15+", color: "from-blue-500 to-cyan-500" },
+    { icon: Building2, label: "Years of Experience", value: "15+", color: "from-blue-500 to-cyan-500" },
     { icon: Award, label: "Quality Certifications", value: "ISO 9001", color: "from-gold to-amber-500" },
     { icon: Users, label: "Happy Clients", value: "500+", color: "from-emerald-500 to-green-500" },
-    { icon: TrendingUp, label: "Annual Growth", value: "40%", color: "from-purple-500 to-pink-500" },
   ];
 
   const values = [
     {
       icon: Target,
       title: "Our Mission",
-      description: "To deliver innovative packaging and labeling solutions that empower brands to stand out in competitive markets while maintaining the highest standards of quality and sustainability.",
+      description: "At Square Pack, our goal is to provide top-notch packaging and labeling solutions that assist businesses in differentiating themselves in a competitive market. We utilize innovative technology and artistic skill to craft safeguards for products while enhancing their aesthetic appeal and reinforcing brand recognition. We prioritize sustainability by providing environmentally-friendly materials and designs that minimize ecological footprint.",
       color: "from-blue-500 to-indigo-500"
     },
     {
       icon: Eye,
       title: "Our Vision",
-      description: "To be the Middle East's most trusted and innovative packaging partner, recognized for excellence, reliability, and commitment to environmental responsibility.",
+      description: "At Square Pack, we envision transforming the packaging and labeling industry with creative, innovative, and environmentally friendly options. Our aim is to lead the way in revolutionizing how businesses present their products, elevating packaging to a key factor in brand identification and customer contentment. Our aim is to provide companies with packaging that not only protects their products but also enhances them, telling a story that resonates with consumers.",
       color: "from-purple-500 to-pink-500"
     },
     {
@@ -39,6 +41,10 @@ const About = () => {
 
   return (
     <div className="min-h-screen pt-24">
+      <WhatsAppButton />
+      <BrochureButton />
+      <AdvisorBanner />
+      
       {/* Hero Header */}
       <section className="relative py-28 overflow-hidden">
         <div 
@@ -50,14 +56,14 @@ const About = () => {
         
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-full mb-8 animate-fade-in-up">
-            <span className="text-white/90 text-sm font-medium">Established 2009 • Dubai, UAE</span>
+            <span className="text-white/90 text-sm font-medium">15+ Years of Experience • UAE</span>
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold mb-6 font-poppins text-white animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
             About <span className="bg-gradient-to-r from-gold via-amber-400 to-gold bg-clip-text text-transparent bg-[length:200%_auto] animate-[shimmer_3s_linear_infinite]">SquarePack</span>
           </h1>
           <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto animate-fade-in-up leading-relaxed" style={{ animationDelay: "0.2s" }}>
-            Building the future of packaging and labeling in Dubai and beyond
+            Building the future of packaging and labeling in UAE and beyond
           </p>
         </div>
       </section>
@@ -65,7 +71,7 @@ const About = () => {
       {/* Stats Section */}
       <section className="py-20 bg-gradient-to-br from-slate-50 to-gray-100">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {stats.map((stat, index) => {
               const Icon = stat.icon;
               return (
@@ -107,17 +113,17 @@ const About = () => {
             <div className="space-y-6 text-lg text-white/90 leading-relaxed">
               <div className="p-8 bg-white/10 backdrop-blur-md rounded-3xl border border-white/20 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
                 <p>
-                  <strong className="text-gold">SquarePack FZC</strong> is Dubai's leading provider of premium packaging and labeling solutions, serving diverse industries including FMCG, healthcare, electronics, and industrial sectors. Established with a vision to transform the packaging industry, we have grown to become a trusted partner for over 500 companies across the UAE and the Middle East.
+                  <strong className="text-gold">SquarePack LLC</strong> is UAE's leading provider of premium packaging and labeling solutions, serving diverse industries including FMCG, healthcare, electronics, and industrial sectors. With over 15 years of experience and a vision to transform the packaging industry, we have grown to become a trusted partner for over 500 companies across the UAE and the Middle East.
                 </p>
               </div>
               <div className="p-8 bg-white/10 backdrop-blur-md rounded-3xl border border-white/20 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
                 <p>
-                  Our state-of-the-art facility in Dubai combines advanced technology with skilled craftsmanship to produce labels, ribbons, packaging films, and specialized packaging products that meet international quality standards. We take pride in our <strong className="text-gold">ISO 9001 certification</strong>, which reflects our commitment to quality management and continuous improvement.
+                  Our state-of-the-art facility combines advanced technology with skilled craftsmanship to produce labels, ribbons, packaging films, and specialized packaging products that meet international quality standards. We take pride in our <strong className="text-gold">ISO 9001 certification</strong>, which reflects our commitment to quality management and continuous improvement.
                 </p>
               </div>
               <div className="p-8 bg-white/10 backdrop-blur-md rounded-3xl border border-white/20 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
                 <p>
-                  What sets us apart is our customer-centric approach. We don't just supply products; we partner with our clients to understand their unique needs and deliver customized solutions that enhance their brand presence and operational efficiency.
+                  What sets us apart is our customer-centric approach. We don't just supply products; we partner with our clients to understand their unique needs and deliver customized solutions that enhance their brand presence and operational efficiency. <strong className="text-gold">"On-time, complete, and uncompromising quality — always."</strong> We are Delivered On Time, On Price, On Service and On Quality.
                 </p>
               </div>
             </div>

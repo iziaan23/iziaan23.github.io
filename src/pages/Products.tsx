@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { BrochureButton } from "@/components/BrochureButton";
+import { AdvisorBanner } from "@/components/AdvisorBanner";
 import plainLabelsImg from "@/assets/products/plain-labels.jpg";
 import productLabelsImg from "@/assets/products/product-labels.jpg";
 import barcodeRibbonsImg from "@/assets/products/barcode-ribbons.jpg";
 import stretchFilmImg from "@/assets/products/stretch-film.jpg";
-import boppTapesImg from "@/assets/products/bopp-tapes.jpg";
 import printersImg from "@/assets/products/printers.jpg";
 import productsBg from "@/assets/backgrounds/products-showcase.jpg";
 
@@ -35,20 +37,12 @@ const Products = () => {
       gradient: "from-purple-500 to-pink-500"
     },
     {
-      id: "stretch-film",
-      title: "Stretch Film",
-      description: "High-performance stretch wrap film for efficient and secure packaging of pallets and large shipments.",
-      features: ["Machine and hand grade", "Clear and colored options", "High puncture resistance", "Excellent load stability"],
+      id: "packaging-products",
+      title: "Packaging Products",
+      description: "Comprehensive packaging solutions including stretch films and BOPP tapes for secure and efficient packaging.",
+      features: ["Stretch film (Hand/Machine Grade)", "BOPP Tapes with strong adhesion", "Weather resistant", "Custom printing available"],
       image: stretchFilmImg,
       gradient: "from-emerald-500 to-green-500"
-    },
-    {
-      id: "bopp-tapes",
-      title: "BOPP Tapes",
-      description: "Reliable adhesive tapes for all packaging applications, offering strong bonding and durability.",
-      features: ["Strong adhesion", "Weather resistant", "Custom printing available", "Various widths and colors"],
-      image: boppTapesImg,
-      gradient: "from-orange-500 to-red-500"
     },
     {
       id: "printers",
@@ -60,8 +54,24 @@ const Products = () => {
     },
   ];
 
+  const otherProducts = [
+    "Tamper Evident Labels / Void Labels",
+    "Asset Tag / Asset Labels",
+    "Warehouse Solutions",
+    "Shrink Sleeve Label",
+    "Thermal Cash Roll (POS Rolls)",
+    "Masking Tape (Auto & Normal Grade)",
+    "Pricing Guns & Stickers",
+    "Hot Stamping Foil",
+    "Printers / Scanners",
+  ];
+
   return (
     <div className="min-h-screen pt-24">
+      <WhatsAppButton />
+      <BrochureButton />
+      <AdvisorBanner />
+      
       {/* Hero Header */}
       <section className="relative py-28 overflow-hidden">
         <div 
@@ -128,6 +138,34 @@ const Products = () => {
                   </div>
                 </div>
               </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Other Products Section */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-navy mb-6 font-poppins">
+              Other Products
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Additional packaging and labeling solutions to meet all your business needs
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {otherProducts.map((product, index) => (
+              <div
+                key={index}
+                className="group p-6 bg-gradient-to-br from-slate-50 to-gray-100 rounded-2xl border border-gray-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center animate-fade-in-up"
+                style={{ animationDelay: `${index * 0.05}s` }}
+              >
+                <p className="text-navy font-semibold text-sm md:text-base leading-tight">
+                  {product}
+                </p>
+              </div>
             ))}
           </div>
         </div>

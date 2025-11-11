@@ -8,9 +8,12 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Company Info */}
           <div>
-            <img src={logo} alt="SquarePack" className="h-16 w-auto mb-4" />
+            <img src={logo} alt="SquarePack" className="h-20 w-auto mb-4" />
             <p className="text-white/70 leading-relaxed">
-              Dubai's premier packaging and labeling solutions provider, delivering excellence across industries.
+              UAE's premier packaging and labeling solutions provider, delivering excellence across industries.
+            </p>
+            <p className="text-gold mt-3 text-sm font-semibold">
+              "On-time, complete, and uncompromising quality — always."
             </p>
           </div>
 
@@ -34,19 +37,29 @@ export const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-gold mt-1 flex-shrink-0" />
-                <span className="text-white/70">Dubai, United Arab Emirates</span>
+                <span className="text-white/70">Meydan freezone, Meydan road<br/>Dubai, UAE</span>
               </li>
-              <li className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-gold flex-shrink-0" />
-                <a href="tel:+971" className="text-white/70 hover:text-gold transition-colors">
-                  +971 XX XXX XXXX
-                </a>
+              <li className="flex items-start gap-3">
+                <Phone className="w-5 h-5 text-gold mt-1 flex-shrink-0" />
+                <div className="text-white/70">
+                  <a href="tel:+971504578900" className="hover:text-gold transition-colors block">
+                    +971 50 457 8900
+                  </a>
+                  <a href="tel:+971509929801" className="hover:text-gold transition-colors block">
+                    +971 50 992 9801
+                  </a>
+                </div>
               </li>
-              <li className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-gold flex-shrink-0" />
-                <a href="mailto:info@squarepack.ae" className="text-white/70 hover:text-gold transition-colors">
-                  info@squarepack.ae
-                </a>
+              <li className="flex items-start gap-3">
+                <Mail className="w-5 h-5 text-gold mt-1 flex-shrink-0" />
+                <div className="text-white/70">
+                  <a href="mailto:mohammed@squarepack.net" className="hover:text-gold transition-colors block">
+                    mohammed@squarepack.net
+                  </a>
+                  <a href="mailto:sales@squarepack.net" className="hover:text-gold transition-colors block">
+                    sales@squarepack.net
+                  </a>
+                </div>
               </li>
             </ul>
           </div>
@@ -69,7 +82,7 @@ export const Footer = () => {
         </div>
 
         <div className="pt-8 border-t border-white/10 text-center text-white/60">
-          <p>&copy; {new Date().getFullYear()} SquarePack FZC. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} SquarePack LLC. All rights reserved.</p>
         </div>
       </div>
     </footer>
