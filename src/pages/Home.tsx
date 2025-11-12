@@ -25,7 +25,7 @@ const Home = () => {
 
 
   return (
-    <div className="min-h-screen pt-16 md:pt-20">
+    <div className="min-h-screen pt-[140px] md:pt-[160px]">
       <WhatsAppButton />
       <BrochureButton />
       <AdvisorBanner />
@@ -72,12 +72,14 @@ const Home = () => {
           </p>
           
           <div className="mb-12 animate-fade-in-up" style={{ animationDelay: "0.25s" }}>
-            <p className="text-lg md:text-xl text-gold font-semibold mb-2">
-              "On-time, complete, and uncompromising quality — always."
-            </p>
-            <p className="text-base md:text-lg text-white/80">
-              Delivered On Time, On Price, On Service and On Quality
-            </p>
+            <div className="inline-block p-4 md:p-6 bg-gold/10 border-2 border-gold rounded-xl backdrop-blur-sm">
+              <p className="text-lg md:text-2xl text-gold font-bold italic mb-2">
+                "On-time, complete, and uncompromising quality — always."
+              </p>
+              <p className="text-sm md:text-base text-white/90 font-medium">
+                Delivered On Time, On Price, On Service and On Quality
+              </p>
+            </div>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
@@ -118,29 +120,54 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Company Highlight */}
+      {/* Company Highlight - 15+ Years Experience with Video */}
       <section className="py-20 bg-gradient-to-br from-slate-50 to-gray-100">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center justify-center w-24 h-24 rounded-2xl bg-gradient-to-br from-gold to-amber-500 mb-8 animate-scale-in shadow-xl">
-              <Award className="w-12 h-12 text-white" />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+            {/* Left: Content */}
+            <div className="animate-fade-in-up">
+              <div className="inline-flex items-center justify-center w-24 h-24 rounded-2xl bg-gradient-to-br from-gold to-amber-500 mb-8 animate-scale-in shadow-xl">
+                <Award className="w-12 h-12 text-white" />
+              </div>
+              
+              <h2 className="text-4xl md:text-5xl font-bold text-navy mb-6 font-poppins">
+                15+ Years of Experience
+              </h2>
+              <p className="text-xl text-gray-700 leading-relaxed mb-6">
+                Square Pack recognizes that packaging and labeling go beyond mere containers and stickers; they play a crucial role in establishing a brand identity and elevating the customer experience. We are proud to offer businesses of all sizes an assortment of innovative, reliable packaging and label choices.
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed mb-8">
+                As a business with extensive experience, we provide fresh, creative, and trustworthy packaging solutions for companies of any scale.
+              </p>
+              
+              <div className="p-4 bg-gold/10 border-l-4 border-gold rounded mb-8">
+                <p className="text-gold text-lg font-bold italic">
+                  "On-time, complete, and uncompromising quality — always."
+                </p>
+              </div>
+              
+              <Link to="/about">
+                <Button size="lg" className="bg-gradient-to-r from-gold to-amber-500 hover:from-amber-500 hover:to-gold text-navy font-bold text-lg px-10 py-7 shadow-xl">
+                  Discover Our Story
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+              </Link>
             </div>
-            
-            <h2 className="text-4xl md:text-5xl font-bold text-navy mb-6 font-poppins animate-fade-in-up">
-              15+ Years of Experience
-            </h2>
-            <p className="text-xl text-gray-700 leading-relaxed mb-8 animate-fade-in-up max-w-3xl mx-auto" style={{ animationDelay: "0.1s" }}>
-              Square Pack recognizes that packaging and labeling go beyond mere containers and stickers; they play a crucial role in establishing a brand identity and elevating the customer experience. We are proud to offer businesses of all sizes an assortment of innovative, reliable packaging and label choices.
-            </p>
-            <p className="text-lg text-gray-600 leading-relaxed mb-10 animate-fade-in-up max-w-3xl mx-auto" style={{ animationDelay: "0.15s" }}>
-              As a business with extensive experience, we provide fresh, creative, and trustworthy packaging solutions for companies of any scale. <strong className="text-navy">ISO 9001 certified</strong>, trusted by <strong className="text-navy">500+ companies</strong> across UAE and the Middle East.
-            </p>
-            <Link to="/about" className="animate-fade-in-up inline-block" style={{ animationDelay: "0.2s" }}>
-              <Button size="lg" className="bg-gradient-to-r from-gold to-amber-500 hover:from-amber-500 hover:to-gold text-navy font-bold text-lg px-10 py-7 shadow-xl">
-                Discover Our Story
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-            </Link>
+
+            {/* Right: Video */}
+            <div className="animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-full object-cover"
+                >
+                  <source src="https://res.cloudinary.com/dae56bvjp/video/upload/v1762929410/Presenting_i7xqxt.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -174,7 +201,7 @@ const Home = () => {
             </p>
             
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-10 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-              {["Plain Labels", "Product Labels", "Barcode Ribbons", "Stretch Film", "BOPP Tapes", "Label Printers"].map((product, idx) => (
+              {["Plain Labels", "Product Labels", "Barcode Ribbons", "Stretch Film", "BOPP Tapes", "Asset Labels"].map((product, idx) => (
                 <div key={idx} className="group p-6 md:p-8 bg-white/15 backdrop-blur-lg border-2 border-white/30 rounded-2xl hover:bg-white/25 hover:scale-105 hover:border-gold/50 transition-all duration-300 shadow-xl hover:shadow-2xl">
                   <span className="text-white font-bold text-base md:text-lg drop-shadow-lg">{product}</span>
                 </div>

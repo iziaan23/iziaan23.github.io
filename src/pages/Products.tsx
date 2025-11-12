@@ -45,10 +45,10 @@ const Products = () => {
       gradient: "from-emerald-500 to-green-500"
     },
     {
-      id: "printers",
-      title: "Label Printers",
-      description: "Professional-grade thermal and inkjet label printers from leading manufacturers for industrial applications.",
-      features: ["Desktop and industrial models", "High-speed printing", "Multiple connectivity options", "Service and support included"],
+      id: "other-products",
+      title: "Other Products",
+      description: "Comprehensive range of specialized packaging and labeling solutions including asset tags, thermal rolls, masking tapes, and more.",
+      features: ["Asset tags & labels", "Thermal cash rolls", "Masking tapes", "Pricing guns & stickers"],
       image: printersImg,
       gradient: "from-indigo-500 to-blue-500"
     },

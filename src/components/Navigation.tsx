@@ -30,7 +30,7 @@ export const Navigation = () => {
 
   return (
     <nav 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-[60px] md:top-[68px] left-0 right-0 z-50 transition-all duration-300 ${
         scrolled || !isHomePage
           ? "bg-white/95 backdrop-blur-md shadow-lg py-3" 
           : "bg-transparent py-6"
@@ -44,7 +44,7 @@ export const Navigation = () => {
               <img 
                 src={logo} 
                 alt="SquarePack Logo" 
-                className="h-16 md:h-20 w-auto cursor-pointer transition-transform hover:scale-105"
+                className="h-20 md:h-24 w-auto cursor-pointer transition-transform hover:scale-105"
               />
             </Link>
           </div>

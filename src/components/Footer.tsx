@@ -8,26 +8,33 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Company Info */}
           <div>
-            <img src={logo} alt="SquarePack" className="h-20 w-auto mb-4" />
+            <img src={logo} alt="SquarePack" className="h-24 md:h-28 w-auto mb-4" />
             <p className="text-white/70 leading-relaxed">
               UAE's premier packaging and labeling solutions provider, delivering excellence across industries.
             </p>
-            <p className="text-gold mt-3 text-sm font-semibold">
-              "On-time, complete, and uncompromising quality — always."
-            </p>
+            <div className="mt-4 p-3 bg-gold/10 border-l-4 border-gold rounded">
+              <p className="text-gold text-sm md:text-base font-bold italic">
+                "On-time, complete, and uncompromising quality — always."
+              </p>
+            </div>
           </div>
 
           {/* Quick Links */}
           <div>
             <h3 className="text-xl font-bold mb-4 font-montserrat text-gold">Quick Links</h3>
             <ul className="space-y-2">
-              {["About Us", "Products", "Industries", "Get a Quote"].map((link) => (
-                <li key={link}>
-                  <a href="#" className="text-white/70 hover:text-gold transition-colors">
-                    {link}
-                  </a>
-                </li>
-              ))}
+              <li>
+                <a href="/about" className="text-white/70 hover:text-gold transition-colors">About Us</a>
+              </li>
+              <li>
+                <a href="/products" className="text-white/70 hover:text-gold transition-colors">Products</a>
+              </li>
+              <li>
+                <a href="/industries" className="text-white/70 hover:text-gold transition-colors">Industries</a>
+              </li>
+              <li>
+                <a href="/contact" className="text-white/70 hover:text-gold transition-colors">Get a Quote</a>
+              </li>
             </ul>
           </div>
 

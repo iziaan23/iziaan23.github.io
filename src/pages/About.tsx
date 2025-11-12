@@ -8,8 +8,6 @@ import manufacturingBg from "@/assets/backgrounds/manufacturing-bg.jpg";
 const About = () => {
   const stats = [
     { icon: Building2, label: "Years of Experience", value: "15+", color: "from-blue-500 to-cyan-500" },
-    { icon: Award, label: "Quality Certifications", value: "ISO 9001", color: "from-gold to-amber-500" },
-    { icon: Users, label: "Happy Clients", value: "500+", color: "from-emerald-500 to-green-500" },
   ];
 
   const values = [
@@ -71,27 +69,23 @@ const About = () => {
       {/* Stats Section */}
       <section className="py-20 bg-gradient-to-br from-slate-50 to-gray-100">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {stats.map((stat, index) => {
-              const Icon = stat.icon;
-              return (
-                <div
-                  key={index}
-                  className="text-center p-10 rounded-3xl bg-white border border-gray-200 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 animate-scale-in"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <div className={`inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br ${stat.color} mb-6 shadow-lg`}>
-                    <Icon className="w-10 h-10 text-white" />
-                  </div>
-                  <div className="text-5xl font-bold text-navy mb-3 font-poppins">
-                    {stat.value}
-                  </div>
-                  <div className="text-sm text-gray-600 font-medium">
-                    {stat.label}
-                  </div>
-                </div>
-              );
-            })}
+          <div className="max-w-2xl mx-auto">
+            <div className="text-center p-12 rounded-3xl bg-white border border-gray-200 shadow-2xl animate-scale-in">
+              <div className="inline-flex items-center justify-center w-24 h-24 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 mb-6 shadow-lg">
+                <Building2 className="w-12 h-12 text-white" />
+              </div>
+              <div className="text-6xl font-bold text-navy mb-3 font-poppins">
+                15+
+              </div>
+              <div className="text-lg text-gray-600 font-medium mb-6">
+                Years of Experience
+              </div>
+              <div className="p-4 bg-gold/10 border-l-4 border-gold rounded">
+                <p className="text-gold text-lg font-bold italic">
+                  "On-time, complete, and uncompromising quality — always."
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -113,17 +107,25 @@ const About = () => {
             <div className="space-y-6 text-lg text-white/90 leading-relaxed">
               <div className="p-8 bg-white/10 backdrop-blur-md rounded-3xl border border-white/20 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
                 <p>
-                  <strong className="text-gold">SquarePack LLC</strong> is UAE's leading provider of premium packaging and labeling solutions, serving diverse industries including FMCG, healthcare, electronics, and industrial sectors. With over 15 years of experience and a vision to transform the packaging industry, we have grown to become a trusted partner for over 500 companies across the UAE and the Middle East.
+                  <strong className="text-gold">SquarePack LLC</strong> is UAE's leading provider of premium packaging and labeling solutions, serving diverse industries including FMCG, healthcare, electronics, and industrial sectors. With over 15 years of experience and a vision to transform the packaging industry, we have become a trusted partner across the UAE and the Middle East.
                 </p>
               </div>
               <div className="p-8 bg-white/10 backdrop-blur-md rounded-3xl border border-white/20 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
                 <p>
-                  Our state-of-the-art facility combines advanced technology with skilled craftsmanship to produce labels, ribbons, packaging films, and specialized packaging products that meet international quality standards. We take pride in our <strong className="text-gold">ISO 9001 certification</strong>, which reflects our commitment to quality management and continuous improvement.
+                  Our state-of-the-art facility combines advanced technology with skilled craftsmanship to produce labels, ribbons, packaging films, and specialized packaging products that meet international quality standards. We are committed to quality management and continuous improvement.
                 </p>
               </div>
               <div className="p-8 bg-white/10 backdrop-blur-md rounded-3xl border border-white/20 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
                 <p>
-                  What sets us apart is our customer-centric approach. We don't just supply products; we partner with our clients to understand their unique needs and deliver customized solutions that enhance their brand presence and operational efficiency. <strong className="text-gold">"On-time, complete, and uncompromising quality — always."</strong> We are Delivered On Time, On Price, On Service and On Quality.
+                  What sets us apart is our customer-centric approach. We don't just supply products; we partner with our clients to understand their unique needs and deliver customized solutions that enhance their brand presence and operational efficiency.
+                </p>
+              </div>
+              <div className="p-6 bg-gold/20 backdrop-blur-md rounded-2xl border-2 border-gold animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
+                <p className="text-gold text-xl font-bold italic text-center">
+                  "On-time, complete, and uncompromising quality — always."
+                </p>
+                <p className="text-white text-center mt-2 font-medium">
+                  Delivered On Time, On Price, On Service and On Quality
                 </p>
               </div>
             </div>
