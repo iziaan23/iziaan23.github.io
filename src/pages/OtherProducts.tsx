@@ -1,7 +1,15 @@
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { BrochureButton } from "@/components/BrochureButton";
 import { AdvisorBanner } from "@/components/AdvisorBanner";
-import printersImg from "@/assets/products/printers.jpg";
+import tamperEvidentImg from "@/assets/products/tamper-evident.jpg";
+import assetTagsImg from "@/assets/products/asset-tags.jpg";
+import warehouseImg from "@/assets/products/warehouse-solutions.jpg";
+import shrinkSleeveImg from "@/assets/products/shrink-sleeve.jpg";
+import thermalRollsImg from "@/assets/products/thermal-rolls.jpg";
+import maskingTapeImg from "@/assets/products/masking-tape.jpg";
+import pricingGunImg from "@/assets/products/pricing-gun.jpg";
+import hotStampingImg from "@/assets/products/hot-stamping-foil.jpg";
+import printerScannerImg from "@/assets/products/printer-scanner.jpg";
 import productsBg from "@/assets/backgrounds/products-showcase.jpg";
 
 const OtherProducts = () => {
@@ -9,47 +17,47 @@ const OtherProducts = () => {
     {
       title: "Tamper Evident Labels / Void Labels",
       description: "Security labels that show clear evidence of tampering, perfect for authenticity and security applications.",
-      image: printersImg
+      image: tamperEvidentImg
     },
     {
       title: "Asset Tag / Asset Labels",
       description: "Durable identification markers for tracking and managing physical assets throughout their lifecycle.",
-      image: printersImg
+      image: assetTagsImg
     },
     {
       title: "Warehouse Solutions",
       description: "Complete labeling and identification systems designed specifically for warehouse management and logistics.",
-      image: printersImg
+      image: warehouseImg
     },
     {
       title: "Shrink Sleeve Label",
       description: "Full-color 360-degree printed labels that conform to container shapes using heat application.",
-      image: printersImg
+      image: shrinkSleeveImg
     },
     {
       title: "Thermal Cash Roll (POS Rolls)",
       description: "High-quality thermal paper rolls for cash registers, credit card terminals, and POS systems.",
-      image: printersImg
+      image: thermalRollsImg
     },
     {
       title: "Masking Tape (Auto & Normal Grade)",
       description: "Premium masking tapes for automotive and general applications with strong adhesion and clean removal.",
-      image: printersImg
+      image: maskingTapeImg
     },
     {
       title: "Pricing Guns & Stickers",
       description: "Hand-held pricing devices with corresponding price stickers for retail and inventory management.",
-      image: printersImg
+      image: pricingGunImg
     },
     {
       title: "Hot Stamping Foil",
       description: "Metallic and holographic foils for premium label finishing and brand enhancement.",
-      image: printersImg
+      image: hotStampingImg
     },
     {
       title: "Printers / Scanners",
       description: "Professional-grade label printers and barcode scanners from leading manufacturers.",
-      image: printersImg
+      image: printerScannerImg
     },
   ];
 

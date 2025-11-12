@@ -54,18 +54,6 @@ const Products = () => {
     },
   ];
 
-  const otherProducts = [
-    "Tamper Evident Labels / Void Labels",
-    "Asset Tag / Asset Labels",
-    "Warehouse Solutions",
-    "Shrink Sleeve Label",
-    "Thermal Cash Roll (POS Rolls)",
-    "Masking Tape (Auto & Normal Grade)",
-    "Pricing Guns & Stickers",
-    "Hot Stamping Foil",
-    "Printers / Scanners",
-  ];
-
   return (
     <div className="min-h-screen pt-40 md:pt-44">
       <WhatsAppButton />
@@ -143,30 +131,18 @@ const Products = () => {
         </div>
       </section>
 
-      {/* Other Products Section */}
-      <section className="py-24 bg-white">
+      {/* Motto Section */}
+      <section className="py-16 bg-navy">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-navy mb-6 font-poppins">
-              Other Products
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Additional packaging and labeling solutions to meet all your business needs
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            {otherProducts.map((product, index) => (
-              <div
-                key={index}
-                className="group p-6 bg-gradient-to-br from-slate-50 to-gray-100 rounded-2xl border border-gray-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center animate-fade-in-up"
-                style={{ animationDelay: `${index * 0.05}s` }}
-              >
-                <p className="text-navy font-semibold text-sm md:text-base leading-tight">
-                  {product}
-                </p>
-              </div>
-            ))}
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="p-6 bg-gold/10 border-2 border-gold rounded-xl">
+              <p className="text-gold text-2xl md:text-3xl font-bold italic">
+                "On-time, complete, and uncompromising quality — always."
+              </p>
+              <p className="text-white text-lg mt-3">
+                Delivered On Time, On Price, On Service and On Quality
+              </p>
+            </div>
           </div>
         </div>
       </section>

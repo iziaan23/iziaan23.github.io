@@ -31,9 +31,9 @@ export const Navigation = () => {
   return (
     <nav 
       className={`fixed top-[60px] md:top-[68px] left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled || !isHomePage
+        scrolled
           ? "bg-white/95 backdrop-blur-md shadow-lg py-3" 
-          : "bg-transparent py-6"
+          : "bg-white/95 backdrop-blur-md shadow-md py-4"
       }`}
     >
       <div className="container mx-auto px-4">
@@ -44,7 +44,7 @@ export const Navigation = () => {
               <img 
                 src={logo} 
                 alt="SquarePack Logo" 
-                className="h-20 md:h-24 w-auto cursor-pointer transition-transform hover:scale-105"
+                className="h-24 md:h-28 w-auto cursor-pointer transition-transform hover:scale-105"
               />
             </Link>
           </div>
@@ -55,9 +55,7 @@ export const Navigation = () => {
               <Link
                 key={link.label}
                 to={link.to}
-                className={`font-medium transition-colors hover:text-gold ${
-                  (scrolled || !isHomePage) ? "text-navy" : "text-white"
-                } ${location.pathname === link.to ? "text-gold" : ""}`}
+                className={`font-medium transition-colors hover:text-gold text-navy ${location.pathname === link.to ? "text-gold" : ""}`}
               >
                 {link.label}
               </Link>
@@ -77,9 +75,9 @@ export const Navigation = () => {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? (
-              <X className={(scrolled || !isHomePage) ? "text-navy" : "text-white"} />
+              <X className="text-navy" />
             ) : (
-              <Menu className={(scrolled || !isHomePage) ? "text-navy" : "text-white"} />
+              <Menu className="text-navy" />
             )}
           </button>
         </div>
