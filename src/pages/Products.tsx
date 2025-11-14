@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { BrochureButton } from "@/components/BrochureButton";
-import { AdvisorBanner } from "@/components/AdvisorBanner";
 import plainLabelsImg from "@/assets/products/plain-labels.jpg";
 import productLabelsImg from "@/assets/products/product-labels.jpg";
 import barcodeRibbonsImg from "@/assets/products/barcode-ribbons.jpg";
@@ -55,10 +54,9 @@ const Products = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-[112px] md:pt-[136px]">
+    <div className="min-h-screen pt-[88px] md:pt-[104px]">
       <WhatsAppButton />
       <BrochureButton />
-      <AdvisorBanner />
       
       {/* Hero Header */}
       <section className="relative py-28 overflow-hidden">

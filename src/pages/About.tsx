@@ -1,7 +1,6 @@
 import { Building2, Award, Users, TrendingUp, Target, Eye, Shield, Zap, Heart, Globe } from "lucide-react";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { BrochureButton } from "@/components/BrochureButton";
-import { AdvisorBanner } from "@/components/AdvisorBanner";
 import aboutBg from "@/assets/backgrounds/about-bg.jpg";
 import manufacturingBg from "@/assets/backgrounds/manufacturing-bg.jpg";
 
@@ -38,10 +37,9 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-[112px] md:pt-[136px]">
+    <div className="min-h-screen pt-[88px] md:pt-[104px]">
       <WhatsAppButton />
       <BrochureButton />
-      <AdvisorBanner />
       
       {/* Hero Header */}
       <section className="relative py-28 overflow-hidden">

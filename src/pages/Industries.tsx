@@ -1,7 +1,6 @@
 import { ShoppingBag, Pill, Laptop, Sparkles, Home, Factory, Package, Truck } from "lucide-react";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { BrochureButton } from "@/components/BrochureButton";
-import { AdvisorBanner } from "@/components/AdvisorBanner";
 import industriesBg from "@/assets/backgrounds/industries-bg.jpg";
 import manufacturingBg from "@/assets/backgrounds/manufacturing-bg.jpg";
 
@@ -66,10 +65,9 @@ const Industries = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-[112px] md:pt-[136px]">
+    <div className="min-h-screen pt-[88px] md:pt-[104px]">
       <WhatsAppButton />
       <BrochureButton />
-      <AdvisorBanner />
       
       {/* Hero Header */}
       <section className="relative py-28 overflow-hidden">
