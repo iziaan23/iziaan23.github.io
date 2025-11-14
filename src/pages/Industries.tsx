@@ -66,7 +66,7 @@ const Industries = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-40 md:pt-44">
+    <div className="min-h-screen pt-[112px] md:pt-[136px]">
       <WhatsAppButton />
       <BrochureButton />
       <AdvisorBanner />
