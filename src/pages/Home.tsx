@@ -25,7 +25,7 @@ const Home = () => {
 
 
   return (
-    <div className="min-h-screen pt-[140px] md:pt-[160px]">
+    <div className="min-h-screen pt-[112px] md:pt-[136px]">
       <WhatsAppButton />
       <BrochureButton />
       <AdvisorBanner />
@@ -60,45 +60,45 @@ const Home = () => {
             <span className="text-white/90 text-sm font-medium">15+ Years of Experience</span>
           </div>
 
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 animate-fade-in-up font-poppins leading-tight" style={{ animationDelay: "0.1s" }}>
+          <h1 className="text-3xl md:text-6xl lg:text-8xl font-bold text-white mb-4 md:mb-6 animate-fade-in-up font-poppins leading-tight px-2" style={{ animationDelay: "0.1s" }}>
             Excellence in
-            <span className="block bg-gradient-to-r from-gold via-amber-400 to-gold bg-clip-text text-transparent mt-2 bg-[length:200%_auto] animate-[shimmer_3s_linear_infinite]">
+            <span className="block bg-gradient-to-r from-gold via-amber-400 to-gold bg-clip-text text-transparent mt-1 md:mt-2 bg-[length:200%_auto] animate-[shimmer_3s_linear_infinite]">
               Packaging & Labeling
             </span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto animate-fade-in-up leading-relaxed" style={{ animationDelay: "0.2s" }}>
+          <p className="text-base md:text-xl lg:text-2xl text-white/90 mb-6 md:mb-8 max-w-3xl mx-auto animate-fade-in-up leading-relaxed px-4" style={{ animationDelay: "0.2s" }}>
             Premium solutions for FMCG, healthcare, logistics, and industrial sectors across UAE and beyond
           </p>
           
-          <div className="mb-12 animate-fade-in-up" style={{ animationDelay: "0.25s" }}>
-            <div className="inline-block p-4 md:p-6 bg-gold/10 border-2 border-gold rounded-xl backdrop-blur-sm">
-              <p className="text-lg md:text-2xl text-gold font-bold italic mb-2">
+          <div className="mb-8 md:mb-12 animate-fade-in-up px-2" style={{ animationDelay: "0.25s" }}>
+            <div className="inline-block p-3 md:p-6 bg-gold/10 border-2 border-gold rounded-xl backdrop-blur-sm max-w-[90%] md:max-w-none">
+              <p className="text-sm md:text-xl lg:text-2xl text-gold font-bold italic mb-1 md:mb-2 leading-tight">
                 "On-time, complete, and uncompromising quality — always."
               </p>
-              <p className="text-sm md:text-base text-white/90 font-medium">
+              <p className="text-xs md:text-base text-white/90 font-medium leading-tight">
                 Delivered On Time, On Price, On Service and On Quality
               </p>
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-            <Link to="/products">
+          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center animate-fade-in-up px-4" style={{ animationDelay: "0.3s" }}>
+            <Link to="/products" className="w-full sm:w-auto">
               <Button 
                 size="lg"
-                className="group bg-gradient-to-r from-gold to-amber-500 hover:from-amber-500 hover:to-gold text-navy font-bold text-lg px-10 py-7 transition-all duration-500 hover:scale-105 shadow-[0_10px_40px_-10px_rgba(251,191,36,0.5)]"
+                className="group bg-gradient-to-r from-gold to-amber-500 hover:from-amber-500 hover:to-gold text-navy font-bold text-base md:text-lg px-6 md:px-10 py-5 md:py-7 transition-all duration-500 hover:scale-105 shadow-[0_10px_40px_-10px_rgba(251,191,36,0.5)] w-full sm:w-auto"
               >
                 Explore Products
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
-            <Link to="/contact">
+            <Link to="/contact" className="w-full sm:w-auto">
               <Button 
                 size="lg"
-                className="group border-2 border-white/80 bg-white/10 backdrop-blur-md text-white hover:bg-white hover:text-navy font-bold text-lg px-10 py-7 transition-all duration-500 hover:scale-105"
+                className="group border-2 border-white/80 bg-white/10 backdrop-blur-md text-white hover:bg-white hover:text-navy font-bold text-base md:text-lg px-6 md:px-10 py-5 md:py-7 transition-all duration-500 hover:scale-105 w-full sm:w-auto"
               >
                 Request Quote
-                <Mail className="ml-2 w-5 h-5" />
+                <Mail className="ml-2 w-4 h-4 md:w-5 md:h-5" />
               </Button>
             </Link>
           </div>
