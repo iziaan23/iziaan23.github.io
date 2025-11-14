@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, Check } from "lucide-react";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { BrochureButton } from "@/components/BrochureButton";
-import { AdvisorBanner } from "@/components/AdvisorBanner";
 import plainLabelsImg from "@/assets/products/plain-labels.jpg";
 import productLabelsImg from "@/assets/products/product-labels.jpg";
 import barcodeRibbonsImg from "@/assets/products/barcode-ribbons.jpg";
@@ -177,10 +176,9 @@ const ProductDetail = () => {
 
   if (!product) {
     return (
-      <div className="min-h-screen pt-40 md:pt-44 flex items-center justify-center">
+      <div className="min-h-screen pt-[88px] md:pt-[104px] flex items-center justify-center">
         <WhatsAppButton />
         <BrochureButton />
-        <AdvisorBanner />
         <div className="text-center">
           <h1 className="text-4xl font-bold text-navy mb-4">Product Not Found</h1>
           <Link to="/products">
@@ -192,10 +190,9 @@ const ProductDetail = () => {
   }
 
   return (
-    <div className="min-h-screen pt-[112px] md:pt-[136px]">
+    <div className="min-h-screen pt-[88px] md:pt-[104px]">
       <WhatsAppButton />
       <BrochureButton />
-      <AdvisorBanner />
       {/* Back Button */}
       <div className="container mx-auto px-4 py-8 bg-gradient-to-br from-slate-50 to-gray-100">
         <Link to="/products">

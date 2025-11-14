@@ -6,7 +6,6 @@ import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { BrochureButton } from "@/components/BrochureButton";
-import { AdvisorBanner } from "@/components/AdvisorBanner";
 import contactBg from "@/assets/backgrounds/contact-bg.jpg";
 
 const Contact = () => {
@@ -58,10 +57,9 @@ const Contact = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-[112px] md:pt-[136px]">
+    <div className="min-h-screen pt-[88px] md:pt-[104px]">
       <WhatsAppButton />
       <BrochureButton />
-      <AdvisorBanner />
       
       {/* Hero Header */}
       <section className="relative py-28 overflow-hidden">

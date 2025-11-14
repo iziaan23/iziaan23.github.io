@@ -4,7 +4,6 @@ import { ArrowRight, Package, ShoppingBag, Mail, Play, Award } from "lucide-reac
 import { Link } from "react-router-dom";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { BrochureButton } from "@/components/BrochureButton";
-import { AdvisorBanner } from "@/components/AdvisorBanner";
 import heroFallback from "@/assets/videos/hero-fallback.jpg";
 import showcase1 from "@/assets/products/showcase-1.jpg";
 import showcase2 from "@/assets/products/showcase-2.jpg";
@@ -25,10 +24,9 @@ const Home = () => {
 
 
   return (
-    <div className="min-h-screen pt-[112px] md:pt-[136px]">
+    <div className="min-h-screen pt-[88px] md:pt-[104px]">
       <WhatsAppButton />
       <BrochureButton />
-      <AdvisorBanner />
       
       {/* Hero Section with Video Background */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
