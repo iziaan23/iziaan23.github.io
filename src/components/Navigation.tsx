@@ -65,14 +65,25 @@ export const Navigation = () => {
                 <img 
                   src={logo} 
                   alt="SquarePack Logo" 
-                  className="h-20 md:h-24 lg:h-28 w-auto cursor-pointer transition-transform hover:scale-105"
+                  className="h-16 md:h-20 lg:h-24 w-auto cursor-pointer transition-transform hover:scale-105"
                 />
               </Link>
             </div>
 
-            {/* Center - Contact Info (Desktop Only) */}
-            <div className="hidden lg:flex items-center gap-4 xl:gap-6 flex-1 justify-center px-4">
-              <div className="flex items-center gap-2 text-navy">
+            {/* Center - Contact Info */}
+            <div className="flex items-center gap-2 md:gap-4 xl:gap-6 flex-1 justify-center px-2 md:px-4">
+              {/* Mobile - Compact Icons Only */}
+              <div className="flex md:hidden items-center gap-2 text-navy">
+                <a href="tel:+971504578900" className="w-8 h-8 rounded-full bg-secondary/20 flex items-center justify-center hover:bg-secondary/30 transition-colors">
+                  <Phone className="w-4 h-4 text-secondary" />
+                </a>
+                <a href="mailto:sales@squarepack.net" className="w-8 h-8 rounded-full bg-secondary/20 flex items-center justify-center hover:bg-secondary/30 transition-colors">
+                  <Mail className="w-4 h-4 text-secondary" />
+                </a>
+              </div>
+
+              {/* Desktop - Full Info */}
+              <div className="hidden md:flex items-center gap-2 text-navy">
                 <div className="w-10 h-10 rounded-full bg-secondary/20 flex items-center justify-center">
                   <Phone className="w-5 h-5 text-secondary" />
                 </div>
@@ -83,7 +94,7 @@ export const Navigation = () => {
                   </a>
                 </div>
               </div>
-              <div className="flex items-center gap-2 text-navy">
+              <div className="hidden md:flex items-center gap-2 text-navy">
                 <div className="w-10 h-10 rounded-full bg-secondary/20 flex items-center justify-center">
                   <Mail className="w-5 h-5 text-secondary" />
                 </div>
