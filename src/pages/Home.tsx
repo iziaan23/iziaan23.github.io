@@ -60,7 +60,7 @@ const Home = () => {
 
           <h1 className="text-3xl md:text-6xl lg:text-8xl font-bold text-white mb-4 md:mb-6 animate-fade-in-up font-poppins leading-tight px-2" style={{ animationDelay: "0.1s" }}>
             Excellence in
-            <span className="block bg-gradient-to-r from-gold via-amber-400 to-gold bg-clip-text text-transparent mt-1 md:mt-2 bg-[length:200%_auto] animate-[shimmer_3s_linear_infinite]">
+            <span className="block bg-gradient-to-r from-secondary via-secondary/80 to-secondary bg-clip-text text-transparent mt-1 md:mt-2 bg-[length:200%_auto] animate-[shimmer_3s_linear_infinite]">
               Packaging & Labeling
             </span>
           </h1>
@@ -84,7 +84,7 @@ const Home = () => {
             <Link to="/products" className="w-full sm:w-auto">
               <Button 
                 size="lg"
-                className="group bg-gradient-to-r from-gold to-amber-500 hover:from-amber-500 hover:to-gold text-navy font-bold text-base md:text-lg px-6 md:px-10 py-5 md:py-7 transition-all duration-500 hover:scale-105 shadow-[0_10px_40px_-10px_rgba(251,191,36,0.5)] w-full sm:w-auto"
+                className="group bg-gradient-to-r from-secondary to-secondary/80 hover:from-secondary/80 hover:to-secondary text-white font-bold text-base md:text-lg px-6 md:px-10 py-5 md:py-7 transition-all duration-500 hover:scale-105 shadow-[0_10px_40px_-10px_rgba(73,170,162,0.5)] w-full sm:w-auto"
               >
                 Explore Products
                 <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
@@ -124,7 +124,7 @@ const Home = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
             {/* Left: Content */}
             <div className="animate-fade-in-up">
-              <div className="inline-flex items-center justify-center w-24 h-24 rounded-2xl bg-gradient-to-br from-gold to-amber-500 mb-8 animate-scale-in shadow-xl">
+              <div className="inline-flex items-center justify-center w-24 h-24 rounded-2xl bg-gradient-to-br from-secondary to-secondary/80 mb-8 animate-scale-in shadow-xl">
                 <Award className="w-12 h-12 text-white" />
               </div>
               
@@ -145,7 +145,7 @@ const Home = () => {
               </div>
               
               <Link to="/about">
-                <Button size="lg" className="bg-gradient-to-r from-gold to-amber-500 hover:from-amber-500 hover:to-gold text-navy font-bold text-lg px-10 py-7 shadow-xl">
+                <Button size="lg" className="bg-gradient-to-r from-secondary to-secondary/80 hover:from-secondary/80 hover:to-secondary text-white font-bold text-lg px-10 py-7 shadow-xl">
                   Discover Our Story
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>

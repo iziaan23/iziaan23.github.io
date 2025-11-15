@@ -10,7 +10,7 @@ export const BrochureButton = () => {
   return (
     <button
       onClick={handleDownload}
-      className="fixed bottom-28 right-6 z-50 flex items-center justify-center w-16 h-16 bg-gold hover:bg-amber-500 text-navy rounded-full shadow-2xl hover:scale-110 transition-all duration-300 group"
+      className="fixed bottom-28 right-6 z-50 flex items-center justify-center w-16 h-16 bg-gold hover:bg-gold/80 text-navy rounded-full shadow-2xl hover:scale-110 transition-all duration-300 group"
       aria-label="Download Brochure"
     >
       <FileText className="w-8 h-8" />
