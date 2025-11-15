@@ -215,7 +215,7 @@ const ProductDetail = () => {
                 {product.description}
               </p>
               <Link to="/contact">
-                <Button size="lg" className="bg-gradient-to-r from-gold to-amber-500 hover:from-amber-500 hover:to-gold text-navy font-bold text-lg px-10 py-7 shadow-lg">
+                <Button size="lg" className="bg-gradient-to-r from-secondary to-secondary/80 hover:from-secondary/80 hover:to-secondary text-white font-bold text-lg px-10 py-7 shadow-lg">
                   Request a Quote
                 </Button>
               </Link>

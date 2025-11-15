@@ -35,18 +35,18 @@ export const Navigation = () => {
         <div className="container mx-auto px-3 md:px-4">
           <div className="flex items-center justify-center gap-2 md:gap-4 text-white text-xs md:text-sm">
             <div className="flex items-center gap-1.5 md:gap-2">
-              <Headphones className="w-4 h-4 md:w-5 md:h-5 text-gold" />
+              <Headphones className="w-4 h-4 md:w-5 md:h-5 text-secondary" />
               <span className="font-semibold hidden sm:inline">24/7 Support:</span>
             </div>
-            <a href="tel:+971504578900" className="text-gold hover:text-gold/80 font-semibold transition-colors">
+            <a href="tel:+971504578900" className="text-secondary hover:text-secondary/80 font-semibold transition-colors">
               +971 50 457 8900
             </a>
             <span className="text-white/40">|</span>
-            <a href="tel:+971509929801" className="text-gold hover:text-gold/80 font-semibold transition-colors hidden sm:inline">
+            <a href="tel:+971509929801" className="text-secondary hover:text-secondary/80 font-semibold transition-colors hidden sm:inline">
               +971 50 992 9801
             </a>
             <span className="text-white/40 hidden md:inline">|</span>
-            <a href="mailto:sales@squarepack.net" className="text-gold hover:text-gold/80 font-semibold transition-colors hidden md:inline">
+            <a href="mailto:sales@squarepack.net" className="text-secondary hover:text-secondary/80 font-semibold transition-colors hidden md:inline">
               sales@squarepack.net
             </a>
           </div>
@@ -73,23 +73,23 @@ export const Navigation = () => {
             {/* Center - Contact Info (Desktop Only) */}
             <div className="hidden lg:flex items-center gap-4 xl:gap-6 flex-1 justify-center px-4">
               <div className="flex items-center gap-2 text-navy">
-                <div className="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center">
-                  <Phone className="w-5 h-5 text-gold" />
+                <div className="w-10 h-10 rounded-full bg-secondary/20 flex items-center justify-center">
+                  <Phone className="w-5 h-5 text-secondary" />
                 </div>
                 <div>
                   <p className="text-xs text-gray-600 leading-tight">Call Us</p>
-                  <a href="tel:+971504578900" className="text-sm font-bold hover:text-gold transition-colors">
+                  <a href="tel:+971504578900" className="text-sm font-bold hover:text-secondary transition-colors">
                     +971 50 457 8900
                   </a>
                 </div>
               </div>
               <div className="flex items-center gap-2 text-navy">
-                <div className="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center">
-                  <Mail className="w-5 h-5 text-gold" />
+                <div className="w-10 h-10 rounded-full bg-secondary/20 flex items-center justify-center">
+                  <Mail className="w-5 h-5 text-secondary" />
                 </div>
                 <div>
                   <p className="text-xs text-gray-600 leading-tight">Email Us</p>
-                  <a href="mailto:sales@squarepack.net" className="text-sm font-bold hover:text-gold transition-colors">
+                  <a href="mailto:sales@squarepack.net" className="text-sm font-bold hover:text-secondary transition-colors">
                     sales@squarepack.net
                   </a>
                 </div>
@@ -102,14 +102,14 @@ export const Navigation = () => {
                 <Link
                   key={link.label}
                   to={link.to}
-                  className={`font-medium text-sm lg:text-base transition-colors hover:text-gold text-navy ${location.pathname === link.to ? "text-gold" : ""}`}
+                  className={`font-medium text-sm lg:text-base transition-colors hover:text-secondary text-navy ${location.pathname === link.to ? "text-secondary" : ""}`}
                 >
                   {link.label}
                 </Link>
               ))}
               <Link to="/contact">
                 <Button 
-                  className="bg-gold hover:bg-gold/90 text-navy font-semibold text-sm lg:text-base"
+                  className="bg-secondary hover:bg-secondary/90 text-white font-semibold text-sm lg:text-base"
                 >
                   Get a Quote
                 </Button>
@@ -146,8 +146,8 @@ export const Navigation = () => {
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Mail className="w-5 h-5 text-gold flex-shrink-0 mt-1" />
-                  <a href="mailto:sales@squarepack.net" className="text-navy font-semibold hover:text-gold transition-colors text-base break-all">
+                  <Mail className="w-5 h-5 text-secondary flex-shrink-0 mt-1" />
+                  <a href="mailto:sales@squarepack.net" className="text-navy font-semibold hover:text-secondary transition-colors text-base break-all">
                     sales@squarepack.net
                   </a>
                 </div>
