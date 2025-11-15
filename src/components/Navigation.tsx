@@ -31,22 +31,22 @@ export const Navigation = () => {
   return (
     <>
       {/* Advisor Bar */}
-      <div className="fixed top-0 left-0 right-0 z-[60] bg-gradient-to-r from-navy via-blue-900 to-indigo-900 py-1.5 md:py-2 shadow-lg">
+      <div className="fixed top-0 left-0 right-0 z-[60] bg-gradient-to-r from-navy via-blue-900 to-indigo-900 py-2 md:py-3 shadow-lg">
         <div className="container mx-auto px-3 md:px-4">
           <div className="flex items-center justify-center gap-2 md:gap-4 text-white text-xs md:text-sm">
             <div className="flex items-center gap-1.5 md:gap-2">
-              <Headphones className="w-3 h-3 md:w-4 md:h-4 text-gold" />
+              <Headphones className="w-4 h-4 md:w-5 md:h-5 text-gold" />
               <span className="font-semibold hidden sm:inline">24/7 Support:</span>
             </div>
-            <a href="tel:+971504578900" className="text-gold hover:text-amber-400 font-semibold transition-colors">
+            <a href="tel:+971504578900" className="text-gold hover:text-gold/80 font-semibold transition-colors">
               +971 50 457 8900
             </a>
             <span className="text-white/40">|</span>
-            <a href="tel:+971509929801" className="text-gold hover:text-amber-400 font-semibold transition-colors hidden sm:inline">
+            <a href="tel:+971509929801" className="text-gold hover:text-gold/80 font-semibold transition-colors hidden sm:inline">
               +971 50 992 9801
             </a>
             <span className="text-white/40 hidden md:inline">|</span>
-            <a href="mailto:sales@squarepack.net" className="text-gold hover:text-amber-400 font-semibold transition-colors hidden md:inline">
+            <a href="mailto:sales@squarepack.net" className="text-gold hover:text-gold/80 font-semibold transition-colors hidden md:inline">
               sales@squarepack.net
             </a>
           </div>
@@ -55,9 +55,7 @@ export const Navigation = () => {
 
       {/* Main Navigation */}
       <nav 
-        className={`fixed top-[32px] md:top-[36px] left-0 right-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-md shadow-md ${
-          scrolled ? "py-2 md:py-3" : "py-2 md:py-3"
-        }`}
+        className="fixed top-[40px] md:top-[48px] left-0 right-0 z-50 transition-all duration-300 bg-white shadow-md py-3 md:py-4"
       >
         <div className="container mx-auto px-3 md:px-4">
           <div className="flex items-center justify-between gap-4">
@@ -67,7 +65,7 @@ export const Navigation = () => {
                 <img 
                   src={logo} 
                   alt="SquarePack Logo" 
-                  className="h-14 md:h-20 lg:h-24 w-auto cursor-pointer transition-transform hover:scale-105"
+                  className="h-20 md:h-24 lg:h-28 w-auto cursor-pointer transition-transform hover:scale-105"
                 />
               </Link>
             </div>
@@ -133,23 +131,23 @@ export const Navigation = () => {
 
           {/* Mobile Menu */}
           {mobileMenuOpen && (
-            <div className="md:hidden mt-4 bg-white rounded-lg shadow-xl p-6 animate-fade-in-up">
+            <div className="md:hidden mt-4 bg-white rounded-lg shadow-xl p-6 animate-fade-in-up border border-gray-200">
               {/* Mobile Contact Info */}
-              <div className="mb-6 pb-6 border-b border-gray-200">
-                <div className="flex items-center gap-3 mb-3">
-                  <Phone className="w-5 h-5 text-gold" />
-                  <div>
-                    <a href="tel:+971504578900" className="text-navy font-semibold hover:text-gold transition-colors block">
+              <div className="mb-6 pb-6 border-b border-gray-300">
+                <div className="flex items-start gap-3 mb-4">
+                  <Phone className="w-5 h-5 text-gold flex-shrink-0 mt-1" />
+                  <div className="flex flex-col gap-1">
+                    <a href="tel:+971504578900" className="text-navy font-semibold hover:text-gold transition-colors text-base">
                       +971 50 457 8900
                     </a>
-                    <a href="tel:+971509929801" className="text-navy font-semibold hover:text-gold transition-colors block">
+                    <a href="tel:+971509929801" className="text-navy font-semibold hover:text-gold transition-colors text-base">
                       +971 50 992 9801
                     </a>
                   </div>
                 </div>
-                <div className="flex items-center gap-3">
-                  <Mail className="w-5 h-5 text-gold" />
-                  <a href="mailto:sales@squarepack.net" className="text-navy font-semibold hover:text-gold transition-colors">
+                <div className="flex items-start gap-3">
+                  <Mail className="w-5 h-5 text-gold flex-shrink-0 mt-1" />
+                  <a href="mailto:sales@squarepack.net" className="text-navy font-semibold hover:text-gold transition-colors text-base break-all">
                     sales@squarepack.net
                   </a>
                 </div>
