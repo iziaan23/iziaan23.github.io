@@ -8,7 +8,7 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Company Info */}
           <div>
-            <img src={logo} alt="SquarePack" className="h-32 md:h-40 w-auto mb-4" />
+            <img src={logo} alt="SquarePack" className="h-40 md:h-48 w-auto mb-4" />
             <p className="text-white/70 leading-relaxed">
               UAE's premier packaging and labeling solutions provider, delivering excellence across industries.
             </p>
