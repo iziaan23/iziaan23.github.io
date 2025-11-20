@@ -55,7 +55,7 @@ export const Navigation = () => {
 
       {/* Main Navigation */}
       <nav 
-        className="fixed top-[56px] md:top-[64px] left-4 right-4 z-50 transition-all duration-300 bg-white shadow-lg rounded-2xl py-4 md:py-5"
+        className="fixed top-[56px] md:top-[64px] left-4 right-4 z-50 transition-all duration-300 bg-white shadow-lg rounded-2xl py-2 md:py-3"
       >
         <div className="container mx-auto px-3 md:px-4">
           <div className="flex items-center justify-between gap-3 md:gap-4">
@@ -65,7 +65,7 @@ export const Navigation = () => {
                 <img 
                   src={logo} 
                   alt="SquarePack Logo" 
-                  className="h-28 md:h-32 lg:h-40 w-auto cursor-pointer transition-transform hover:scale-105"
+                  className="h-32 md:h-36 lg:h-44 w-auto cursor-pointer transition-transform hover:scale-105"
                 />
               </Link>
             </div>
