@@ -2,9 +2,10 @@ import { FileText } from "lucide-react";
 
 export const BrochureButton = () => {
   const handleDownload = () => {
-    // For now, this would link to a brochure PDF
-    // You would replace this with actual brochure file path
-    window.open("/brochure.pdf", "_blank");
+    window.open(
+      "https://raw.githubusercontent.com/iziaan23/iziaan23.github.io/main/src/assets/Final%20broucher.pdf",
+      "_blank"
+    );
   };
 
   return (
