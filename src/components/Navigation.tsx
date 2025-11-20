@@ -31,7 +31,7 @@ export const Navigation = () => {
   return (
     <>
       {/* Advisor Bar */}
-      <div className="fixed top-0 left-0 right-0 z-[60] bg-gradient-to-r from-navy via-blue-900 to-indigo-900 py-2 md:py-3 shadow-lg">
+      <div className="fixed top-4 left-4 right-4 z-[60] bg-gradient-to-r from-navy via-blue-900 to-indigo-900 py-2 md:py-3 shadow-lg rounded-2xl">
         <div className="container mx-auto px-3 md:px-4">
           <div className="flex items-center justify-center gap-2 md:gap-4 text-white text-xs md:text-sm">
             <div className="flex items-center gap-1.5 md:gap-2">
@@ -55,30 +55,32 @@ export const Navigation = () => {
 
       {/* Main Navigation */}
       <nav 
-        className="fixed top-[40px] md:top-[48px] left-0 right-0 z-50 transition-all duration-300 bg-white shadow-md py-3 md:py-4"
+        className="fixed top-[56px] md:top-[64px] left-4 right-4 z-50 transition-all duration-300 bg-white shadow-lg rounded-2xl py-2 md:py-3"
       >
         <div className="container mx-auto px-3 md:px-4">
-          <div className="flex items-center justify-between gap-4">
+          <div className="flex items-center justify-between gap-3 md:gap-4">
             {/* Logo */}
             <div className="flex items-center flex-shrink-0">
               <Link to="/">
                 <img 
                   src={logo} 
                   alt="SquarePack Logo" 
-                  className="h-24 md:h-28 lg:h-36 w-auto cursor-pointer transition-transform hover:scale-105"
+                  className="h-14 md:h-16 lg:h-20 w-auto cursor-pointer transition-transform hover:scale-105"
                 />
               </Link>
             </div>
 
-            {/* Center - Contact Info */}
-            <div className="flex items-center gap-2 md:gap-4 xl:gap-6 flex-1 justify-center px-2 md:px-4">
-              {/* Mobile - Compact Icons Only */}
-              <div className="flex md:hidden items-center gap-2 text-navy">
-                <a href="tel:+971504578900" className="w-8 h-8 rounded-full bg-secondary/20 flex items-center justify-center hover:bg-secondary/30 transition-colors">
-                  <Phone className="w-4 h-4 text-secondary" />
+            {/* Center - Contact Info - Full Display on All Screens */}
+            <div className="flex items-center gap-2 md:gap-4 xl:gap-6 flex-1 justify-center px-2">
+              {/* Mobile - Show Full Text Compact */}
+              <div className="flex md:hidden flex-col items-start gap-1 text-navy text-xs">
+                <a href="tel:+971504578900" className="flex items-center gap-1.5 hover:text-primary transition-colors">
+                  <Phone className="w-3 h-3 text-secondary" />
+                  <span className="font-semibold">+971 50 457 8900</span>
                 </a>
-                <a href="mailto:sales@squarepack.net" className="w-8 h-8 rounded-full bg-secondary/20 flex items-center justify-center hover:bg-secondary/30 transition-colors">
-                  <Mail className="w-4 h-4 text-secondary" />
+                <a href="mailto:sales@squarepack.net" className="flex items-center gap-1.5 hover:text-primary transition-colors">
+                  <Mail className="w-3 h-3 text-secondary" />
+                  <span className="font-semibold">sales@squarepack.net</span>
                 </a>
               </div>
 
@@ -88,19 +90,20 @@ export const Navigation = () => {
                   <Phone className="w-5 h-5 text-secondary" />
                 </div>
                 <div>
-                  <p className="text-xs text-gray-600 leading-tight">Call Us</p>
-                  <a href="tel:+971504578900" className="text-sm font-bold hover:text-secondary transition-colors">
+                  <div className="text-xs text-muted-foreground">Call Us</div>
+                  <a href="tel:+971504578900" className="font-bold text-sm text-navy hover:text-primary transition-colors">
                     +971 50 457 8900
                   </a>
                 </div>
               </div>
+
               <div className="hidden md:flex items-center gap-2 text-navy">
                 <div className="w-10 h-10 rounded-full bg-secondary/20 flex items-center justify-center">
                   <Mail className="w-5 h-5 text-secondary" />
                 </div>
                 <div>
-                  <p className="text-xs text-gray-600 leading-tight">Email Us</p>
-                  <a href="mailto:sales@squarepack.net" className="text-sm font-bold hover:text-secondary transition-colors">
+                  <div className="text-xs text-muted-foreground">Email Us</div>
+                  <a href="mailto:sales@squarepack.net" className="font-bold text-sm text-navy hover:text-primary transition-colors">
                     sales@squarepack.net
                   </a>
                 </div>
