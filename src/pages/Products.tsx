@@ -8,6 +8,7 @@ import barcodeRibbonsImg from "@/assets/products/barcode-ribbons.jpg";
 import stretchFilmImg from "@/assets/products/stretch-film.jpg";
 import printersImg from "@/assets/products/printers.jpg";
 import productsBg from "@/assets/backgrounds/products-showcase.jpg";
+import promotionalLabelsImg from "@/assets/products/promotional-labels.jpg";
 
 const Products = () => {
   const products = [
@@ -42,6 +43,14 @@ const Products = () => {
       features: ["Stretch film (Hand/Machine Grade)", "BOPP Tapes with strong adhesion", "Weather resistant", "Custom printing available"],
       image: stretchFilmImg,
       gradient: "from-emerald-500 to-green-500"
+    },
+    {
+      id: "promotional-labels",
+      title: "Promotional Labels",
+      description: "Make your brand stand out with Square Pack's vibrant promotional stickers. Ideal for marketing campaigns, giveaways, and product packaging, these stickers are designed to attract attention and effectively convey your promotional messages.",
+      features: ["Attracting attention", "Highlighting special offers", "Boosting sales", "Seasonal promotions"],
+      image: promotionalLabelsImg,
+      gradient: "from-rose-500 to-orange-500"
     },
     {
       id: "other-products",

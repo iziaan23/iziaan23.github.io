@@ -10,6 +10,13 @@ import pricingGunImg from "@/assets/products/pricing-gun.jpg";
 import hotStampingImg from "@/assets/products/hot-stamping-foil.jpg";
 import printerScannerImg from "@/assets/products/printer-scanner.jpg";
 import productsBg from "@/assets/backgrounds/products-showcase.jpg";
+import locationBoardImg from "@/assets/products/location-board.jpg";
+import rackLabelsImg from "@/assets/products/rack-labels.jpg";
+import variablePrintImg from "@/assets/products/variable-print.jpg";
+import jewelryTagImg from "@/assets/products/jewelry-tag.jpg";
+import voidLabelsImg from "@/assets/products/void-labels.jpg";
+import rfidLabelsImg from "@/assets/products/rfid-labels.jpg";
+import customAssetLabelsImg from "@/assets/products/custom-asset-labels.jpg";
 
 const OtherProducts = () => {
   const otherProducts = [
@@ -57,6 +64,41 @@ const OtherProducts = () => {
       title: "Printers / Scanners",
       description: "Professional-grade label printers and barcode scanners from leading manufacturers.",
       image: printerScannerImg
+    },
+    {
+      title: "Location Board / Location Labels",
+      description: "Durable location boards and labels to optimize warehouse and storage operations. These solutions help in identifying storage areas, guiding inventory placement, and improving overall efficiency in logistics and distribution centers.",
+      image: locationBoardImg
+    },
+    {
+      title: "RACK Labels",
+      description: "Optimize your warehouse organization with our durable RACK labels. Designed to mark shelves and racks, these labels improve navigation and efficiency in locating and managing inventory.",
+      image: rackLabelsImg
+    },
+    {
+      title: "Variable Print Solutions",
+      description: "Offering flexibility and customization, our variable print solutions allow for the inclusion of unique data on each label, such as serial numbers, barcodes, or personalised information. Ideal for applications requiring specific and individualised labelling.",
+      image: variablePrintImg
+    },
+    {
+      title: "Jewellery Tags",
+      description: "Elegant and professional jewelry tags designed specifically for the jewelry industry. Perfect for branding, pricing, and product information with premium finishing options.",
+      image: jewelryTagImg
+    },
+    {
+      title: "Void Labels",
+      description: "Square Pack's void labels leave a visible 'VOID' message when removed, preventing reuse and ensuring the integrity of your products and packaging. These labels are perfect for warranty seals, confidential documents, and secure packaging.",
+      image: voidLabelsImg
+    },
+    {
+      title: "RFID Tags",
+      description: "Enhance your tracking and inventory management with Square Pack's advanced RFID labels. These labels are embedded with RFID technology, providing superior efficiency and accuracy in asset management.",
+      image: rfidLabelsImg
+    },
+    {
+      title: "Custom Asset Labels",
+      description: "Square Pack's custom asset labels offer full customization options, allowing you to choose material, size, color, and design. Whether for branding or operational purposes, our custom labels ensure high visibility and functionality tailored to your unique requirements.",
+      image: customAssetLabelsImg
     },
   ];
 
