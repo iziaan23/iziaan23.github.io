@@ -62,7 +62,7 @@ export const Navigation = () => {
               <img
                 src={logo}
                 alt="SquarePack Logo"
-                className="h-16 md:h-20 w-auto transition-transform hover:scale-105"
+                className="h-[72px] md:h-[88px] w-auto transition-transform hover:scale-105"
               />
             </Link>
 
