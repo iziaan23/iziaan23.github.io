@@ -57,18 +57,19 @@ export const Navigation = () => {
 
             {/* === Left: BIG VISUAL LOGO WITHOUT CHANGING NAVBAR HEIGHT === */}
             <Link to="/" className="flex-shrink-0 flex items-center">
-              <img
-                src={logo}
-                alt="SquarePack Logo"
-                className="
-                  h-[70px] 
-                  w-auto 
-                  scale-[1.45] 
-                  origin-left 
-                  transition-transform 
-                  hover:scale-[1.55]
-                "
-              />
+                <img
+                  src={logo}
+                  alt="SquarePack Logo"
+                  className="
+                    h-[85px]
+                    w-auto
+                    scale-[1.2]
+                    origin-left
+                    transition-transform
+                    hover:scale-[1.25]
+                  "
+                />
+
             </Link>
 
             {/* === Right: Nav Links === */}
