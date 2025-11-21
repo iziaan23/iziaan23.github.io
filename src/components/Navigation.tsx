@@ -50,22 +50,26 @@ export const Navigation = () => {
       </div>
 
       {/* === Main White Navbar === */}
-      <nav
-        className="fixed inset-x-0 top-[36px] z-[60] bg-white shadow-lg border-b border-gray-200"
-      >
+      <nav className="fixed inset-x-0 top-[36px] z-[60] bg-white shadow-lg border-b border-gray-200">
         <div className="container mx-auto px-4">
-          
+
           <div className="flex items-center justify-between h-24 md:h-28 lg:h-32">
 
-            {/* === Left: BIG LOGO === */}
+            {/* === Left: BIG VISUAL LOGO WITHOUT CHANGING NAVBAR HEIGHT === */}
             <Link to="/" className="flex-shrink-0 flex items-center">
               <img
                 src={logo}
                 alt="SquarePack Logo"
-                className="h-[90px] md:h-[110px] lg:h-[120px] w-auto transition-transform hover:scale-105"
+                className="
+                  h-[70px] 
+                  w-auto 
+                  scale-[1.45] 
+                  origin-left 
+                  transition-transform 
+                  hover:scale-[1.55]
+                "
               />
             </Link>
-
 
             {/* === Right: Nav Links === */}
             <div className="hidden md:flex items-center gap-8">
@@ -108,7 +112,6 @@ export const Navigation = () => {
 
               <div className="flex flex-col gap-4">
 
-                {/* Nav Links */}
                 {navLinks.map((link) => (
                   <Link
                     key={link.label}
