@@ -176,7 +176,7 @@ const ProductDetail = () => {
 
   if (!product) {
     return (
-      <div className="min-h-screen pt-[116px] md:pt-[132px] flex items-center justify-center">
+      <div className="min-h-screen pt-[132px] md:pt-[148px] lg:pt-[164px] flex items-center justify-center">
         <WhatsAppButton />
         <BrochureButton />
         <div className="text-center">
@@ -190,7 +190,7 @@ const ProductDetail = () => {
   }
 
   return (
-    <div className="min-h-screen pt-[116px] md:pt-[132px]">
+    <div className="min-h-screen pt-[132px] md:pt-[148px] lg:pt-[164px]">
       <WhatsAppButton />
       <BrochureButton />
       {/* Back Button */}
