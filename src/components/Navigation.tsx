@@ -55,14 +55,14 @@ export const Navigation = () => {
       >
         <div className="container mx-auto px-4">
           
-          <div className="flex items-center justify-between h-20 md:h-24">
+          <div className="flex items-center justify-between h-24 md:h-28 lg:h-32">
 
             {/* === Left: BIG LOGO === */}
             <Link to="/" className="flex-shrink-0 flex items-center">
               <img
                 src={logo}
                 alt="SquarePack Logo"
-                className="h-[72px] md:h-[88px] w-auto transition-transform hover:scale-105"
+                className="h-[90px] md:h-[110px] lg:h-[120px] w-auto transition-transform hover:scale-105"
               />
             </Link>
 

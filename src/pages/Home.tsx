@@ -24,7 +24,7 @@ const Home = () => {
 
 
   return (
-    <div className="min-h-screen pt-[116px] md:pt-[132px]">
+    <div className="min-h-screen pt-[132px] md:pt-[148px] lg:pt-[164px]">
       <WhatsAppButton />
       <BrochureButton />
       
