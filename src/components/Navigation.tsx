@@ -26,8 +26,8 @@ export const Navigation = () => {
   return (
     <>
       {/* === Top Advisor Bar === */}
-      <div className="fixed inset-x-4 top-2 z-[70]">
-        <div className="bg-[#0b2a56] text-white text-xs md:text-sm px-4 py-1.5 rounded-xl shadow-md flex items-center justify-center gap-3">
+      <div className="fixed inset-x-0 top-0 z-[70]">
+        <div className="bg-[#0b2a56] text-white text-xs md:text-sm px-4 py-2 shadow-md flex items-center justify-center gap-3">
           <Headphones className="w-4 h-4 text-yellow-300" />
           <span className="font-medium">24/7 Support:</span>
 
@@ -51,19 +51,18 @@ export const Navigation = () => {
 
       {/* === Main White Navbar === */}
       <nav
-        className={`fixed left-4 right-4 top-16 z-[60] rounded-2xl bg-white 
-          transition-all duration-300 shadow-lg border border-gray-200`}
+        className="fixed inset-x-0 top-[36px] z-[60] bg-white shadow-lg border-b border-gray-200"
       >
         <div className="container mx-auto px-4">
           
-          <div className="flex items-center justify-between h-24 md:h-28">
+          <div className="flex items-center justify-between h-20 md:h-24">
 
             {/* === Left: BIG LOGO === */}
             <Link to="/" className="flex-shrink-0 flex items-center">
               <img
                 src={logo}
                 alt="SquarePack Logo"
-                className="h-28 md:h-32 lg:h-40 xl:h-44 w-auto transition-transform hover:scale-105"
+                className="h-16 md:h-20 w-auto transition-transform hover:scale-105"
               />
             </Link>
 
@@ -105,7 +104,7 @@ export const Navigation = () => {
 
           {/* === Mobile Dropdown === */}
           {mobileMenuOpen && (
-            <div className="md:hidden mt-2 mb-4 bg-white border border-gray-200 rounded-xl p-4 shadow">
+            <div className="md:hidden mt-2 mb-4 bg-white border-t border-gray-200 p-4">
 
               <div className="flex flex-col gap-4">
 
