@@ -67,34 +67,6 @@ export const Navigation = () => {
               />
             </Link>
 
-            {/* === Middle: Contact Info (Desktop Only) === */}
-            <div className="hidden md:flex flex-col items-start gap-3 text-[#0b2a56] px-6">
-
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-yellow-300/20 flex items-center justify-center">
-                  <Phone className="w-6 h-6 text-yellow-500" />
-                </div>
-                <div>
-                  <p className="text-xs text-gray-500">Call Us</p>
-                  <a href="tel:+971504578900" className="text-sm font-semibold hover:text-yellow-600">
-                    +971 50 457 8900
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-yellow-300/20 flex items-center justify-center">
-                  <Mail className="w-6 h-6 text-yellow-500" />
-                </div>
-                <div>
-                  <p className="text-xs text-gray-500">Email Us</p>
-                  <a href="mailto:sales@squarepack.net" className="text-sm font-semibold hover:text-yellow-600">
-                    sales@squarepack.net
-                  </a>
-                </div>
-              </div>
-
-            </div>
 
             {/* === Right: Nav Links === */}
             <div className="hidden md:flex items-center gap-8">
@@ -136,16 +108,6 @@ export const Navigation = () => {
             <div className="md:hidden mt-2 mb-4 bg-white border border-gray-200 rounded-xl p-4 shadow">
 
               <div className="flex flex-col gap-4">
-
-                {/* Contact Info Mobile */}
-                <div className="flex flex-col gap-3">
-                  <a href="tel:+971504578900" className="flex items-center gap-2 text-[#0b2a56] font-semibold">
-                    <Phone className="w-5 h-5 text-yellow-500" /> +971 50 457 8900
-                  </a>
-                  <a href="mailto:sales@squarepack.net" className="flex items-center gap-2 text-[#0b2a56] font-semibold">
-                    <Mail className="w-5 h-5 text-yellow-500" /> sales@squarepack.net
-                  </a>
-                </div>
 
                 {/* Nav Links */}
                 {navLinks.map((link) => (

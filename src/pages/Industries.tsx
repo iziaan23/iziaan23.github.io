@@ -65,7 +65,7 @@ const Industries = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-[120px] md:pt-[140px] lg:pt-[160px]">
+    <div className="min-h-screen pt-[60px] md:pt-[68px]">
       <WhatsAppButton />
       <BrochureButton />
       
@@ -140,11 +140,7 @@ const Industries = () => {
               We understand that each industry has unique requirements. Our team delivers customized solutions that meet industry standards, regulatory requirements, and your specific business needs.
             </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-              <div className="p-10 bg-white/10 backdrop-blur-md rounded-3xl border border-white/20 hover:bg-white/20 hover:scale-105 transition-all duration-500 shadow-xl">
-                <div className="text-6xl font-bold text-gold mb-3 font-poppins">500+</div>
-                <div className="text-white/90 text-lg">Clients Served</div>
-              </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 animate-fade-in-up max-w-2xl mx-auto" style={{ animationDelay: "0.2s" }}>
               <div className="p-10 bg-white/10 backdrop-blur-md rounded-3xl border border-white/20 hover:bg-white/20 hover:scale-105 transition-all duration-500 shadow-xl">
                 <div className="text-6xl font-bold text-gold mb-3 font-poppins">8+</div>
                 <div className="text-white/90 text-lg">Industries</div>
