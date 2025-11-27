@@ -27,23 +27,25 @@ export const Navigation = () => {
     <>
       {/* === Top Advisor Bar === */}
       <div className="fixed inset-x-0 top-0 z-[70]">
-        <div className="bg-[#0b2a56] text-white text-xs md:text-sm px-4 py-2 shadow-md flex items-center justify-center gap-3">
-          <Headphones className="w-4 h-4 text-yellow-300" />
-          <span className="font-medium">24/7 Support:</span>
+        <div className="bg-[#0b2a56] text-white text-[10px] sm:text-xs md:text-sm px-2 sm:px-4 py-2 shadow-md flex items-center justify-center gap-1 sm:gap-2 md:gap-3 flex-wrap">
+          <div className="flex items-center gap-1 sm:gap-2">
+            <Headphones className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-300" />
+            <span className="font-medium">24/7 Support:</span>
+          </div>
 
-          <a href="tel:+971504578900" className="font-semibold text-yellow-300 hover:underline">
+          <a href="tel:+971504578900" className="font-semibold text-yellow-300 hover:underline whitespace-nowrap">
             +971 50 457 8900
           </a>
 
-          <span className="hidden sm:inline text-white/40">|</span>
+          <span className="text-white/40">|</span>
 
-          <a href="tel:+971509929801" className="hidden sm:inline font-semibold text-yellow-300 hover:underline">
+          <a href="tel:+971509929801" className="font-semibold text-yellow-300 hover:underline whitespace-nowrap">
             +971 50 992 9801
           </a>
 
-          <span className="hidden md:inline text-white/40">|</span>
+          <span className="text-white/40">|</span>
 
-          <a href="mailto:sales@squarepack.net" className="hidden md:inline font-semibold text-yellow-300 hover:underline">
+          <a href="mailto:sales@squarepack.net" className="font-semibold text-yellow-300 hover:underline whitespace-nowrap">
             sales@squarepack.net
           </a>
         </div>
