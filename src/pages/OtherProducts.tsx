@@ -16,7 +16,7 @@ import rackLabelsImg from "@/assets/products/other-products/rack-labels.jpg";
 import variablePrintImg from "@/assets/products/other-products/variable-print-solutions.png";
 import jewelryTagImg from "@/assets/products/other-products/jewellery-tags.png";
 import voidLabelsImg from "@/assets/products/other-products/void-labels.jpeg";
-import rfidLabelsImg from "@/assets/products/other-products/rfid-tags.jpg";
+import rfidLabelsImg from "@/assets/products/other-products/rfid-labels.png";
 import customAssetLabelsImg from "@/assets/products/other-products/custom-asset-labels.jpeg";
 
 const OtherProducts = () => {
