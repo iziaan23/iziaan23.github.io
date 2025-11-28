@@ -8,13 +8,8 @@ import { ProductBreadcrumb } from "@/components/ProductBreadcrumb";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
 import plainLabelsImg from "@/assets/products/main/plain-labels.jpg";
-<<<<<<< HEAD
-import productLabelsImg from "@/assets/products/main/product-labels.png";
-import barcodeRibbonsImg from "@/assets/products/main/barcode-ribbons.jpg";
-=======
 import productLabelsImg from "@/assets/products/main/product-labels.png";
 import barcodeRibbonsImg from "@/assets/products/main/barcode-ribbons.png";
->>>>>>> 2c6e58f6bd6d3fce796ee7a02e58ee40bb3729e0
 import stretchFilmImg from "@/assets/products/main/stretch-film.jpg";
 import boppTapesImg from "@/assets/products/bopp-tapes.jpg";
 import printersImg from "@/assets/products/main/printers.jpg";
