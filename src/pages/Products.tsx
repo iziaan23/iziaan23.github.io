@@ -5,7 +5,7 @@ import { BrochureButton } from "@/components/BrochureButton";
 import { ProductCategoryNav } from "@/components/ProductCategoryNav";
 import plainLabelsImg from "@/assets/products/main/plain-labels.jpg";
 import productLabelsImg from "@/assets/products/main/product-labels.png";
-import barcodeRibbonsImg from "@/assets/products/main/barcode-ribbons.jpg";
+import barcodeRibbonsImg from "@/assets/products/main/barcode-ribbons.png";
 import stretchFilmImg from "@/assets/products/main/stretch-film.jpg";
 import printersImg from "@/assets/products/main/printers.jpg";
 import productsBg from "@/assets/backgrounds/products-showcase.jpg";
