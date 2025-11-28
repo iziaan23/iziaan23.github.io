@@ -2,13 +2,13 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { BrochureButton } from "@/components/BrochureButton";
-import plainLabelsImg from "@/assets/products/plain-labels.jpg";
-import productLabelsImg from "@/assets/products/product-labels.jpg";
-import barcodeRibbonsImg from "@/assets/products/barcode-ribbons.jpg";
-import stretchFilmImg from "@/assets/products/stretch-film.jpg";
-import printersImg from "@/assets/products/printers.jpg";
+import plainLabelsImg from "@/assets/products/main/plain-labels.jpg";
+import productLabelsImg from "@/assets/products/main/product-labels.jpg";
+import barcodeRibbonsImg from "@/assets/products/main/barcode-ribbons.jpg";
+import stretchFilmImg from "@/assets/products/main/stretch-film.jpg";
+import printersImg from "@/assets/products/main/printers.jpg";
 import productsBg from "@/assets/backgrounds/products-showcase.jpg";
-import promotionalLabelsImg from "@/assets/products/promotional-labels.jpg";
+import promotionalLabelsImg from "@/assets/products/main/promotional-labels.jpg";
 
 const Products = () => {
   const products = [

@@ -1,22 +1,22 @@
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { BrochureButton } from "@/components/BrochureButton";
-import tamperEvidentImg from "@/assets/products/tamper-evident.jpg";
-import assetTagsImg from "@/assets/products/asset-tags.jpg";
-import warehouseImg from "@/assets/products/warehouse-solutions.jpg";
-import shrinkSleeveImg from "@/assets/products/shrink-sleeve.jpg";
-import thermalRollsImg from "@/assets/products/thermal-rolls.jpg";
-import maskingTapeImg from "@/assets/products/masking-tape.jpg";
-import pricingGunImg from "@/assets/products/pricing-gun.jpg";
-import hotStampingImg from "@/assets/products/hot-stamping-foil.jpg";
-import printerScannerImg from "@/assets/products/printer-scanner.jpg";
+import tamperEvidentImg from "@/assets/products/other-products/tamper-evident-labels.jpg";
+import assetTagsImg from "@/assets/products/other-products/asset-tags.jpg";
+import warehouseImg from "@/assets/products/other-products/warehouse-solutions.jpg";
+import shrinkSleeveImg from "@/assets/products/other-products/shrink-sleeve-label.jpg";
+import thermalRollsImg from "@/assets/products/other-products/thermal-cash-rolls.jpg";
+import maskingTapeImg from "@/assets/products/other-products/masking-tape.jpg";
+import pricingGunImg from "@/assets/products/other-products/pricing-guns.jpg";
+import hotStampingImg from "@/assets/products/other-products/hot-stamping-foil.jpg";
+import printerScannerImg from "@/assets/products/other-products/printers-scanners.jpg";
 import productsBg from "@/assets/backgrounds/products-showcase.jpg";
-import locationBoardImg from "@/assets/products/location-board.jpg";
-import rackLabelsImg from "@/assets/products/rack-labels.jpg";
-import variablePrintImg from "@/assets/products/variable-print.jpg";
-import jewelryTagImg from "@/assets/products/jewelry-tag.jpg";
-import voidLabelsImg from "@/assets/products/void-labels.jpg";
-import rfidLabelsImg from "@/assets/products/rfid-labels.jpg";
-import customAssetLabelsImg from "@/assets/products/custom-asset-labels.jpg";
+import locationBoardImg from "@/assets/products/other-products/location-board.jpg";
+import rackLabelsImg from "@/assets/products/other-products/rack-labels.jpg";
+import variablePrintImg from "@/assets/products/other-products/variable-print-solutions.jpg";
+import jewelryTagImg from "@/assets/products/other-products/jewellery-tags.jpg";
+import voidLabelsImg from "@/assets/products/other-products/void-labels.jpg";
+import rfidLabelsImg from "@/assets/products/other-products/rfid-tags.jpg";
+import customAssetLabelsImg from "@/assets/products/other-products/custom-asset-labels.jpg";
 
 const OtherProducts = () => {
   const otherProducts = [
