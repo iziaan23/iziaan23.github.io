@@ -2,7 +2,7 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { BrochureButton } from "@/components/BrochureButton";
 import { ProductCategoryNav } from "@/components/ProductCategoryNav";
 import tamperEvidentImg from "@/assets/products/other-products/tamper-evident-labels.jpg";
-import assetTagsImg from "@/assets/products/other-products/asset-tags.jpg";
+import assetTagsImg from "@/assets/products/other-products/asset-tags.avif";
 import warehouseImg from "@/assets/products/other-products/warehouse-solutions.jpg";
 import shrinkSleeveImg from "@/assets/products/other-products/shrink-sleeve-label.jpg";
 import thermalRollsImg from "@/assets/products/other-products/thermal-cash-rolls.jpg";
@@ -13,11 +13,11 @@ import printerScannerImg from "@/assets/products/other-products/printers-scanner
 import productsBg from "@/assets/backgrounds/products-showcase.jpg";
 import locationBoardImg from "@/assets/products/other-products/location-board.jpg";
 import rackLabelsImg from "@/assets/products/other-products/rack-labels.jpg";
-import variablePrintImg from "@/assets/products/other-products/variable-print-solutions.jpg";
-import jewelryTagImg from "@/assets/products/other-products/jewellery-tags.jpg";
-import voidLabelsImg from "@/assets/products/other-products/void-labels.jpg";
+import variablePrintImg from "@/assets/products/other-products/variable-print-solutions.png";
+import jewelryTagImg from "@/assets/products/other-products/jewellery-tags.png";
+import voidLabelsImg from "@/assets/products/other-products/void-labels.jpeg";
 import rfidLabelsImg from "@/assets/products/other-products/rfid-tags.jpg";
-import customAssetLabelsImg from "@/assets/products/other-products/custom-asset-labels.jpg";
+import customAssetLabelsImg from "@/assets/products/other-products/custom-asset-labels.jpeg";
 
 const OtherProducts = () => {
   const otherProducts = [
