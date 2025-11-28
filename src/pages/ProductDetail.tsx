@@ -3,12 +3,12 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, Check } from "lucide-react";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { BrochureButton } from "@/components/BrochureButton";
-import plainLabelsImg from "@/assets/products/plain-labels.jpg";
-import productLabelsImg from "@/assets/products/product-labels.jpg";
-import barcodeRibbonsImg from "@/assets/products/barcode-ribbons.jpg";
-import stretchFilmImg from "@/assets/products/stretch-film.jpg";
+import plainLabelsImg from "@/assets/products/main/plain-labels.jpg";
+import productLabelsImg from "@/assets/products/main/product-labels.jpg";
+import barcodeRibbonsImg from "@/assets/products/main/barcode-ribbons.jpg";
+import stretchFilmImg from "@/assets/products/main/stretch-film.jpg";
 import boppTapesImg from "@/assets/products/bopp-tapes.jpg";
-import printersImg from "@/assets/products/printers.jpg";
+import printersImg from "@/assets/products/main/printers.jpg";
 
 const ProductDetail = () => {
   const { productId } = useParams();
