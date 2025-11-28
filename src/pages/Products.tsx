@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { BrochureButton } from "@/components/BrochureButton";
+import { ProductCategoryNav } from "@/components/ProductCategoryNav";
 import plainLabelsImg from "@/assets/products/main/plain-labels.jpg";
 import productLabelsImg from "@/assets/products/main/product-labels.jpg";
 import barcodeRibbonsImg from "@/assets/products/main/barcode-ribbons.jpg";
@@ -66,6 +67,8 @@ const Products = () => {
     <div className="min-h-screen pt-[132px] md:pt-[148px] lg:pt-[164px]">
       <WhatsAppButton />
       <BrochureButton />
+      
+      <ProductCategoryNav />
       
       {/* Hero Header */}
       <section className="relative py-28 overflow-hidden">

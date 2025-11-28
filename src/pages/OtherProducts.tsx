@@ -1,5 +1,6 @@
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { BrochureButton } from "@/components/BrochureButton";
+import { ProductCategoryNav } from "@/components/ProductCategoryNav";
 import tamperEvidentImg from "@/assets/products/other-products/tamper-evident-labels.jpg";
 import assetTagsImg from "@/assets/products/other-products/asset-tags.jpg";
 import warehouseImg from "@/assets/products/other-products/warehouse-solutions.jpg";
@@ -106,6 +107,8 @@ const OtherProducts = () => {
     <div className="min-h-screen pt-[132px] md:pt-[148px] lg:pt-[164px]">
       <WhatsAppButton />
       <BrochureButton />
+      
+      <ProductCategoryNav />
       
       {/* Hero Header */}
       <section className="relative py-28 overflow-hidden">
