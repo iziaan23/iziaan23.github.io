@@ -145,10 +145,22 @@ All colors MUST be HSL.
     animation: float 3s ease-in-out infinite;
   }
   
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
   .glass-effect {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .text-shadow-glow {
+    text-shadow: 0 0 40px rgba(251, 191, 36, 0.5);
+  }
+  
+  .perspective-1000 {
+    perspective: 1000px;
   }
   
   @keyframes fade-in-up {
