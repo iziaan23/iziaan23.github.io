@@ -27,9 +27,9 @@ export const Navigation = () => {
     <>
       {/* === Top Advisor Bar === */}
       <div className="fixed inset-x-0 top-0 z-[70]">
-        <div className="bg-[#0b2a56] text-white text-[10px] sm:text-xs md:text-sm px-2 sm:px-4 py-2 shadow-md flex items-center justify-center gap-1 sm:gap-2 md:gap-3 flex-wrap">
+        <div className="bg-[#0b2a56] text-white text-[10px] sm:text-xs px-2 sm:px-4 py-1.5 shadow-md flex items-center justify-center gap-1 sm:gap-2 md:gap-3 flex-wrap">
           <div className="flex items-center gap-1 sm:gap-2">
-            <Headphones className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-300" />
+            <Headphones className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-yellow-300" />
             <span className="font-medium">24/7 Support:</span>
           </div>
 
@@ -52,23 +52,23 @@ export const Navigation = () => {
       </div>
 
       {/* === Main White Navbar === */}
-      <nav className="fixed inset-x-0 top-[36px] z-[60] bg-white shadow-lg border-b border-gray-200">
+      <nav className="fixed inset-x-0 top-[30px] z-[60] bg-white shadow-lg border-b border-gray-200">
         <div className="container mx-auto px-4">
 
-          <div className="flex items-center justify-between h-24 md:h-28 lg:h-32">
+          <div className="flex items-center justify-between h-20 md:h-22 lg:h-24">
 
-            {/* === Left: BIG VISUAL LOGO WITHOUT CHANGING NAVBAR HEIGHT === */}
+            {/* === Left: LOGO === */}
             <Link to="/" className="flex-shrink-0 flex items-center">
                 <img
                   src={logo}
                   alt="SquarePack Logo"
                   className="
-                    h-[85px]
+                    h-[70px]
                     w-auto
-                    scale-[1.2]
+                    scale-[1.1]
                     origin-left
                     transition-transform
-                    hover:scale-[1.25]
+                    hover:scale-[1.15]
                   "
                 />
 

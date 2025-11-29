@@ -57,7 +57,7 @@ const Contact = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-[132px] md:pt-[148px] lg:pt-[164px]">
+    <div className="min-h-screen pt-[110px] md:pt-[122px] lg:pt-[134px]">
       <WhatsAppButton />
       <BrochureButton />
       
@@ -88,33 +88,38 @@ const Contact = () => {
       {/* Contact Section */}
       <section className="py-24 bg-gradient-to-br from-slate-50 to-gray-100">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
             {/* Contact Information */}
             <div className="space-y-6">
-              <h2 className="text-4xl font-bold text-navy mb-8 font-poppins animate-fade-in-up">
-                Contact Information
-              </h2>
+              <div className="animate-fade-in-up">
+                <h2 className="text-4xl md:text-5xl font-bold text-navy mb-4 font-poppins">
+                  Contact Information
+                </h2>
+                <p className="text-lg text-gray-600 mb-8">
+                  We're here to help. Reach out to us through any of these channels.
+                </p>
+              </div>
               
               {contactInfo.map((info, index) => {
                 const Icon = info.icon;
                 return (
                   <div
                     key={index}
-                    className="group p-8 bg-white rounded-3xl border border-gray-200 hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 animate-slide-in-left"
+                    className="group p-8 bg-white rounded-3xl border border-gray-200 hover:shadow-2xl hover:border-transparent transition-all duration-500 hover:-translate-y-1 animate-slide-in-left"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
-                    <div className="flex items-start gap-4">
+                    <div className="flex items-start gap-6">
                       <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${info.gradient} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-500 shadow-lg`}>
                         <Icon className="w-8 h-8 text-white" />
                       </div>
                       <div>
                         <h3 className="font-bold text-navy mb-2 text-xl">{info.title}</h3>
                         {info.link ? (
-                          <a href={info.link} className="text-gray-600 hover:text-navy transition-colors whitespace-pre-line text-lg">
+                          <a href={info.link} className="text-gray-600 hover:text-secondary transition-colors whitespace-pre-line text-base leading-relaxed">
                             {info.content}
                           </a>
                         ) : (
-                          <p className="text-gray-600 whitespace-pre-line text-lg">
+                          <p className="text-gray-600 whitespace-pre-line text-base leading-relaxed">
                             {info.content}
                           </p>
                         )}
@@ -127,68 +132,71 @@ const Contact = () => {
 
             {/* Contact Form */}
             <div className="animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-              <div className="p-10 bg-white rounded-3xl border border-gray-200 shadow-xl">
-                <h2 className="text-4xl font-bold text-navy mb-8 font-poppins">
-                  Send Us a Message
+              <div className="p-10 bg-white rounded-3xl border-2 border-gray-200 shadow-2xl hover:shadow-3xl transition-shadow duration-500">
+                <h2 className="text-4xl md:text-5xl font-bold text-navy mb-3 font-poppins">
+                  Send Message
                 </h2>
+                <p className="text-gray-600 mb-8 text-lg">
+                  Fill out the form and we'll get back to you within 24 hours.
+                </p>
                 
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  <div>
+                  <div className="relative group">
                     <Input
                       placeholder="Your Name *"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       required
-                      className="h-14 text-lg border-gray-300 focus:border-navy focus:ring-navy"
+                      className="h-14 text-base border-2 border-gray-200 focus:border-secondary focus:ring-2 focus:ring-secondary/20 rounded-xl transition-all duration-300"
                     />
                   </div>
 
-                  <div>
+                  <div className="relative group">
                     <Input
                       type="email"
                       placeholder="Email Address *"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       required
-                      className="h-14 text-lg border-gray-300 focus:border-navy focus:ring-navy"
+                      className="h-14 text-base border-2 border-gray-200 focus:border-secondary focus:ring-2 focus:ring-secondary/20 rounded-xl transition-all duration-300"
                     />
                   </div>
 
-                  <div>
+                  <div className="relative group">
                     <Input
                       type="tel"
                       placeholder="Phone Number *"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       required
-                      className="h-14 text-lg border-gray-300 focus:border-navy focus:ring-navy"
+                      className="h-14 text-base border-2 border-gray-200 focus:border-secondary focus:ring-2 focus:ring-secondary/20 rounded-xl transition-all duration-300"
                     />
                   </div>
 
-                  <div>
+                  <div className="relative group">
                     <Input
                       placeholder="Company Name"
                       value={formData.company}
                       onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                      className="h-14 text-lg border-gray-300 focus:border-navy focus:ring-navy"
+                      className="h-14 text-base border-2 border-gray-200 focus:border-secondary focus:ring-2 focus:ring-secondary/20 rounded-xl transition-all duration-300"
                     />
                   </div>
 
-                  <div>
+                  <div className="relative group">
                     <Textarea
                       placeholder="Tell us about your requirements... *"
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       required
                       rows={6}
-                      className="text-lg border-gray-300 focus:border-navy focus:ring-navy resize-none"
+                      className="text-base border-2 border-gray-200 focus:border-secondary focus:ring-2 focus:ring-secondary/20 resize-none rounded-xl transition-all duration-300"
                     />
                   </div>
 
                   <Button
                     type="submit"
                     size="lg"
-                    className="w-full bg-gradient-to-r from-secondary to-secondary/80 hover:from-secondary/80 hover:to-secondary text-white font-bold text-lg py-7 transition-all duration-500 hover:scale-105 shadow-lg"
+                    className="w-full bg-gradient-to-r from-secondary to-secondary/80 hover:from-secondary/90 hover:to-secondary text-white font-bold text-lg py-7 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl rounded-xl"
                   >
                     Send Message
                     <Send className="ml-2 w-5 h-5" />
