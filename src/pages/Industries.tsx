@@ -65,7 +65,7 @@ const Industries = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-[132px] md:pt-[148px] lg:pt-[164px]">
+    <div className="min-h-screen pt-[110px] md:pt-[122px] lg:pt-[134px]">
       <WhatsAppButton />
       <BrochureButton />
       
@@ -95,26 +95,40 @@ const Industries = () => {
       {/* Industries Grid */}
       <section className="py-24 bg-gradient-to-br from-slate-50 to-gray-100">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-navy mb-4 font-poppins animate-fade-in-up">
+              Sectors We Serve
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+              Delivering specialized packaging and labeling solutions across diverse industries
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
             {industries.map((industry, index) => {
               const Icon = industry.icon;
               return (
                 <div
                   key={index}
-                  className={`group p-8 bg-white rounded-3xl border border-gray-200 hover:border-transparent hover:shadow-2xl ${industry.shadow} transition-all duration-500 hover:-translate-y-2 animate-fade-in-up`}
+                  className={`group p-8 bg-white rounded-3xl border-2 border-gray-200 hover:border-transparent hover:shadow-2xl ${industry.shadow} transition-all duration-500 hover:-translate-y-3 animate-fade-in-up relative overflow-hidden`}
                   style={{ animationDelay: `${index * 0.05}s` }}
                 >
-                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${industry.gradient} mb-6 group-hover:scale-110 transition-transform duration-500 shadow-lg`}>
-                    <Icon className="w-8 h-8 text-white" />
+                  {/* Gradient overlay on hover */}
+                  <div className={`absolute inset-0 bg-gradient-to-br ${industry.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
+                  
+                  <div className="relative z-10">
+                    <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${industry.gradient} mb-6 group-hover:scale-110 transition-transform duration-500 shadow-lg`}>
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    
+                    <h3 className="text-xl font-bold text-navy mb-3 font-poppins group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:bg-clip-text group-hover:from-navy group-hover:to-gray-600 transition-all">
+                      {industry.title}
+                    </h3>
+                    
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      {industry.description}
+                    </p>
                   </div>
-                  
-                  <h3 className="text-xl font-bold text-navy mb-3 font-poppins group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:bg-clip-text group-hover:from-navy group-hover:to-gray-600 transition-all">
-                    {industry.title}
-                  </h3>
-                  
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    {industry.description}
-                  </p>
                 </div>
               );
             })}

@@ -104,7 +104,7 @@ const OtherProducts = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-[132px] md:pt-[148px] lg:pt-[164px]">
+    <div className="min-h-screen pt-[110px] md:pt-[122px] lg:pt-[134px]">
       <WhatsAppButton />
       <BrochureButton />
       
@@ -144,13 +144,13 @@ const OtherProducts = () => {
                 style={{ animationDelay: `${index * 0.05}s` }}
               >
                 {/* Product Image */}
-                <div className="relative h-64 overflow-hidden">
+                <div className="relative h-64 overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
                   <img 
                     src={product.image} 
                     alt={product.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-br from-indigo-500 to-blue-500 opacity-0 group-hover:opacity-20 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-indigo-500 to-blue-500 opacity-0 group-hover:opacity-10 transition-opacity duration-500" />
                 </div>
                 
                 {/* Content */}

@@ -37,7 +37,7 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-[132px] md:pt-[148px] lg:pt-[164px]">
+    <div className="min-h-screen pt-[110px] md:pt-[122px] lg:pt-[134px]">
       <WhatsAppButton />
       <BrochureButton />
       
