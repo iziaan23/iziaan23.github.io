@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Package, ShoppingBag, Mail, Play, Award } from "lucide-react";
+import { ArrowRight, Package, Award, Sparkles, Zap, Shield, TrendingUp, Users, CheckCircle2, Star, Phone, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { BrochureButton } from "@/components/BrochureButton";
@@ -8,11 +8,10 @@ import heroFallback from "@/assets/videos/hero-fallback.jpg";
 import showcase1 from "@/assets/products/showcase-1.jpg";
 import showcase2 from "@/assets/products/showcase-2.jpg";
 import showcase3 from "@/assets/products/showcase-3.jpg";
-import industriesBg from "@/assets/backgrounds/industries-bg.jpg";
-import contactBg from "@/assets/backgrounds/contact-bg.jpg";
 
 const Home = () => {
   const [currentImage, setCurrentImage] = useState(0);
+  const [statsVisible, setStatsVisible] = useState(false);
   const productImages = [showcase1, showcase2, showcase3];
 
   useEffect(() => {
@@ -22,157 +21,280 @@ const Home = () => {
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setStatsVisible(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    const statsElement = document.getElementById('stats-section');
+    if (statsElement) observer.observe(statsElement);
+
+    return () => observer.disconnect();
+  }, []);
+
+  const stats = [
+    { value: "15+", label: "Years Excellence", icon: Award },
+    { value: "8+", label: "Industries Served", icon: TrendingUp },
+    { value: "1000+", label: "Happy Clients", icon: Users },
+    { value: "99%", label: "On-Time Delivery", icon: CheckCircle2 }
+  ];
+
+  const features = [
+    {
+      icon: Sparkles,
+      title: "Premium Quality",
+      description: "Industry-leading materials and printing technology",
+      gradient: "from-yellow-400 via-orange-500 to-red-500"
+    },
+    {
+      icon: Zap,
+      title: "Lightning Fast",
+      description: "Express delivery and quick turnaround times",
+      gradient: "from-cyan-400 via-blue-500 to-indigo-600"
+    },
+    {
+      icon: Shield,
+      title: "100% Guaranteed",
+      description: "Quality assurance and customer satisfaction",
+      gradient: "from-emerald-400 via-green-500 to-teal-600"
+    }
+  ];
+
+  const products = [
+    { name: "Plain Labels", image: showcase1, category: "Essential" },
+    { name: "Product Labels", image: showcase2, category: "Premium" },
+    { name: "Barcode Solutions", image: showcase3, category: "Industrial" }
+  ];
 
   return (
-    <div className="min-h-screen pt-[110px] md:pt-[122px] lg:pt-[134px]">
+    <div className="min-h-screen pt-[110px] md:pt-[122px] lg:pt-[134px] overflow-hidden">
       <WhatsAppButton />
       <BrochureButton />
       
-      {/* Hero Section with Video Background */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        {/* Video Background */}
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-          poster={heroFallback}
-        >
-          <source src="https://assets.mixkit.co/videos/preview/mixkit-industrial-production-line-in-operation-43649-large.mp4" type="video/mp4" />
-        </video>
-
-        {/* Fallback Image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroFallback})` }}
-        />
-        
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-navy/90 via-blue-900/85 to-purple-900/90" />
-
-        {/* Content */}
-        <div className="relative z-10 container mx-auto px-4 text-center">
-          <div className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-full mb-8 animate-fade-in-up">
-            <Award className="w-5 h-5 text-gold" />
-            <span className="text-white/90 text-sm font-medium">15+ Years of Experience</span>
-          </div>
-
-          <h1 className="text-3xl md:text-6xl lg:text-8xl font-bold text-white mb-4 md:mb-6 animate-fade-in-up font-poppins leading-tight px-2" style={{ animationDelay: "0.1s" }}>
-            Excellence in
-            <span className="block bg-gradient-to-r from-secondary via-secondary/80 to-secondary bg-clip-text text-transparent mt-1 md:mt-2 bg-[length:200%_auto] animate-[shimmer_3s_linear_infinite]">
-              Packaging & Labeling
-            </span>
-          </h1>
+      {/* Revolutionary Hero Section */}
+      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover opacity-20"
+            poster={heroFallback}
+          >
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-industrial-production-line-in-operation-43649-large.mp4" type="video/mp4" />
+          </video>
           
-          <p className="text-base md:text-xl lg:text-2xl text-white/90 mb-6 md:mb-8 max-w-3xl mx-auto animate-fade-in-up leading-relaxed px-4" style={{ animationDelay: "0.2s" }}>
-            Premium solutions for FMCG, healthcare, logistics, and industrial sectors across UAE and beyond
-          </p>
+          {/* Gradient Mesh Background */}
+          <div className="absolute inset-0 bg-gradient-to-br from-navy via-blue-950 to-indigo-950" />
           
-          <div className="mb-8 md:mb-12 animate-fade-in-up px-2" style={{ animationDelay: "0.25s" }}>
-            <div className="inline-block p-3 md:p-6 bg-gold/10 border-2 border-gold rounded-xl backdrop-blur-sm max-w-[90%] md:max-w-none">
-              <p className="text-sm md:text-xl lg:text-2xl text-gold font-bold italic mb-1 md:mb-2 leading-tight">
-                "On-time, complete, and uncompromising quality — always."
-              </p>
-              <p className="text-xs md:text-base text-white/90 font-medium leading-tight">
-                Delivered On Time, On Price, On Service and On Quality
-              </p>
+          {/* Animated Gradient Orbs */}
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-secondary/30 rounded-full blur-3xl animate-float" />
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-float" style={{ animationDelay: "1s" }} />
+        </div>
+
+        {/* Hero Content */}
+        <div className="relative z-10 container mx-auto px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              
+              {/* Left: Text Content */}
+              <div className="space-y-8">
+                {/* Badge */}
+                <div className="inline-flex items-center gap-3 px-6 py-3 bg-white/10 backdrop-blur-xl border border-white/20 rounded-full animate-fade-in-up shadow-2xl">
+                  <Award className="w-5 h-5 text-secondary" />
+                  <span className="text-white/90 text-sm font-semibold tracking-wide">15+ YEARS OF EXCELLENCE</span>
+                  <Star className="w-4 h-4 text-secondary fill-secondary animate-pulse" />
+                </div>
+
+                {/* Main Heading */}
+                <div className="space-y-4 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+                  <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black text-white leading-tight font-poppins">
+                    Redefining
+                    <span className="block mt-2 bg-gradient-to-r from-secondary via-yellow-300 to-orange-400 bg-clip-text text-transparent animate-[shimmer_3s_linear_infinite] bg-[length:200%_auto]">
+                      Packaging
+                    </span>
+                    <span className="block text-5xl sm:text-6xl lg:text-7xl">Excellence</span>
+                  </h1>
+                  
+                  <p className="text-xl lg:text-2xl text-white/80 max-w-2xl leading-relaxed font-light">
+                    Transform your brand identity with world-class packaging and labeling solutions trusted by industry leaders across UAE.
+                  </p>
+                </div>
+
+                {/* CTA Buttons */}
+                <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+                  <Link to="/products" className="group">
+                    <Button 
+                      size="lg"
+                      className="relative overflow-hidden bg-gradient-to-r from-secondary via-yellow-400 to-orange-400 hover:shadow-[0_0_40px_rgba(251,191,36,0.5)] text-navy font-bold text-lg px-10 py-7 transition-all duration-500 hover:scale-105"
+                    >
+                      <span className="relative z-10 flex items-center">
+                        Explore Products
+                        <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform" />
+                      </span>
+                      <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    </Button>
+                  </Link>
+                  
+                  <Link to="/contact">
+                    <Button 
+                      size="lg"
+                      className="group border-2 border-white/40 bg-white/10 backdrop-blur-xl text-white hover:bg-white hover:text-navy font-bold text-lg px-10 py-7 transition-all duration-500 hover:scale-105"
+                    >
+                      Get Quote
+                      <Mail className="ml-2 w-5 h-5" />
+                    </Button>
+                  </Link>
+                </div>
+
+                {/* Trust Indicators */}
+                <div className="flex items-center gap-6 pt-4 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+                  <div className="flex -space-x-3">
+                    {[1, 2, 3, 4].map((i) => (
+                      <div key={i} className="w-12 h-12 rounded-full bg-gradient-to-br from-secondary to-orange-400 border-2 border-navy flex items-center justify-center text-white font-bold">
+                        {i}
+                      </div>
+                    ))}
+                  </div>
+                  <div>
+                    <div className="flex items-center gap-1 mb-1">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 text-secondary fill-secondary" />
+                      ))}
+                    </div>
+                    <p className="text-sm text-white/70">1000+ Satisfied Clients</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right: Floating Product Cards */}
+              <div className="relative h-[600px] hidden lg:block animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
+                {products.map((product, index) => (
+                  <div
+                    key={index}
+                    className="absolute w-72 h-96 rounded-3xl overflow-hidden shadow-2xl hover:shadow-[0_0_60px_rgba(251,191,36,0.4)] transition-all duration-500 hover:scale-105 cursor-pointer group"
+                    style={{
+                      top: `${index * 120}px`,
+                      right: `${index * 40}px`,
+                      zIndex: 3 - index,
+                      transform: `rotate(${index * 3}deg)`,
+                    }}
+                  >
+                    <div className="relative w-full h-full">
+                      <img 
+                        src={product.image} 
+                        alt={product.name}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/40 to-transparent" />
+                      <div className="absolute bottom-0 left-0 right-0 p-6">
+                        <span className="px-3 py-1 bg-secondary/90 backdrop-blur-sm text-navy text-xs font-bold rounded-full">
+                          {product.category}
+                        </span>
+                        <h3 className="text-white font-bold text-2xl mt-3">{product.name}</h3>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
-
-          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center animate-fade-in-up px-4" style={{ animationDelay: "0.3s" }}>
-            <Link to="/products" className="w-full sm:w-auto">
-              <Button 
-                size="lg"
-                className="group bg-gradient-to-r from-secondary to-secondary/80 hover:from-secondary/80 hover:to-secondary text-white font-bold text-base md:text-lg px-6 md:px-10 py-5 md:py-7 transition-all duration-500 hover:scale-105 shadow-[0_10px_40px_-10px_rgba(73,170,162,0.5)] w-full sm:w-auto"
-              >
-                Explore Products
-                <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </Link>
-            <Link to="/contact" className="w-full sm:w-auto">
-              <Button 
-                size="lg"
-                className="group border-2 border-white/80 bg-white/10 backdrop-blur-md text-white hover:bg-white hover:text-navy font-bold text-base md:text-lg px-6 md:px-10 py-5 md:py-7 transition-all duration-500 hover:scale-105 w-full sm:w-auto"
-              >
-                Request Quote
-                <Mail className="ml-2 w-4 h-4 md:w-5 md:h-5" />
-              </Button>
-            </Link>
-          </div>
-
-          {/* Play Button */}
-          <button className="mt-12 inline-flex items-center gap-3 text-white/80 hover:text-white transition-colors group">
-            <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center group-hover:bg-white/30 transition-all">
-              <Play className="w-6 h-6 fill-current" />
-            </div>
-            <span className="text-sm font-medium">Watch Our Story</span>
-          </button>
         </div>
 
         {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-white/50 rounded-full mt-2 animate-[scroll_1.5s_ease-in-out_infinite]" />
+          <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center p-2">
+            <div className="w-1 h-3 bg-secondary rounded-full animate-[scroll_1.5s_ease-in-out_infinite]" />
           </div>
         </div>
       </section>
 
-      {/* Company Highlight - 15+ Years Experience with Video */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 to-gray-100">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
-            {/* Left: Content */}
-            <div className="animate-fade-in-up">
-              <div className="inline-flex items-center justify-center w-24 h-24 rounded-2xl bg-gradient-to-br from-secondary to-secondary/80 mb-8 animate-scale-in shadow-xl">
-                <Award className="w-12 h-12 text-white" />
-              </div>
-              
-              <h2 className="text-4xl md:text-5xl font-bold text-navy mb-6 font-poppins">
-                15+ Years of Experience
-              </h2>
-              <p className="text-xl text-gray-700 leading-relaxed mb-6">
-                Square Pack recognizes that packaging and labeling go beyond mere containers and stickers; they play a crucial role in establishing a brand identity and elevating the customer experience. We are proud to offer businesses of all sizes an assortment of innovative, reliable packaging and label choices.
-              </p>
-              <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                As a business with extensive experience, we provide fresh, creative, and trustworthy packaging solutions for companies of any scale.
-              </p>
-              
-              <div className="p-4 bg-gold/10 border-l-4 border-gold rounded mb-8">
-                <p className="text-gold text-lg font-bold italic">
-                  "On-time, complete, and uncompromising quality — always."
-                </p>
-              </div>
-              
-              <Link to="/about">
-                <Button size="lg" className="bg-gradient-to-r from-secondary to-secondary/80 hover:from-secondary/80 hover:to-secondary text-white font-bold text-lg px-10 py-7 shadow-xl">
-                  Discover Our Story
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-              </Link>
-            </div>
+      {/* Animated Stats Counter */}
+      <section id="stats-section" className="py-20 bg-gradient-to-br from-slate-50 to-gray-100 relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle, #000 1px, transparent 1px)', backgroundSize: '50px 50px' }} />
+        </div>
 
-            {/* Right: Video */}
-            <div className="animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="w-full h-full object-cover"
+        <div className="relative container mx-auto px-4">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            {stats.map((stat, index) => {
+              const Icon = stat.icon;
+              return (
+                <div
+                  key={index}
+                  className="text-center p-8 bg-white rounded-3xl border-2 border-gray-200 hover:border-secondary hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group"
+                  style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <source src="https://res.cloudinary.com/dae56bvjp/video/upload/v1762929410/Presenting_i7xqxt.mp4" type="video/mp4" />
-                </video>
-              </div>
-            </div>
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-secondary to-orange-400 mb-4 group-hover:scale-110 transition-transform duration-500 shadow-lg">
+                    <Icon className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="text-5xl font-black text-navy mb-2 font-poppins">
+                    {statsVisible ? stat.value : "0"}
+                  </div>
+                  <div className="text-gray-600 font-medium">{stat.label}</div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* Products Preview with Image Carousel */}
+      {/* Bento Grid Features */}
+      <section className="py-24 bg-white relative overflow-hidden">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-black text-navy mb-4 font-poppins animate-fade-in-up">
+              Why Choose <span className="bg-gradient-to-r from-secondary to-orange-400 bg-clip-text text-transparent">SquarePack?</span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+              Experience the difference of working with UAE's most innovative packaging partner
+            </p>
+          </div>
+
+          {/* Bento Grid Layout */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
+            {features.map((feature, index) => {
+              const Icon = feature.icon;
+              return (
+                <div
+                  key={index}
+                  className="group relative p-10 bg-gradient-to-br from-white to-gray-50 rounded-3xl border-2 border-gray-200 hover:border-transparent hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  {/* Gradient Background on Hover */}
+                  <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
+                  
+                  <div className="relative z-10">
+                    <div className={`inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br ${feature.gradient} mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg`}>
+                      <Icon className="w-10 h-10 text-white" />
+                    </div>
+                    
+                    <h3 className="text-2xl font-bold text-navy mb-3 font-poppins">
+                      {feature.title}
+                    </h3>
+                    
+                    <p className="text-gray-600 leading-relaxed">
+                      {feature.description}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Immersive Product Showcase */}
       <section className="relative py-28 overflow-hidden">
-        {/* Animated Background Images */}
+        {/* Animated Background */}
         {productImages.map((image, index) => (
           <div
             key={index}
@@ -183,110 +305,155 @@ const Home = () => {
           />
         ))}
         
-        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/85 via-purple-900/80 to-pink-900/85" />
+        <div className="absolute inset-0 bg-gradient-to-br from-navy/95 via-blue-900/90 to-indigo-900/95" />
 
         <div className="relative z-10 container mx-auto px-4">
-          <div className="max-w-5xl mx-auto text-center">
-            <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-pink-500 to-purple-500 mb-8 animate-scale-in shadow-xl">
-              <Package className="w-10 h-10 text-white" />
+          <div className="max-w-6xl mx-auto text-center">
+            <div className="inline-flex items-center justify-center w-24 h-24 rounded-3xl bg-gradient-to-br from-secondary to-orange-400 mb-8 animate-float shadow-2xl">
+              <Package className="w-12 h-12 text-white" />
             </div>
             
-            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 font-poppins animate-fade-in-up">
-              Comprehensive Product Range
+            <h2 className="text-5xl md:text-7xl font-black text-white mb-6 font-poppins animate-fade-in-up">
+              Complete Product Range
             </h2>
-            <p className="text-xl text-white/90 leading-relaxed mb-10 animate-fade-in-up max-w-3xl mx-auto" style={{ animationDelay: "0.1s" }}>
-              From plain labels to industrial printers - everything you need for professional packaging
+            
+            <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-12 animate-fade-in-up max-w-3xl mx-auto" style={{ animationDelay: "0.1s" }}>
+              From basic labels to advanced RFID solutions - everything you need for professional packaging
             </p>
             
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-10 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-              {["Plain Labels", "Product Labels", "Barcode Ribbons", "Stretch Film", "BOPP Tapes", "Asset Labels"].map((product, idx) => (
-                <div key={idx} className="group p-6 md:p-8 bg-white/15 backdrop-blur-lg border-2 border-white/30 rounded-2xl hover:bg-white/25 hover:scale-105 hover:border-gold/50 transition-all duration-300 shadow-xl hover:shadow-2xl">
-                  <span className="text-white font-bold text-base md:text-lg drop-shadow-lg">{product}</span>
+            {/* Product Grid */}
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-12 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+              {["Plain Labels", "Product Labels", "Barcode Ribbons", "Stretch Film", "BOPP Tapes", "RFID Solutions"].map((product, idx) => (
+                <div key={idx} className="group relative p-8 bg-white/10 backdrop-blur-xl border-2 border-white/20 rounded-2xl hover:bg-white/20 hover:scale-105 hover:border-secondary/50 transition-all duration-500 shadow-xl overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <span className="relative z-10 text-white font-bold text-lg">{product}</span>
                 </div>
               ))}
             </div>
 
             {/* Image Indicators */}
-            <div className="flex justify-center gap-2 mb-10">
+            <div className="flex justify-center gap-3 mb-12">
               {productImages.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentImage(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    currentImage === index ? 'bg-gold w-8' : 'bg-white/50'
+                  className={`h-2 rounded-full transition-all duration-300 ${
+                    currentImage === index ? 'bg-secondary w-12' : 'bg-white/50 w-2'
                   }`}
                 />
               ))}
             </div>
             
-            <Link to="/products" className="animate-fade-in-up inline-block" style={{ animationDelay: "0.3s" }}>
-              <Button size="lg" className="bg-white text-navy hover:bg-gray-100 font-bold text-lg px-10 py-7 shadow-xl">
-                View All Products
-                <ArrowRight className="ml-2 w-5 h-5" />
+            <Link to="/products" className="inline-block animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+              <Button size="lg" className="bg-gradient-to-r from-secondary to-orange-400 hover:shadow-[0_0_40px_rgba(251,191,36,0.5)] text-navy font-bold text-xl px-12 py-8 transition-all duration-500 hover:scale-105">
+                Explore All Products
+                <ArrowRight className="ml-2 w-6 h-6" />
               </Button>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Industries Preview */}
-      <section className="relative py-28 overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${industriesBg})` }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-br from-teal-900/95 via-cyan-900/90 to-blue-900/95" />
+      {/* Signature Motto Section */}
+      <section className="py-24 bg-gradient-to-br from-navy via-blue-950 to-indigo-950 relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)', backgroundSize: '50px 50px' }} />
         </div>
 
-        <div className="relative z-10 container mx-auto px-4">
-          <div className="max-w-5xl mx-auto text-center">
-            <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-500 mb-8 animate-scale-in shadow-xl">
-              <ShoppingBag className="w-10 h-10 text-white" />
+        <div className="relative container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <div className="relative p-12 bg-gradient-to-br from-white/10 to-transparent backdrop-blur-xl border-4 border-secondary rounded-3xl shadow-2xl hover:shadow-[0_0_60px_rgba(251,191,36,0.4)] transition-all duration-500 hover:scale-[1.02]">
+              {/* Decorative Elements */}
+              <div className="absolute -top-6 -left-6 w-24 h-24 bg-gradient-to-br from-secondary to-orange-400 rounded-full blur-2xl opacity-50" />
+              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full blur-2xl opacity-50" />
+              
+              <div className="relative z-10 text-center">
+                <div className="inline-flex items-center gap-2 mb-6">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-8 h-8 text-secondary fill-secondary animate-pulse" style={{ animationDelay: `${i * 0.1}s` }} />
+                  ))}
+                </div>
+                
+                <blockquote className="text-3xl md:text-5xl font-black text-secondary mb-6 font-poppins italic leading-tight">
+                  "On-time, complete, and uncompromising quality — always."
+                </blockquote>
+                
+                <p className="text-xl md:text-2xl text-white font-semibold">
+                  Delivered On Time, On Price, On Service and On Quality
+                </p>
+              </div>
             </div>
-            
-            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 font-poppins animate-fade-in-up">
-              Serving 8+ Industries
-            </h2>
-            <p className="text-xl text-white/90 leading-relaxed mb-10 animate-fade-in-up max-w-3xl mx-auto" style={{ animationDelay: "0.1s" }}>
-              From FMCG to healthcare, electronics to manufacturing - industry-specific solutions
-            </p>
-            <Link to="/industries" className="animate-fade-in-up inline-block" style={{ animationDelay: "0.2s" }}>
-              <Button size="lg" className="bg-white text-navy hover:bg-gray-100 font-bold text-lg px-10 py-7 shadow-xl">
-                Explore Industries
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-            </Link>
           </div>
         </div>
       </section>
 
-      {/* Contact CTA */}
-      <section className="relative py-28 overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${contactBg})` }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-br from-orange-900/95 via-red-900/90 to-pink-900/95" />
-        </div>
+      {/* Final CTA Section */}
+      <section className="py-28 bg-gradient-to-br from-slate-50 to-gray-100 relative overflow-hidden">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              
+              {/* Left: Contact Info Cards */}
+              <div className="space-y-6">
+                <h2 className="text-4xl md:text-5xl font-black text-navy mb-8 font-poppins">
+                  Ready to Transform Your Packaging?
+                </h2>
+                
+                <div className="group p-8 bg-white rounded-3xl border-2 border-gray-200 hover:border-secondary hover:shadow-2xl transition-all duration-500">
+                  <div className="flex items-center gap-6">
+                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-400 to-green-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                      <Phone className="w-8 h-8 text-white" />
+                    </div>
+                    <div>
+                      <p className="text-sm text-gray-600 mb-1">Call Us Now</p>
+                      <a href="tel:+971504578900" className="text-2xl font-bold text-navy hover:text-secondary transition-colors">
+                        +971 50 457 8900
+                      </a>
+                    </div>
+                  </div>
+                </div>
 
-        <div className="relative z-10 container mx-auto px-4">
-          <div className="max-w-5xl mx-auto text-center">
-            <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-orange-500 to-red-500 mb-8 animate-scale-in shadow-xl">
-              <Mail className="w-10 h-10 text-white" />
+                <div className="group p-8 bg-white rounded-3xl border-2 border-gray-200 hover:border-secondary hover:shadow-2xl transition-all duration-500">
+                  <div className="flex items-center gap-6">
+                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-400 to-indigo-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                      <Mail className="w-8 h-8 text-white" />
+                    </div>
+                    <div>
+                      <p className="text-sm text-gray-600 mb-1">Email Us</p>
+                      <a href="mailto:sales@squarepack.net" className="text-2xl font-bold text-navy hover:text-secondary transition-colors">
+                        sales@squarepack.net
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right: CTA */}
+              <div className="p-12 bg-gradient-to-br from-navy to-blue-950 rounded-3xl text-white relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-500" />
+                
+                <div className="relative z-10">
+                  <h3 className="text-3xl md:text-4xl font-black mb-4 font-poppins">
+                    Get Your Free Quote Today
+                  </h3>
+                  <p className="text-lg text-white/80 mb-8">
+                    Join 1000+ satisfied clients who trust SquarePack for their packaging needs.
+                  </p>
+                  
+                  <Link to="/contact">
+                    <Button size="lg" className="w-full bg-gradient-to-r from-secondary to-orange-400 hover:shadow-[0_0_40px_rgba(251,191,36,0.5)] text-navy font-bold text-xl py-8 transition-all duration-500 hover:scale-105">
+                      Request Quote
+                      <ArrowRight className="ml-2 w-6 h-6" />
+                    </Button>
+                  </Link>
+                  
+                  <p className="text-sm text-white/60 mt-4 text-center">
+                    ⚡ Response within 24 hours guaranteed
+                  </p>
+                </div>
+              </div>
             </div>
-            
-            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 font-poppins animate-fade-in-up">
-              Let's Start Your Project
-            </h2>
-            <p className="text-xl text-white/90 leading-relaxed mb-10 animate-fade-in-up max-w-3xl mx-auto" style={{ animationDelay: "0.1s" }}>
-              Get in touch for custom solutions tailored to your business needs
-            </p>
-            <Link to="/contact" className="animate-fade-in-up inline-block" style={{ animationDelay: "0.2s" }}>
-              <Button size="lg" className="bg-white text-navy hover:bg-gray-100 font-bold text-lg px-10 py-7 shadow-xl">
-                Contact Us Today
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-            </Link>
           </div>
         </div>
       </section>
