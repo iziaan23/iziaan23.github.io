@@ -215,11 +215,26 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Animated Stats Counter */}
-      <section id="stats-section" className="py-20 bg-gradient-to-br from-slate-50 to-gray-100 relative overflow-hidden">
+      {/* Animated Stats Counter with Video Background */}
+      <section id="stats-section" className="py-20 relative overflow-hidden">
+        {/* Video Background */}
+        <div className="absolute inset-0">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+            poster={heroFallback}
+          >
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-industrial-production-line-in-operation-43649-large.mp4" type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-gradient-to-br from-navy/90 via-blue-900/85 to-indigo-900/90" />
+        </div>
+        
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle, #000 1px, transparent 1px)', backgroundSize: '50px 50px' }} />
+          <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)', backgroundSize: '50px 50px' }} />
         </div>
 
         <div className="relative container mx-auto px-4">
@@ -229,16 +244,16 @@ const Home = () => {
               return (
                 <div
                   key={index}
-                  className="text-center p-8 bg-white rounded-3xl border-2 border-gray-200 hover:border-secondary hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group"
+                  className="text-center p-10 bg-white/95 backdrop-blur-sm rounded-3xl border-2 border-white/50 hover:border-secondary hover:shadow-2xl hover:bg-white transition-all duration-500 hover:-translate-y-2 group animate-fade-in-up"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-secondary to-orange-400 mb-4 group-hover:scale-110 transition-transform duration-500 shadow-lg">
-                    <Icon className="w-8 h-8 text-white" />
+                  <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-secondary to-orange-400 mb-6 group-hover:scale-110 transition-transform duration-500 shadow-lg">
+                    <Icon className="w-10 h-10 text-white" />
                   </div>
-                  <div className="text-5xl font-black text-navy mb-2 font-poppins">
+                  <div className="text-6xl font-black text-navy mb-3 font-poppins">
                     {statsVisible ? stat.value : "0"}
                   </div>
-                  <div className="text-gray-600 font-medium">{stat.label}</div>
+                  <div className="text-gray-700 font-semibold text-lg">{stat.label}</div>
                 </div>
               );
             })}
