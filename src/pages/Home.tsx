@@ -40,7 +40,6 @@ const Home = () => {
   const stats = [
     { value: "15+", label: "Years Excellence", icon: Award },
     { value: "8+", label: "Industries Served", icon: TrendingUp },
-    { value: "1000+", label: "Happy Clients", icon: Users },
     { value: "99%", label: "On-Time Delivery", icon: CheckCircle2 }
   ];
 
@@ -169,7 +168,7 @@ const Home = () => {
                         <Star key={i} className="w-4 h-4 text-secondary fill-secondary" />
                       ))}
                     </div>
-                    <p className="text-sm text-white/70">1000+ Satisfied Clients</p>
+                    <p className="text-sm text-white/70">Trusted by Industry Leaders</p>
                   </div>
                 </div>
               </div>
@@ -224,7 +223,7 @@ const Home = () => {
         </div>
 
         <div className="relative container mx-auto px-4">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {stats.map((stat, index) => {
               const Icon = stat.icon;
               return (
