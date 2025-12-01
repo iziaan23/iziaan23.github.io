@@ -20,10 +20,22 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Format WhatsApp message
+    const whatsappMessage = `*Your Name:* ${formData.name}%0A*Email Address:* ${formData.email}%0A*Phone Number:* ${formData.phone}%0A*Company Name:* ${formData.company || 'Not provided'}%0A*Tell us about your requirements:* ${formData.message}`;
+    
+    // WhatsApp number
+    const whatsappNumber = "971504578900";
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+    
+    // Open WhatsApp
+    window.open(whatsappUrl, '_blank');
+    
     toast({
-      title: "Message Sent Successfully!",
-      description: "Our team will get back to you within 24 hours.",
+      title: "Redirecting to WhatsApp!",
+      description: "Your message is ready to be sent.",
     });
+    
     setFormData({ name: "", email: "", phone: "", company: "", message: "" });
   };
 

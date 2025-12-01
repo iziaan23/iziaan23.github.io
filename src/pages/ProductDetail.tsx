@@ -173,6 +173,32 @@ const ProductDetail = () => {
         { label: "Brands", value: "Zebra, TSC, Honeywell, Datamax" },
         { label: "Warranty", value: "1-3 years manufacturer warranty" }
       ]
+    },
+    "packaging-products": {
+      title: "Packaging Products",
+      image: stretchFilmImg,
+      description: "Comprehensive packaging solutions including stretch films and BOPP tapes designed for secure and efficient packaging. Our products ensure your goods are protected during storage and transit.",
+      features: [
+        "Stretch film available in hand and machine grade",
+        "BOPP tapes with strong adhesion and weather resistance",
+        "Custom printing available for brand visibility",
+        "Multiple thickness and width options",
+        "High load retention and puncture resistance",
+        "Suitable for both manual and automated applications"
+      ],
+      applications: [
+        "Pallet wrapping and stabilization",
+        "Carton sealing and box packaging",
+        "Bundle wrapping and unitizing",
+        "Export packaging and shipping",
+        "Warehouse storage protection"
+      ],
+      specifications: [
+        { label: "Stretch Film Thickness", value: "12-35 micron" },
+        { label: "BOPP Tape Width", value: "12mm to 72mm" },
+        { label: "Temperature Resistance", value: "-10°C to 50°C" },
+        { label: "Customization", value: "Logo printing available" }
+      ]
     }
   };
 
