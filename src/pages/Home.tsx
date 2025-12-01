@@ -38,9 +38,7 @@ const Home = () => {
   }, []);
 
   const stats = [
-    { value: "15+", label: "Years Excellence", icon: Award },
-    { value: "8+", label: "Industries Served", icon: TrendingUp },
-    { value: "99%", label: "On-Time Delivery", icon: CheckCircle2 }
+    { value: "15+", label: "Years Excellence", icon: Award }
   ];
 
   const features = [
@@ -238,22 +236,21 @@ const Home = () => {
         </div>
 
         <div className="relative container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="flex justify-center">
             {stats.map((stat, index) => {
               const Icon = stat.icon;
               return (
                 <div
                   key={index}
-                  className="text-center p-10 bg-white/95 backdrop-blur-sm rounded-3xl border-2 border-white/50 hover:border-secondary hover:shadow-2xl hover:bg-white transition-all duration-500 hover:-translate-y-2 group animate-fade-in-up"
-                  style={{ animationDelay: `${index * 0.1}s` }}
+                  className="text-center p-12 bg-white/95 backdrop-blur-sm rounded-3xl border-2 border-white/50 hover:border-secondary hover:shadow-2xl hover:bg-white transition-all duration-500 hover:-translate-y-2 group animate-fade-in-up max-w-md w-full"
                 >
-                  <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-secondary to-orange-400 mb-6 group-hover:scale-110 transition-transform duration-500 shadow-lg">
-                    <Icon className="w-10 h-10 text-white" />
+                  <div className="inline-flex items-center justify-center w-24 h-24 rounded-2xl bg-gradient-to-br from-secondary to-orange-400 mb-6 group-hover:scale-110 transition-transform duration-500 shadow-lg">
+                    <Icon className="w-12 h-12 text-white" />
                   </div>
-                  <div className="text-6xl font-black text-navy mb-3 font-poppins">
+                  <div className="text-7xl font-black text-navy mb-3 font-poppins">
                     {statsVisible ? stat.value : "0"}
                   </div>
-                  <div className="text-gray-700 font-semibold text-lg">{stat.label}</div>
+                  <div className="text-gray-700 font-semibold text-2xl">{stat.label}</div>
                 </div>
               );
             })}
