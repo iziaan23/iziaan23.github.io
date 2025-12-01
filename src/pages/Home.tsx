@@ -227,7 +227,7 @@ const Home = () => {
             className="absolute inset-0 w-full h-full object-cover"
             poster={heroFallback}
           >
-            <source src="YOUR_CLOUDINARY_VIDEO_URL_HERE" type="video/mp4" />
+            <source src="https://res.cloudinary.com/dae56bvjp/video/upload/v1762929410/Presenting_i7xqxt.mp4" type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-gradient-to-br from-navy/90 via-blue-900/85 to-indigo-900/90" />
         </div>
