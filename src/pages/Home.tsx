@@ -213,47 +213,52 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Animated Stats Counter with Video Background */}
-      <section id="stats-section" className="py-20 relative overflow-hidden">
-        {/* Video Background */}
-        <div className="absolute inset-0">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="absolute inset-0 w-full h-full object-cover"
-            poster={heroFallback}
-          >
-            <source src="https://res.cloudinary.com/dae56bvjp/video/upload/v1762929410/Presenting_i7xqxt.mp4" type="video/mp4" />
-          </video>
-          <div className="absolute inset-0 bg-gradient-to-br from-navy/90 via-blue-900/85 to-indigo-900/90" />
-        </div>
-        
+      {/* Stats with Video Section */}
+      <section id="stats-section" className="py-20 bg-gradient-to-br from-slate-50 to-gray-100 relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)', backgroundSize: '50px 50px' }} />
+          <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle, #000 1px, transparent 1px)', backgroundSize: '50px 50px' }} />
         </div>
 
         <div className="relative container mx-auto px-4">
-          <div className="flex justify-center">
-            {stats.map((stat, index) => {
-              const Icon = stat.icon;
-              return (
-                <div
-                  key={index}
-                  className="text-center p-12 bg-white/95 backdrop-blur-sm rounded-3xl border-2 border-white/50 hover:border-secondary hover:shadow-2xl hover:bg-white transition-all duration-500 hover:-translate-y-2 group animate-fade-in-up max-w-md w-full"
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+            {/* Left: Stat Card */}
+            <div className="flex justify-center lg:justify-end animate-fade-in-up">
+              {stats.map((stat, index) => {
+                const Icon = stat.icon;
+                return (
+                  <div
+                    key={index}
+                    className="text-center p-12 bg-white rounded-3xl border-2 border-gray-200 hover:border-secondary hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group w-full max-w-md"
+                  >
+                    <div className="inline-flex items-center justify-center w-24 h-24 rounded-2xl bg-gradient-to-br from-secondary to-orange-400 mb-6 group-hover:scale-110 transition-transform duration-500 shadow-lg">
+                      <Icon className="w-12 h-12 text-white" />
+                    </div>
+                    <div className="text-7xl font-black text-navy mb-3 font-poppins">
+                      {statsVisible ? stat.value : "0"}
+                    </div>
+                    <div className="text-gray-700 font-semibold text-2xl">{stat.label}</div>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Right: Video */}
+            <div className="animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white group">
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-auto aspect-video object-cover"
+                  poster={heroFallback}
                 >
-                  <div className="inline-flex items-center justify-center w-24 h-24 rounded-2xl bg-gradient-to-br from-secondary to-orange-400 mb-6 group-hover:scale-110 transition-transform duration-500 shadow-lg">
-                    <Icon className="w-12 h-12 text-white" />
-                  </div>
-                  <div className="text-7xl font-black text-navy mb-3 font-poppins">
-                    {statsVisible ? stat.value : "0"}
-                  </div>
-                  <div className="text-gray-700 font-semibold text-2xl">{stat.label}</div>
-                </div>
-              );
-            })}
+                  <source src="https://res.cloudinary.com/dae56bvjp/video/upload/v1762929410/Presenting_i7xqxt.mp4" type="video/mp4" />
+                </video>
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
