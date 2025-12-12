@@ -11,7 +11,7 @@ import plainLabelsImg from "@/assets/products/main/plain-labels.jpg";
 import productLabelsImg from "@/assets/products/main/product-labels.png";
 import barcodeRibbonsImg from "@/assets/products/main/barcode-ribbons.png";
 import stretchFilmImg from "@/assets/products/main/stretch-film.jpg";
-import boppTapesImg from "@/assets/products/bopp-tapes.jpg";
+import boppTapesImg from "@/assets/products/bopp-tapes.png";
 import printersImg from "@/assets/products/main/printers.jpg";
 
 const ProductDetail = () => {

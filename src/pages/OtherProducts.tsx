@@ -4,7 +4,7 @@ import { ProductCategoryNav } from "@/components/ProductCategoryNav";
 import tamperEvidentImg from "@/assets/products/other-products/tamper-evident-labels.jpg";
 import assetTagsImg from "@/assets/products/other-products/asset-tags.avif";
 import warehouseImg from "@/assets/products/other-products/warehouse-solutions.jpg";
-import shrinkSleeveImg from "@/assets/products/other-products/shrink-sleeve-label.jpg";
+import shrinkSleeveImg from "@/assets/products/other-products/shirnk11.png";
 import thermalRollsImg from "@/assets/products/other-products/thermal-cash-rolls.jpg";
 import maskingTapeImg from "@/assets/products/other-products/masking-tape.jpg";
 import pricingGunImg from "@/assets/products/other-products/pricing-guns.jpg";
@@ -12,7 +12,7 @@ import hotStampingImg from "@/assets/products/other-products/hot-stamping-foil.j
 import printerScannerImg from "@/assets/products/other-products/printers-scanners.jpg";
 import productsBg from "@/assets/backgrounds/products-showcase.jpg";
 import locationBoardImg from "@/assets/products/other-products/location-board.jpg";
-import rackLabelsImg from "@/assets/products/other-products/rack-labels.jpg";
+import rackLabelsImg from "@/assets/products/other-products/rack-labels.png";
 import variablePrintImg from "@/assets/products/other-products/variable-print-solutions.png";
 import jewelryTagImg from "@/assets/products/other-products/jewellery-tags.png";
 import voidLabelsImg from "@/assets/products/other-products/void-labels.jpeg";
