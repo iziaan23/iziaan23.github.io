@@ -436,7 +436,7 @@ const Home = () => {
                     Get Your Free Quote Today
                   </h3>
                   <p className="text-lg text-white/80 mb-8">
-                    Join 1000+ satisfied clients who trust SquarePack for their packaging needs.
+                    Delivering reliable, high-quality packaging solutions tailored to your business needs.
                   </p>
                   
                   <Link to="/contact">

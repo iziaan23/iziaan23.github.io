@@ -13,6 +13,8 @@ import barcodeRibbonsImg from "@/assets/products/main/pngwing.com.png";
 import stretchFilmImg from "@/assets/products/main/stretch-film.jpg";
 import boppTapesImg from "@/assets/products/bopp-tapes.png";
 import printersImg from "@/assets/products/main/rack_and_shelf_labels_uk_ltd_cover.jpeg";
+import promotionalLabelsImg from "@/assets/products/main/promotional.jpg";
+
 
 const ProductDetail = () => {
   const { productId } = useParams();
@@ -153,7 +155,7 @@ const ProductDetail = () => {
     },
     "promotional-labels": {
       title: "Promotional Labels",
-      image: productLabelsImg,
+      image: promotionalLabelsImg,
       description: "Make your brand stand out with Square Pack's vibrant promotional stickers. Ideal for marketing campaigns, giveaways, and product packaging, our promotional labels are designed to attract attention and boost sales.",
       features: [
         "Eye-catching designs and vibrant colors",
