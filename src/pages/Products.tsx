@@ -5,7 +5,7 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { BrochureButton } from "@/components/BrochureButton";
 import { ProductCategoryNav } from "@/components/ProductCategoryNav";
 import plainLabelsImg from "@/assets/products/main/plain-labels.jpg";
-import productLabelsImg from "@/assets/products/main/prodcut-labels.jpg";
+import productLabelsImg from "@/assets/products/main/idjFYy6ZUN.jpeg";
 import barcodeRibbonsImg from "@/assets/products/main/pngwing.com.png";
 import stretchFilmImg from "@/assets/products/main/stretch-film.jpg";
 import printersImg from "@/assets/products/main/rack_and_shelf_labels_uk_ltd_cover.jpeg";
