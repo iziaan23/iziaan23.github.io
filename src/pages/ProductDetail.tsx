@@ -66,7 +66,6 @@ const ProductDetail = () => {
       specifications: [
         { label: "Printing Method", value: "Flexo, Digital, Offset" },
         { label: "Maximum Width", value: "330mm" },
-        { label: "Minimum Order", value: "1000 labels" },
         { label: "Turnaround Time", value: "3-7 working days" }
       ]
     },
@@ -196,8 +195,7 @@ const ProductDetail = () => {
       specifications: [
         { label: "Printing Method", value: "Flexo, Digital, Offset" },
         { label: "Material Options", value: "Paper, PP, PET, Vinyl" },
-        { label: "Finish Options", value: "Matte, Gloss, Soft-touch" },
-        { label: "Minimum Order", value: "1000 labels" }
+        { label: "Turnaround Time", value: "3-7 working days" }
       ]
     },
     "packaging-products": {
