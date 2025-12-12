@@ -8,11 +8,11 @@ import { ProductBreadcrumb } from "@/components/ProductBreadcrumb";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
 import plainLabelsImg from "@/assets/products/main/plain-labels.jpg";
-import productLabelsImg from "@/assets/products/main/prodcut-labels.jpg";
-import barcodeRibbonsImg from "@/assets/products/main/barcode-ribbons.png";
+import productLabelsImg from "@/assets/products/main/idjFYy6ZUN.jpeg";
+import barcodeRibbonsImg from "@/assets/products/main/pngwing.com.png";
 import stretchFilmImg from "@/assets/products/main/stretch-film.jpg";
 import boppTapesImg from "@/assets/products/bopp-tapes.png";
-import printersImg from "@/assets/products/main/printers.jpg";
+import printersImg from "@/assets/products/main/rack_and_shelf_labels_uk_ltd_cover.jpeg";
 
 const ProductDetail = () => {
   const { productId } = useParams();
