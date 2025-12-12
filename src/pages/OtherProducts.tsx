@@ -8,7 +8,7 @@ import shrinkSleeveImg from "@/assets/products/other-products/shirnk11.png";
 import thermalRollsImg from "@/assets/products/other-products/thermal-cash-rolls.jpg";
 import maskingTapeImg from "@/assets/products/other-products/masking-tape.jpg";
 import pricingGunImg from "@/assets/products/other-products/pricing-guns.jpg";
-import hotStampingImg from "@/assets/products/other-products/hot-stamping-foil.jpg";
+import hotStampingImg from "@/assets/products/other-products/hot-stamping-foils.jpg";
 import printerScannerImg from "@/assets/products/other-products/printers-scanners.jpg";
 import productsBg from "@/assets/backgrounds/products-showcase.jpg";
 import locationBoardImg from "@/assets/products/other-products/location-board.jpg";
