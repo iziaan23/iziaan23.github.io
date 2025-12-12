@@ -17,7 +17,7 @@ import variablePrintImg from "@/assets/products/other-products/variable-print-so
 import jewelryTagImg from "@/assets/products/other-products/jewellery-tags.png";
 import voidLabelsImg from "@/assets/products/other-products/void-labels.jpeg";
 import rfidLabelsImg from "@/assets/products/other-products/rfid-labels.png";
-import customAssetLabelsImg from "@/assets/products/other-products/custom-asset-labels.jpeg";
+import customAssetLabelsImg from "@/assets/products/other-products/assetsss.jpeg";
 
 const OtherProducts = () => {
   const otherProducts = [
