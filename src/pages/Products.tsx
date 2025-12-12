@@ -65,7 +65,7 @@ const Products = () => {
       id: "other-products",
       title: "Other Products",
       description: "Comprehensive range of specialized packaging and labeling solutions including asset tags, thermal rolls, masking tapes, and more.",
-      features: ["Asset tags & labels", "Thermal cash rolls", "Masking tapes", "Pricing guns & stickers"],
+      features: ["Asset tags & labels", "Thermal cash rolls", "Masking tape", "Pricing guns & stickers"],
       image: printersImg,
       gradient: "from-indigo-500 via-blue-500 to-violet-500",
       accentColor: "from-indigo-400 to-blue-500"
