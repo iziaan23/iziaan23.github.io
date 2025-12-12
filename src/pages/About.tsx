@@ -193,15 +193,9 @@ const About = () => {
         data-scroll-section
         id="overview-section"
       >
-        {/* Parallax Background */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center transition-transform duration-100"
-          style={{ 
-            backgroundImage: `url(${manufacturingBg})`,
-            transform: `translateY(${scrollY * 0.3}px)`
-          }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/95 via-purple-900/90 to-pink-900/95" />
+        {/* Fixed Background (no parallax) */}
+        <div className="absolute inset-0 bg-cover bg-center bg-fixed" style={{ backgroundImage: `url(${manufacturingBg})` }}>
+          <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/98 via-purple-900/95 to-pink-900/98" />
           
           {/* Animated Orbs */}
           <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-pink-500/20 rounded-full blur-[150px] animate-float" />

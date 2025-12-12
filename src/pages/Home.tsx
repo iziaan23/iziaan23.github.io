@@ -151,24 +151,6 @@ const Home = () => {
                   </Link>
                 </div>
 
-                {/* Trust Indicators */}
-                <div className="flex items-center gap-6 pt-4 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-                  <div className="flex -space-x-3">
-                    {[1, 2, 3, 4].map((i) => (
-                      <div key={i} className="w-12 h-12 rounded-full bg-gradient-to-br from-secondary to-orange-400 border-2 border-navy flex items-center justify-center text-white font-bold">
-                        {i}
-                      </div>
-                    ))}
-                  </div>
-                  <div>
-                    <div className="flex items-center gap-1 mb-1">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 text-secondary fill-secondary" />
-                      ))}
-                    </div>
-                    <p className="text-sm text-white/70">Trusted by Industry Leaders</p>
-                  </div>
-                </div>
               </div>
 
               {/* Right: Floating Product Cards */}
