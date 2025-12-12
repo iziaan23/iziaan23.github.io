@@ -23,7 +23,6 @@ const ProductDetail = () => {
       image: plainLabelsImg,
       description: "Our plain labels are manufactured using premium quality materials to ensure durability and superior performance across various applications. Available in thermal transfer and direct thermal options, these labels are designed to meet the demanding requirements of modern industries.",
       features: [
-        "Available in multiple sizes: 25mm to 100mm width",
         "Materials: Paper, Polypropylene, Polyester",
         "Temperature resistant up to 150°C",
         "Superior adhesive strength for various surfaces",
@@ -39,9 +38,7 @@ const ProductDetail = () => {
       ],
       specifications: [
         { label: "Material Options", value: "Paper, PP, PET, Vinyl" },
-        { label: "Adhesive Type", value: "Permanent, Removable, Freezer-grade" },
-        { label: "Core Size", value: "25mm, 40mm, 76mm" },
-        { label: "Roll Diameter", value: "Up to 300mm" }
+        { label: "Adhesive Type", value: "Permanent, Removable, Freezer-grade" }
       ]
     },
     "product-labels": {
@@ -64,9 +61,7 @@ const ProductDetail = () => {
         "Electronics and appliance labels"
       ],
       specifications: [
-        { label: "Printing Method", value: "Flexo, Digital, Offset" },
-        { label: "Maximum Width", value: "330mm" },
-        { label: "Turnaround Time", value: "3-7 working days" }
+        { label: "Printing Method", value: "Flexo, Digital, Offset" }
       ]
     },
     "barcode-ribbons": {
@@ -75,9 +70,6 @@ const ProductDetail = () => {
       description: "Premium quality thermal transfer ribbons engineered for consistent, high-resolution printing. Our ribbons deliver exceptional barcode readability and durability across diverse printing environments.",
       features: [
         "Wax, Wax-Resin, and Full Resin formulations",
-        "Widths available: 40mm, 60mm, 80mm, 110mm",
-        "Lengths: 300m standard (custom lengths available)",
-        "High-density printing up to 600 DPI",
         "Excellent smudge and scratch resistance",
         "Compatible with all major thermal printers"
       ],
@@ -90,8 +82,6 @@ const ProductDetail = () => {
       ],
       specifications: [
         { label: "Ribbon Types", value: "Wax, Wax-Resin, Resin" },
-        { label: "Core Size", value: "0.5 inch, 1 inch" },
-        { label: "Print Speed", value: "Up to 12 IPS" },
         { label: "Storage", value: "18 months shelf life" }
       ]
     },
@@ -101,9 +91,7 @@ const ProductDetail = () => {
       description: "High-performance stretch film designed for optimal load stability and protection. Our films offer superior puncture resistance and excellent cling properties for secure pallet wrapping.",
       features: [
         "Machine grade and hand grade options",
-        "Thickness: 12 micron to 35 micron",
         "Clear and colored films available",
-        "High stretch ratio (up to 300%)",
         "Excellent load retention",
         "UV resistant formulations"
       ],
@@ -115,9 +103,7 @@ const ProductDetail = () => {
         "Export packaging"
       ],
       specifications: [
-        { label: "Film Width", value: "300mm, 450mm, 500mm" },
-        { label: "Core Size", value: "50mm, 76mm" },
-        { label: "Roll Length", value: "Up to 2000 meters" },
+        { label: "Film Width", value: "Multiple widths available" },
         { label: "Elongation", value: "200-300%" }
       ]
     },
@@ -139,12 +125,6 @@ const ProductDetail = () => {
         "Bundle wrapping",
         "Export packaging",
         "General purpose sealing"
-      ],
-      specifications: [
-        { label: "Width Range", value: "12mm to 72mm" },
-        { label: "Length", value: "40m, 65m, 100m" },
-        { label: "Thickness", value: "38-65 microns" },
-        { label: "Adhesion", value: "≥ 5.5 N/25mm" }
       ]
     },
     "printers": {
@@ -167,8 +147,6 @@ const ProductDetail = () => {
         "Compliance labeling"
       ],
       specifications: [
-        { label: "Print Resolution", value: "203 DPI, 300 DPI, 600 DPI" },
-        { label: "Max Print Width", value: "104mm to 216mm" },
         { label: "Brands", value: "Zebra, TSC, Honeywell, Datamax" },
         { label: "Warranty", value: "1-3 years manufacturer warranty" }
       ]
@@ -194,8 +172,7 @@ const ProductDetail = () => {
       ],
       specifications: [
         { label: "Printing Method", value: "Flexo, Digital, Offset" },
-        { label: "Material Options", value: "Paper, PP, PET, Vinyl" },
-        { label: "Turnaround Time", value: "3-7 working days" }
+        { label: "Material Options", value: "Paper, PP, PET, Vinyl" }
       ]
     },
     "packaging-products": {
@@ -218,8 +195,6 @@ const ProductDetail = () => {
         "Warehouse storage protection"
       ],
       specifications: [
-        { label: "Stretch Film Thickness", value: "12-35 micron" },
-        { label: "BOPP Tape Width", value: "12mm to 72mm" },
         { label: "Temperature Resistance", value: "-10°C to 50°C" },
         { label: "Customization", value: "Logo printing available" }
       ]
