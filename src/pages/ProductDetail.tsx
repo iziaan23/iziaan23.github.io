@@ -210,7 +210,7 @@ const ProductDetail = () => {
       title: "Packaging Products",
       image: stretchFilmImg,
       description:
-        "Comprehensive packaging solutions including stretch films and BOPP tapes designed for secure and efficient packaging. Our products ensure your goods are protected during storage and transit.",
+        "Comprehensive packaging solutions including stretch films and BOPP tapes designed for secure and efficient packaging. Our products ensure your goods are protected during storage and transit.\n\n• Clear Tapes: Transparent BOPP tape offering strong adhesion and a clean, unobtrusive finish without covering printed text or visuals.\n• Brown Tapes: Durable brown BOPP tape ideal for general-purpose packaging, providing excellent adhesion and reliable sealing for cartons and shipping materials.",
       features: [
         "Stretch film available in hand and machine grade",
         "BOPP tapes with strong adhesion and weather resistance",
