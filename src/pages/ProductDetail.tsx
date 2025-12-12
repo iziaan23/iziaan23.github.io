@@ -174,6 +174,32 @@ const ProductDetail = () => {
         { label: "Warranty", value: "1-3 years manufacturer warranty" }
       ]
     },
+    "promotional-labels": {
+      title: "Promotional Labels",
+      image: productLabelsImg,
+      description: "Make your brand stand out with Square Pack's vibrant promotional stickers. Ideal for marketing campaigns, giveaways, and product packaging, our promotional labels are designed to attract attention and boost sales.",
+      features: [
+        "Eye-catching designs and vibrant colors",
+        "Premium adhesive for various surfaces",
+        "Water and UV resistant options",
+        "Custom shapes and sizes available",
+        "Quick turnaround for campaign deadlines",
+        "High-quality finish options"
+      ],
+      applications: [
+        "Marketing campaigns",
+        "Product giveaways",
+        "Seasonal promotions",
+        "Special offers and discounts",
+        "Brand awareness initiatives"
+      ],
+      specifications: [
+        { label: "Printing Method", value: "Flexo, Digital, Offset" },
+        { label: "Material Options", value: "Paper, PP, PET, Vinyl" },
+        { label: "Finish Options", value: "Matte, Gloss, Soft-touch" },
+        { label: "Minimum Order", value: "1000 labels" }
+      ]
+    },
     "packaging-products": {
       title: "Packaging Products",
       image: stretchFilmImg,
