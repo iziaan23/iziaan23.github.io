@@ -629,6 +629,108 @@ const ProductDetail = () => {
       </section>
 
       {/* =============================== */}
+      {/* SUB-PRODUCTS SECTION (for packaging-products) */}
+      {/* =============================== */}
+      {productId === "packaging-products" && (
+        <section className="py-20 bg-gradient-to-br from-slate-50 via-blue-50/30 to-gray-100">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-navy/10 to-blue-900/10 rounded-full mb-4">
+                <Package className="w-4 h-4 text-navy" />
+                <span className="text-sm font-bold text-navy">Our Range</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold text-navy mb-4 font-poppins">
+                Packaging Products
+              </h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Explore our comprehensive range of premium packaging solutions
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {/* Brown Tapes */}
+              <div className="group relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100">
+                <div className="relative h-64 overflow-hidden bg-gradient-to-br from-slate-100 to-gray-200">
+                  <img
+                    src={brownTapesImg}
+                    alt="Brown Tapes"
+                    className="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-navy mb-3 font-poppins group-hover:text-gold transition-colors">
+                    Brown Tapes
+                  </h3>
+                  <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                    Our brown BOPP tapes are a staple for general-purpose packaging. They offer excellent adhesion and durability, making them suitable for sealing cardboard boxes and other packaging materials.
+                  </p>
+                  <Link to="/contact">
+                    <Button className="w-full bg-gradient-to-r from-navy to-blue-900 hover:from-navy/90 hover:to-blue-900/90 text-white font-semibold">
+                      <Mail className="w-4 h-4 mr-2" />
+                      Get Quote
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+
+              {/* Printed Tape */}
+              <div className="group relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100">
+                <div className="relative h-64 overflow-hidden bg-gradient-to-br from-slate-100 to-gray-200">
+                  <img
+                    src={printedTapesImg}
+                    alt="Printed Tape"
+                    className="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-navy mb-3 font-poppins group-hover:text-gold transition-colors">
+                    Printed Tape
+                  </h3>
+                  <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                    Enhance your branding and convey important information with our printed tape, featuring custom text or logos. Ideal for branding packages, indicating handling instructions, or promoting your company.
+                  </p>
+                  <Link to="/contact">
+                    <Button className="w-full bg-gradient-to-r from-navy to-blue-900 hover:from-navy/90 hover:to-blue-900/90 text-white font-semibold">
+                      <Mail className="w-4 h-4 mr-2" />
+                      Get Quote
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+
+              {/* Bubble Wraps */}
+              <div className="group relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100">
+                <div className="relative h-64 overflow-hidden bg-gradient-to-br from-slate-100 to-gray-200">
+                  <img
+                    src={bubbleWrapsImg}
+                    alt="Bubble Wraps"
+                    className="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-navy mb-3 font-poppins group-hover:text-gold transition-colors">
+                    Bubble Wraps
+                  </h3>
+                  <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                    Premium quality bubble wrap for superior cushioning and protection of fragile items during shipping and storage. Available in various sizes and bubble dimensions.
+                  </p>
+                  <Link to="/contact">
+                    <Button className="w-full bg-gradient-to-r from-navy to-blue-900 hover:from-navy/90 hover:to-blue-900/90 text-white font-semibold">
+                      <Mail className="w-4 h-4 mr-2" />
+                      Get Quote
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* =============================== */}
       {/* UPDATED BOTTOM CTA SECTION */}
       {/* =============================== */}
       <section className="relative py-20 overflow-hidden">
