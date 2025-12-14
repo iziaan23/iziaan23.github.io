@@ -30,6 +30,9 @@ import stretchFilmImg from "@/assets/products/main/stretch-film.jpg";
 import boppTapesImg from "@/assets/products/bopp-tapes.png";
 import printersImg from "@/assets/products/main/rack_and_shelf_labels_uk_ltd_cover.jpeg";
 import promotionalLabelsImg from "@/assets/products/main/promotional.jpg";
+import brownTapesImg from "@/assets/products/main/brown-tapes.avif";
+import printedTapesImg from "@/assets/products/main/printed-tapes.avif";
+import bubbleWrapsImg from "@/assets/products/main/bubble-wraps.jpeg";
 
 const ProductDetail = () => {
   const { productId } = useParams();
@@ -229,6 +232,84 @@ const ProductDetail = () => {
       specifications: [
         { label: "Temperature Resistance", value: "-10°C to 50°C" },
         { label: "Customization", value: "Logo printing available" },
+      ],
+    },
+
+    "brown-tapes": {
+      title: "Brown Tapes",
+      image: brownTapesImg,
+      description:
+        "Our brown BOPP tapes are a staple for general-purpose packaging. They offer excellent adhesion and durability, making them suitable for sealing cardboard boxes and other packaging materials.",
+      features: [
+        "Strong acrylic adhesive for reliable bonding",
+        "Excellent durability and tear resistance",
+        "Weather and moisture resistant",
+        "Low noise unwinding option available",
+        "Consistent adhesion across temperature ranges",
+        "Cost-effective solution for high-volume use",
+      ],
+      applications: [
+        "Cardboard box sealing",
+        "General-purpose packaging",
+        "Shipping and logistics",
+        "Warehouse storage",
+        "Export packaging",
+      ],
+      specifications: [
+        { label: "Tape Width", value: "48mm, 72mm options" },
+        { label: "Adhesive Type", value: "Acrylic" },
+      ],
+    },
+
+    "printed-tape": {
+      title: "Printed Tape",
+      image: printedTapesImg,
+      description:
+        "Enhance your branding and convey important information with our printed tape, featuring custom text or logos. Ideal for branding packages, indicating handling instructions, or promoting your company.",
+      features: [
+        "Custom text and logo printing",
+        "Full-color printing options available",
+        "Strong adhesive for secure sealing",
+        "Premium quality BOPP material",
+        "Weather and moisture resistant",
+        "Multiple colors and designs available",
+      ],
+      applications: [
+        "Brand promotion on packages",
+        "Handling instruction indicators",
+        "Company branding and marketing",
+        "Security and tamper evidence",
+        "Product identification",
+      ],
+      specifications: [
+        { label: "Printing Method", value: "Flexo printing" },
+        { label: "Customization", value: "Full custom design available" },
+      ],
+    },
+
+    "bubble-wraps": {
+      title: "Bubble Wraps",
+      image: bubbleWrapsImg,
+      description:
+        "Premium quality bubble wrap for superior cushioning and protection of fragile items during shipping and storage. Our bubble wraps provide excellent shock absorption and are available in various sizes and bubble dimensions.",
+      features: [
+        "Superior shock absorption and cushioning",
+        "Available in multiple bubble sizes",
+        "Lightweight yet highly protective",
+        "Recyclable and eco-friendly options",
+        "Easy to cut and wrap around items",
+        "Moisture resistant protection",
+      ],
+      applications: [
+        "Fragile item protection",
+        "Electronics packaging",
+        "Glassware and ceramics shipping",
+        "Furniture protection",
+        "Moving and relocation",
+      ],
+      specifications: [
+        { label: "Bubble Size", value: "Small, Medium, Large" },
+        { label: "Roll Width", value: "Multiple widths available" },
       ],
     },
   };
