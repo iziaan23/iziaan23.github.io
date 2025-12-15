@@ -4,7 +4,7 @@ import { ArrowRight, Sparkles, CheckCircle, Layers, Zap } from "lucide-react";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { BrochureButton } from "@/components/BrochureButton";
 import { ProductCategoryNav } from "@/components/ProductCategoryNav";
-import plainLabelsImg from "@/assets/products/main/plain-labels.jpeg";
+import plainLabelsImg from "@/assets/products/main/plain-labels-new.jpeg";
 import productLabelsImg from "@/assets/products/main/idjFYy6ZUN.jpeg";
 import barcodeRibbonsImg from "@/assets/products/main/pngwing.com.png";
 import packagingProductsImg from "@/assets/products/main/bubble-wraps.jpeg";

@@ -23,7 +23,7 @@ import {
 } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
 
-import plainLabelsImg from "@/assets/products/main/plain-labels.jpg";
+import plainLabelsImg from "@/assets/products/main/plain-labels-new.jpeg";
 import productLabelsImg from "@/assets/products/main/idjFYy6ZUN.jpeg";
 import barcodeRibbonsImg from "@/assets/products/main/pngwing.com.png";
 import stretchFilmImg from "@/assets/products/main/bubble-wraps.jpeg";
@@ -32,7 +32,7 @@ import printersImg from "@/assets/products/main/rack_and_shelf_labels_uk_ltd_cov
 import promotionalLabelsImg from "@/assets/products/main/promotional.jpg";
 import brownTapesImg from "@/assets/products/main/brown-tapes.avif";
 import printedTapesImg from "@/assets/products/main/printed-tapes.avif";
-import bubbleWrapsImg from "@/assets/products/main/bubble-wraps-2.jpeg";
+import bubbleWrapsImg from "@/assets/products/main/bubble-wrap-new.png";
 import clearTapeImg from "@/assets/products/main/clear-tape.avif";
 
 const ProductDetail = () => {
