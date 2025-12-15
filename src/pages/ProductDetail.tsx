@@ -26,13 +26,14 @@ import { Card, CardContent } from "@/components/ui/card";
 import plainLabelsImg from "@/assets/products/main/plain-labels.jpg";
 import productLabelsImg from "@/assets/products/main/idjFYy6ZUN.jpeg";
 import barcodeRibbonsImg from "@/assets/products/main/pngwing.com.png";
-import stretchFilmImg from "@/assets/products/main/stretch-film.jpg";
+import stretchFilmImg from "@/assets/products/main/bubble-wraps.jpeg";
 import boppTapesImg from "@/assets/products/bopp-tapes.png";
 import printersImg from "@/assets/products/main/rack_and_shelf_labels_uk_ltd_cover.jpeg";
 import promotionalLabelsImg from "@/assets/products/main/promotional.jpg";
 import brownTapesImg from "@/assets/products/main/brown-tapes.avif";
 import printedTapesImg from "@/assets/products/main/printed-tapes.avif";
-import bubbleWrapsImg from "@/assets/products/main/bubble-wraps.jpeg";
+import bubbleWrapsImg from "@/assets/products/main/bubble-wraps-2.jpeg";
+import clearTapeImg from "@/assets/products/main/clear-tape.avif";
 
 const ProductDetail = () => {
   const { productId } = useParams();
@@ -518,7 +519,7 @@ const ProductDetail = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
               {/* Brown Tapes */}
               <div className="group relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100">
                 <div className="relative h-64 overflow-hidden bg-gradient-to-br from-slate-100 to-gray-200">
@@ -535,6 +536,32 @@ const ProductDetail = () => {
                   </h3>
                   <p className="text-gray-600 text-sm leading-relaxed mb-4">
                     Our brown BOPP tapes are a staple for general-purpose packaging. They offer excellent adhesion and durability, making them suitable for sealing cardboard boxes and other packaging materials.
+                  </p>
+                  <Link to="/contact">
+                    <Button className="w-full bg-gradient-to-r from-navy to-blue-900 hover:from-navy/90 hover:to-blue-900/90 text-white font-semibold">
+                      <Mail className="w-4 h-4 mr-2" />
+                      Get Quote
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+
+              {/* Clear Tapes */}
+              <div className="group relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100">
+                <div className="relative h-64 overflow-hidden bg-gradient-to-br from-slate-100 to-gray-200">
+                  <img
+                    src={clearTapeImg}
+                    alt="Clear Tapes"
+                    className="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-navy mb-3 font-poppins group-hover:text-gold transition-colors">
+                    Clear Tapes
+                  </h3>
+                  <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                    Square Pack offers clear BOPP tape that provides a clean and unobtrusive finish, perfect for sealing packages without obscuring any underlying text or images. It offers strong adhesion and a professional appearance.
                   </p>
                   <Link to="/contact">
                     <Button className="w-full bg-gradient-to-r from-navy to-blue-900 hover:from-navy/90 hover:to-blue-900/90 text-white font-semibold">
@@ -587,6 +614,32 @@ const ProductDetail = () => {
                   </h3>
                   <p className="text-gray-600 text-sm leading-relaxed mb-4">
                     Premium quality bubble wrap for superior cushioning and protection of fragile items during shipping and storage. Available in various sizes and bubble dimensions.
+                  </p>
+                  <Link to="/contact">
+                    <Button className="w-full bg-gradient-to-r from-navy to-blue-900 hover:from-navy/90 hover:to-blue-900/90 text-white font-semibold">
+                      <Mail className="w-4 h-4 mr-2" />
+                      Get Quote
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+
+              {/* Stretch Film */}
+              <div className="group relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100">
+                <div className="relative h-64 overflow-hidden bg-gradient-to-br from-slate-100 to-gray-200">
+                  <img
+                    src={stretchFilmImg}
+                    alt="Stretch Film"
+                    className="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-navy mb-3 font-poppins group-hover:text-gold transition-colors">
+                    Stretch Film
+                  </h3>
+                  <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                    Square Pack offers stretch film to secure your items during transportation and storage. With excellent stretchability and cling properties, this film ensures that your goods are protected from dust, moisture, and damage.
                   </p>
                   <Link to="/contact">
                     <Button className="w-full bg-gradient-to-r from-navy to-blue-900 hover:from-navy/90 hover:to-blue-900/90 text-white font-semibold">

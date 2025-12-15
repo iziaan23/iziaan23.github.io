@@ -7,7 +7,7 @@ import { ProductCategoryNav } from "@/components/ProductCategoryNav";
 import plainLabelsImg from "@/assets/products/main/plain-labels.jpeg";
 import productLabelsImg from "@/assets/products/main/idjFYy6ZUN.jpeg";
 import barcodeRibbonsImg from "@/assets/products/main/pngwing.com.png";
-import stretchFilmImg from "@/assets/products/main/stretch-film.jpg";
+import packagingProductsImg from "@/assets/products/main/bubble-wraps.jpeg";
 import printersImg from "@/assets/products/main/rack_and_shelf_labels_uk_ltd_cover.jpeg";
 import productsBg from "@/assets/backgrounds/products-showcase.jpg";
 import promotionalLabelsImg from "@/assets/products/main/promotional.jpg";
@@ -48,7 +48,7 @@ const Products = () => {
       title: "Packaging Products",
       description: "Comprehensive packaging solutions including stretch films and BOPP tapes for secure and efficient packaging.",
       features: ["Stretch film (Hand/Machine Grade)", "BOPP Tapes with strong adhesion", "Weather resistant", "Custom printing available"],
-      image: stretchFilmImg,
+      image: packagingProductsImg,
       gradient: "from-emerald-500 via-green-500 to-teal-500",
       accentColor: "from-emerald-400 to-green-500"
     },
