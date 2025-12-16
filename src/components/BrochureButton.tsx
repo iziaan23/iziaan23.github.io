@@ -3,7 +3,7 @@ import { FileText } from "lucide-react";
 export const BrochureButton = () => {
   const handleDownload = () => {
     window.open(
-      "https://raw.githubusercontent.com/iziaan23/iziaan23.github.io/main/src/assets/Final%20broucher.pdf",
+      "https://cdn.squarepack.net/SQUAREPACK-BROCHURE.pdf",
       "_blank"
     );
   };

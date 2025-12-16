@@ -12,3 +12,9 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+# Sitemap
+Sitemap: https://www.squarepack.net/sitemap.xml
+
+# Host
+Host: https://www.squarepack.net
