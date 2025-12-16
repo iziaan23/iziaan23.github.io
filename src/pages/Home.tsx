@@ -106,7 +106,7 @@ const Home = () => {
                 {/* Badge */}
                 <div className="inline-flex items-center gap-3 px-6 py-3 bg-white/10 backdrop-blur-xl border border-white/20 rounded-full animate-fade-in-up shadow-2xl">
                   <Award className="w-5 h-5 text-secondary" />
-                  <span className="text-white/90 text-sm font-semibold tracking-wide">15+ YEARS OF EXCELLENCE</span>
+                  <span className="text-white/90 text-sm font-semibold tracking-wide">15+ YEARS OF EXPERIENCE</span>
                   <Star className="w-4 h-4 text-secondary fill-secondary animate-pulse" />
                 </div>
 

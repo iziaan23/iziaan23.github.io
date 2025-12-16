@@ -98,7 +98,7 @@ const About = () => {
             {/* Floating Badge with Pulse */}
             <div className="inline-flex items-center gap-3 px-8 py-4 bg-white/10 backdrop-blur-xl border border-white/20 rounded-full mb-12 animate-fade-in-up shadow-2xl group hover:bg-white/20 hover:scale-105 transition-all duration-500">
               <div className="w-2 h-2 bg-secondary rounded-full animate-pulse" />
-              <span className="text-white/90 text-sm font-bold tracking-widest uppercase">15+ Years of Excellence • UAE</span>
+              <span className="text-white/90 text-sm font-bold tracking-widest uppercase">15+ Years of Experience • UAE</span>
               <Sparkles className="w-4 h-4 text-secondary animate-pulse-slow" />
             </div>
 
@@ -118,7 +118,6 @@ const About = () => {
             <div className="flex flex-wrap justify-center gap-6 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
               {[
                 { icon: Building2, label: "15+ Years", color: "from-blue-500 to-cyan-500" },
-                { icon: Globe, label: "UAE Leader", color: "from-purple-500 to-pink-500" },
                 { icon: CheckCircle2, label: "Premium Quality", color: "from-emerald-500 to-green-500" }
               ].map((pill, idx) => {
                 const Icon = pill.icon;
@@ -141,51 +140,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Floating Stats Card Section */}
-      <section 
-        className="py-24 bg-gradient-to-br from-slate-50 via-blue-50/30 to-gray-100 relative"
-        data-scroll-section
-        id="stats-section"
-      >
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle, #0a1f44 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
-        </div>
-
-        <div className="relative container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <div className={`relative group transition-all duration-1000 ${visibleSections.has('stats-section') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
-              {/* Glowing Background Effect */}
-              <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 via-cyan-500 to-blue-500 rounded-3xl blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-500 animate-pulse-slow" />
-              
-              <div className="relative text-center p-14 rounded-3xl bg-white border-2 border-gray-200 shadow-2xl hover:shadow-[0_20px_80px_-20px_rgba(0,0,0,0.3)] hover:-translate-y-2 transition-all duration-700">
-                {/* Icon with Rotation Animation */}
-                <div className="inline-flex items-center justify-center w-28 h-28 rounded-3xl bg-gradient-to-br from-blue-500 to-cyan-500 mb-8 shadow-2xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-700">
-                  <Building2 className="w-14 h-14 text-white" />
-                </div>
-                
-                {/* Animated Counter */}
-                <div className="text-7xl md:text-8xl font-black text-navy mb-4 font-poppins bg-gradient-to-br from-navy to-blue-600 bg-clip-text text-transparent">
-                  15<span className="text-secondary">+</span>
-                </div>
-                
-                <div className="text-2xl text-gray-600 font-bold mb-8 tracking-wide">
-                  Years of Experience
-                </div>
-                
-                {/* Motto Card with Enhanced Design */}
-                <div className="relative p-8 bg-gradient-to-br from-gold/10 to-yellow-500/10 rounded-2xl border-l-4 border-gold shadow-lg group-hover:shadow-xl transition-all duration-500">
-                  <div className="absolute top-0 left-0 w-16 h-16 bg-gold/20 rounded-br-full" />
-                  <div className="absolute bottom-0 right-0 w-16 h-16 bg-gold/20 rounded-tl-full" />
-                  <p className="relative text-gold text-2xl font-black italic leading-relaxed">
-                    "On-time, complete, and uncompromising quality — always."
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Company Overview - Bento Grid Style */}
       <section 
