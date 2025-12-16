@@ -63,7 +63,7 @@ const Contact = () => {
     {
       icon: Clock,
       title: "Business Hours",
-      content: "Monday - Saturday: 9:00 AM - 6:00 PM\Sunday: Closed",
+      content: "Monday - Saturday: 9:00 AM - 6:00 PM\nSunday: Closed",
       gradient: "from-orange-500 to-red-500"
     }
   ];
