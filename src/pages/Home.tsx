@@ -38,7 +38,7 @@ const Home = () => {
   }, []);
 
   const stats = [
-    { value: "15+", label: "Years Excellence", icon: Award }
+    { value: "15+", label: "Years Experience", icon: Award }
   ];
 
   const features = [
