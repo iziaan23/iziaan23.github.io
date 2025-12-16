@@ -90,8 +90,13 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-white/10 text-center text-white/60">
+        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-white/60">
           <p>&copy; {new Date().getFullYear()} SquarePack LLC. All rights reserved.</p>
+          <div className="flex gap-4 text-sm">
+            <a href="/#/terms-and-conditions" className="hover:text-secondary transition-colors">Terms & Conditions</a>
+            <span>|</span>
+            <a href="/#/privacy-policy" className="hover:text-secondary transition-colors">Privacy Policy</a>
+          </div>
         </div>
       </div>
     </footer>
