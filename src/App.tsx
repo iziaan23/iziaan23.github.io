@@ -15,9 +15,20 @@ import Industries from "./pages/Industries";
 import Contact from "./pages/Contact";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import AdminLogin from "./pages/AdminLogin";
+import AdminDashboard from "./pages/AdminDashboard";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
+
+// Layout wrapper for public pages
+const PublicLayout = ({ children }: { children: React.ReactNode }) => (
+  <>
+    <Navigation />
+    {children}
+    <Footer />
+  </>
+);
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -26,20 +37,24 @@ const App = () => (
       <Sonner />
       <HashRouter>
         <ScrollToTop />
-        <Navigation />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/products/other-products" element={<OtherProducts />} />
-          <Route path="/products/:productId" element={<ProductDetail />} />
-          <Route path="/industries" element={<Industries />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="*" element={<NotFound />} />
+          {/* Public Routes */}
+          <Route path="/" element={<PublicLayout><Home /></PublicLayout>} />
+          <Route path="/about" element={<PublicLayout><About /></PublicLayout>} />
+          <Route path="/products" element={<PublicLayout><Products /></PublicLayout>} />
+          <Route path="/products/other-products" element={<PublicLayout><OtherProducts /></PublicLayout>} />
+          <Route path="/products/:productId" element={<PublicLayout><ProductDetail /></PublicLayout>} />
+          <Route path="/industries" element={<PublicLayout><Industries /></PublicLayout>} />
+          <Route path="/contact" element={<PublicLayout><Contact /></PublicLayout>} />
+          <Route path="/terms-and-conditions" element={<PublicLayout><TermsAndConditions /></PublicLayout>} />
+          <Route path="/privacy-policy" element={<PublicLayout><PrivacyPolicy /></PublicLayout>} />
+          
+          {/* Admin Routes (no nav/footer) */}
+          <Route path="/admin/login" element={<AdminLogin />} />
+          <Route path="/admin" element={<AdminDashboard />} />
+          
+          <Route path="*" element={<PublicLayout><NotFound /></PublicLayout>} />
         </Routes>
-        <Footer />
       </HashRouter>
     </TooltipProvider>
   </QueryClientProvider>
