@@ -3,13 +3,15 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Send, Loader2 } from "lucide-react";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { BrochureButton } from "@/components/BrochureButton";
+import { supabase } from "@/integrations/supabase/client";
 import contactBg from "@/assets/backgrounds/contact-bg.jpg";
 
 const Contact = () => {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -18,25 +20,56 @@ const Contact = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
     
-    // Format WhatsApp message
-    const whatsappMessage = `*Your Name:* ${formData.name}%0A*Email Address:* ${formData.email}%0A*Phone Number:* ${formData.phone}%0A*Company Name:* ${formData.company || 'Not provided'}%0A*Tell us about your requirements:* ${formData.message}`;
-    
-    // WhatsApp number
-    const whatsappNumber = "971504578900";
-    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
-    
-    // Open WhatsApp
-    window.open(whatsappUrl, '_blank');
-    
-    toast({
-      title: "Redirecting to WhatsApp!",
-      description: "Your message is ready to be sent.",
-    });
-    
-    setFormData({ name: "", email: "", phone: "", company: "", message: "" });
+    try {
+      // Save to database
+      const { error } = await supabase.from("contact_messages").insert({
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone || null,
+        company: formData.company || null,
+        message: formData.message,
+      });
+
+      if (error) {
+        console.error("Error saving message:", error);
+        toast({
+          title: "Error",
+          description: "Failed to save your message. Please try again.",
+          variant: "destructive",
+        });
+        return;
+      }
+
+      // Format WhatsApp message
+      const whatsappMessage = `*Your Name:* ${formData.name}%0A*Email Address:* ${formData.email}%0A*Phone Number:* ${formData.phone}%0A*Company Name:* ${formData.company || 'Not provided'}%0A*Tell us about your requirements:* ${formData.message}`;
+      
+      // WhatsApp number
+      const whatsappNumber = "971504578900";
+      const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+      
+      // Open WhatsApp
+      window.open(whatsappUrl, '_blank');
+      
+      toast({
+        title: "Message Sent!",
+        description: "Your message has been saved and WhatsApp is ready.",
+      });
+      
+      setFormData({ name: "", email: "", phone: "", company: "", message: "" });
+    } catch (err) {
+      console.error("Unexpected error:", err);
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
@@ -208,10 +241,20 @@ const Contact = () => {
                   <Button
                     type="submit"
                     size="lg"
-                    className="w-full bg-gradient-to-r from-secondary to-secondary/80 hover:from-secondary/90 hover:to-secondary text-white font-bold text-lg py-7 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl rounded-xl"
+                    disabled={isSubmitting}
+                    className="w-full bg-gradient-to-r from-secondary to-secondary/80 hover:from-secondary/90 hover:to-secondary text-white font-bold text-lg py-7 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl rounded-xl disabled:opacity-70 disabled:cursor-not-allowed"
                   >
-                    Send Message
-                    <Send className="ml-2 w-5 h-5" />
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 className="mr-2 w-5 h-5 animate-spin" />
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        Send Message
+                        <Send className="ml-2 w-5 h-5" />
+                      </>
+                    )}
                   </Button>
                 </form>
               </div>
