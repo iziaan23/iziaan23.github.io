@@ -39,7 +39,7 @@ const handler = async (req: Request): Promise<Response> => {
       },
       body: JSON.stringify({
         from: "Square Pack <noreply@mails.squarepack.net>",
-        to: ["sales@squarepack.net"],
+        to: ["sales@squarepack.net", "squarepack.net@gmail.com"],
         subject: `New Contact Form Submission from ${name}`,
         html: `
           <!DOCTYPE html>
