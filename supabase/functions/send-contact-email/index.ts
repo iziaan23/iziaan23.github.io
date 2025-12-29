@@ -38,7 +38,7 @@ const handler = async (req: Request): Promise<Response> => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: "Square Pack <onboarding@resend.dev>",
+        from: "Square Pack <noreply@mails.squarepack.net>",
         to: ["sales@squarepack.net"],
         subject: `New Contact Form Submission from ${name}`,
         html: `
