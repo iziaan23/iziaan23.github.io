@@ -44,6 +44,24 @@ const Contact = () => {
         return;
       }
 
+      // Send email via Resend
+      const emailResponse = await supabase.functions.invoke('send-contact-email', {
+        body: {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          company: formData.company || '',
+          message: formData.message,
+        }
+      });
+
+      if (emailResponse.error) {
+        console.error("Error sending email:", emailResponse.error);
+        // Don't block the flow, just log the error
+      } else {
+        console.log("Email sent successfully");
+      }
+
       // Format WhatsApp message
       const whatsappMessage = `*Your Name:* ${formData.name}%0A*Email Address:* ${formData.email}%0A*Phone Number:* ${formData.phone}%0A*Company Name:* ${formData.company || 'Not provided'}%0A*Tell us about your requirements:* ${formData.message}`;
       
@@ -56,7 +74,7 @@ const Contact = () => {
       
       toast({
         title: "Message Sent!",
-        description: "Your message has been saved and WhatsApp is ready.",
+        description: "Your message has been saved and sent to our team.",
       });
       
       setFormData({ name: "", email: "", phone: "", company: "", message: "" });
