@@ -62,6 +62,7 @@ const App = () => (
           <Route path="/printed-tape" element={<Navigate to="/products/printed-tape" replace />} />
           <Route path="/bubble-wraps" element={<Navigate to="/products/bubble-wraps" replace />} />
           <Route path="/stretch-film" element={<Navigate to="/products/stretch-film" replace />} />
+          <Route path="/stretch-films" element={<Navigate to="/products/stretch-film" replace />} />
           <Route path="/bopp-tapes" element={<Navigate to="/products/bopp-tapes" replace />} />
           <Route path="/printers" element={<Navigate to="/products/printers" replace />} />
           
