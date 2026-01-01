@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 export const ProductCategoryNav = () => {
   const location = useLocation();
   const isMainProducts = location.pathname === "/products";
-  const isOtherProducts = location.pathname === "/products/other-products";
+  const isOtherProducts = location.pathname === "/other-products";
 
   const categories = [
     {
@@ -17,7 +17,7 @@ export const ProductCategoryNav = () => {
     },
     {
       name: "Other Products",
-      path: "/products/other-products",
+      path: "/other-products",
       icon: Layers,
       description: "Specialized solutions",
       active: isOtherProducts
