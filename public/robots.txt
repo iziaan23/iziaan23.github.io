@@ -13,6 +13,10 @@ Allow: /
 User-agent: *
 Allow: /
 
+# Disallow admin pages
+Disallow: /admin
+Disallow: /admin/
+
 # Sitemap
 Sitemap: https://www.squarepack.net/sitemap.xml
 
