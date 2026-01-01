@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { ScrollToTop } from "@/components/ScrollToTop";
@@ -45,6 +45,7 @@ const App = () => (
           <Route path="/about" element={<PublicLayout><About /></PublicLayout>} />
           <Route path="/products" element={<PublicLayout><Products /></PublicLayout>} />
           <Route path="/other-products" element={<PublicLayout><OtherProducts /></PublicLayout>} />
+          <Route path="/products/other-products" element={<Navigate to="/other-products" replace />} />
           <Route path="/products/:productId" element={<PublicLayout><ProductDetail /></PublicLayout>} />
           <Route path="/industries" element={<PublicLayout><Industries /></PublicLayout>} />
           <Route path="/contact" element={<PublicLayout><Contact /></PublicLayout>} />
