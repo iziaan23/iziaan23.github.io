@@ -1,4 +1,5 @@
 import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
+import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
 export const Footer = () => {
@@ -26,16 +27,16 @@ export const Footer = () => {
             <h3 className="text-xl font-bold mb-4 font-montserrat text-secondary">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <a href="/#/about" className="text-white/70 hover:text-secondary transition-colors">About Us</a>
+                <Link to="/about" className="text-white/70 hover:text-secondary transition-colors">About Us</Link>
               </li>
               <li>
-                <a href="/#/products" className="text-white/70 hover:text-secondary transition-colors">Products</a>
+                <Link to="/products" className="text-white/70 hover:text-secondary transition-colors">Products</Link>
               </li>
               <li>
-                <a href="/#/industries" className="text-white/70 hover:text-secondary transition-colors">Industries</a>
+                <Link to="/industries" className="text-white/70 hover:text-secondary transition-colors">Industries</Link>
               </li>
               <li>
-                <a href="/#/contact" className="text-white/70 hover:text-secondary transition-colors">Get a Quote</a>
+                <Link to="/contact" className="text-white/70 hover:text-secondary transition-colors">Get a Quote</Link>
               </li>
             </ul>
           </div>
@@ -93,9 +94,9 @@ export const Footer = () => {
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-white/60">
           <p>&copy; {new Date().getFullYear()} SquarePack LLC. All rights reserved.</p>
           <div className="flex gap-4 text-sm">
-            <a href="/#/terms-and-conditions" className="hover:text-secondary transition-colors">Terms & Conditions</a>
+            <Link to="/terms-and-conditions" className="hover:text-secondary transition-colors">Terms & Conditions</Link>
             <span>|</span>
-            <a href="/#/privacy-policy" className="hover:text-secondary transition-colors">Privacy Policy</a>
+            <Link to="/privacy-policy" className="hover:text-secondary transition-colors">Privacy Policy</Link>
           </div>
         </div>
       </div>
