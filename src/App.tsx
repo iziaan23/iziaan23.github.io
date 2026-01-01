@@ -44,7 +44,7 @@ const App = () => (
           <Route path="/" element={<PublicLayout><Home /></PublicLayout>} />
           <Route path="/about" element={<PublicLayout><About /></PublicLayout>} />
           <Route path="/products" element={<PublicLayout><Products /></PublicLayout>} />
-          <Route path="/products/other-products" element={<PublicLayout><OtherProducts /></PublicLayout>} />
+          <Route path="/other-products" element={<PublicLayout><OtherProducts /></PublicLayout>} />
           <Route path="/products/:productId" element={<PublicLayout><ProductDetail /></PublicLayout>} />
           <Route path="/industries" element={<PublicLayout><Industries /></PublicLayout>} />
           <Route path="/contact" element={<PublicLayout><Contact /></PublicLayout>} />

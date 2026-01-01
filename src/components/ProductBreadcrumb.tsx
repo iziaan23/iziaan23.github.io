@@ -8,7 +8,7 @@ interface ProductBreadcrumbProps {
 
 export const ProductBreadcrumb = ({ category, productName }: ProductBreadcrumbProps) => {
   const categoryName = category === "main" ? "Main Products" : "Other Products";
-  const categoryPath = category === "main" ? "/products" : "/products/other-products";
+  const categoryPath = category === "main" ? "/products" : "/other-products";
 
   return (
     <nav className="flex items-center gap-2 text-sm text-gray-600 mb-6">
