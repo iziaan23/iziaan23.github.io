@@ -52,6 +52,32 @@ const App = () => (
           <Route path="/terms-and-conditions" element={<PublicLayout><TermsAndConditions /></PublicLayout>} />
           <Route path="/privacy-policy" element={<PublicLayout><PrivacyPolicy /></PublicLayout>} />
           
+          {/* Short Product URL Redirects - allows /product-name to work */}
+          <Route path="/plain-labels" element={<Navigate to="/products/plain-labels" replace />} />
+          <Route path="/product-labels" element={<Navigate to="/products/product-labels" replace />} />
+          <Route path="/barcode-ribbons" element={<Navigate to="/products/barcode-ribbons" replace />} />
+          <Route path="/packaging-products" element={<Navigate to="/products/packaging-products" replace />} />
+          <Route path="/promotional-labels" element={<Navigate to="/products/promotional-labels" replace />} />
+          <Route path="/brown-tapes" element={<Navigate to="/products/brown-tapes" replace />} />
+          <Route path="/printed-tape" element={<Navigate to="/products/printed-tape" replace />} />
+          <Route path="/bubble-wraps" element={<Navigate to="/products/bubble-wraps" replace />} />
+          <Route path="/stretch-film" element={<Navigate to="/products/stretch-film" replace />} />
+          <Route path="/bopp-tapes" element={<Navigate to="/products/bopp-tapes" replace />} />
+          <Route path="/printers" element={<Navigate to="/products/printers" replace />} />
+          
+          {/* Alternate spellings without hyphens */}
+          <Route path="/plainlabels" element={<Navigate to="/products/plain-labels" replace />} />
+          <Route path="/productlabels" element={<Navigate to="/products/product-labels" replace />} />
+          <Route path="/barcoderibbons" element={<Navigate to="/products/barcode-ribbons" replace />} />
+          <Route path="/packagingproducts" element={<Navigate to="/products/packaging-products" replace />} />
+          <Route path="/promotionallabels" element={<Navigate to="/products/promotional-labels" replace />} />
+          <Route path="/browntapes" element={<Navigate to="/products/brown-tapes" replace />} />
+          <Route path="/printedtape" element={<Navigate to="/products/printed-tape" replace />} />
+          <Route path="/bubblewraps" element={<Navigate to="/products/bubble-wraps" replace />} />
+          <Route path="/stretchfilm" element={<Navigate to="/products/stretch-film" replace />} />
+          <Route path="/bopptapes" element={<Navigate to="/products/bopp-tapes" replace />} />
+          <Route path="/otherproducts" element={<Navigate to="/other-products" replace />} />
+          
           {/* Admin Routes (no nav/footer) */}
           <Route path="/admin/login" element={<AdminLogin />} />
           <Route path="/admin" element={<AdminDashboard />} />
