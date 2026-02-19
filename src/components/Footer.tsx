@@ -26,18 +26,12 @@ export const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4 font-montserrat text-secondary">Quick Links</h3>
             <ul className="space-y-2">
-              <li>
-                <Link to="/about" className="text-white/70 hover:text-secondary transition-colors">About Us</Link>
-              </li>
-              <li>
-                <Link to="/products" className="text-white/70 hover:text-secondary transition-colors">Products</Link>
-              </li>
-              <li>
-                <Link to="/industries" className="text-white/70 hover:text-secondary transition-colors">Industries</Link>
-              </li>
-              <li>
-                <Link to="/contact" className="text-white/70 hover:text-secondary transition-colors">Get a Quote</Link>
-              </li>
+              <li><Link to="/about" className="text-white/70 hover:text-secondary transition-colors">About Us</Link></li>
+              <li><Link to="/products" className="text-white/70 hover:text-secondary transition-colors">Products</Link></li>
+              <li><Link to="/industries" className="text-white/70 hover:text-secondary transition-colors">Industries</Link></li>
+              <li><Link to="/testimonials" className="text-white/70 hover:text-secondary transition-colors">Testimonials</Link></li>
+              <li><Link to="/feedback" className="text-white/70 hover:text-secondary transition-colors">Leave Feedback</Link></li>
+              <li><Link to="/contact" className="text-white/70 hover:text-secondary transition-colors">Get a Quote</Link></li>
             </ul>
           </div>
 

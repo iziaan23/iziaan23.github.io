@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Package, Award, Sparkles, Zap, Shield, TrendingUp, Users, CheckCircle2, Star, Phone, Mail } from "lucide-react";
+import { ArrowRight, Package, Award, Sparkles, Zap, Shield, Star, Phone, Mail, Quote } from "lucide-react";
 import { Link } from "react-router-dom";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { BrochureButton } from "@/components/BrochureButton";
@@ -8,11 +8,33 @@ import heroFallback from "@/assets/videos/hero-fallback.jpg";
 import showcase1 from "@/assets/products/showcase-1.jpg";
 import showcase2 from "@/assets/products/showcase-2.jpg";
 import showcase3 from "@/assets/products/showcase-3.jpg";
+import { supabase } from "@/integrations/supabase/client";
+
+interface Testimonial {
+  id: string;
+  name: string;
+  company: string | null;
+  rating: number;
+  review: string;
+  product_service: string | null;
+}
 
 const Home = () => {
   const [currentImage, setCurrentImage] = useState(0);
   const [statsVisible, setStatsVisible] = useState(false);
+  const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
   const productImages = [showcase1, showcase2, showcase3];
+
+  useEffect(() => {
+    // Fetch approved testimonials for home page (show latest 3)
+    supabase
+      .from("feedback")
+      .select("id, name, company, rating, review, product_service")
+      .eq("status", "approved")
+      .order("created_at", { ascending: false })
+      .limit(3)
+      .then(({ data }) => { if (data) setTestimonials(data); });
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -385,6 +407,69 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Testimonials Section */}
+      {testimonials.length > 0 && (
+        <section className="py-24 bg-gradient-to-br from-slate-50 to-gray-100 relative overflow-hidden">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-14">
+              <div className="inline-flex items-center gap-2 px-5 py-2 bg-secondary/10 border border-secondary/30 rounded-full mb-4">
+                <Star className="w-4 h-4 text-secondary fill-secondary" />
+                <span className="text-sm font-semibold text-navy">Client Reviews</span>
+              </div>
+              <h2 className="text-5xl md:text-6xl font-black text-navy mb-4 font-poppins animate-fade-in-up">
+                What Our Clients <span className="bg-gradient-to-r from-secondary to-orange-400 bg-clip-text text-transparent">Say</span>
+              </h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Trusted by businesses across the UAE for packaging and labeling excellence
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-10">
+              {testimonials.map((t, index) => (
+                <div
+                  key={t.id}
+                  className="group bg-white rounded-3xl border-2 border-gray-200 hover:border-secondary hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 p-8 relative overflow-hidden"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <div className="absolute top-0 right-0 w-28 h-28 bg-gradient-to-bl from-secondary/10 to-transparent rounded-bl-full" />
+                  <div className="flex gap-1 mb-3">
+                    {[1,2,3,4,5].map((s) => (
+                      <Star key={s} className={`w-5 h-5 ${s <= t.rating ? "text-secondary fill-secondary" : "text-gray-200"}`} />
+                    ))}
+                  </div>
+                  <Quote className="w-7 h-7 text-secondary/30 mb-3" />
+                  <p className="text-gray-700 leading-relaxed mb-6 italic line-clamp-4">"{t.review}"</p>
+                  <div className="flex items-center gap-3 pt-4 border-t border-gray-100">
+                    <div className="w-11 h-11 rounded-full bg-gradient-to-br from-secondary to-orange-400 flex items-center justify-center text-navy font-black text-lg shadow-md flex-shrink-0">
+                      {t.name.charAt(0).toUpperCase()}
+                    </div>
+                    <div>
+                      <p className="font-bold text-navy">{t.name}</p>
+                      {t.company && <p className="text-sm text-gray-500">{t.company}</p>}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="text-center flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/testimonials">
+                <Button size="lg" variant="outline" className="border-2 border-secondary text-navy font-bold px-8 py-6 hover:bg-secondary hover:text-navy transition-all duration-300">
+                  View All Reviews
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+              </Link>
+              <Link to="/feedback">
+                <Button size="lg" className="bg-gradient-to-r from-secondary to-orange-400 text-navy font-bold px-8 py-6 hover:shadow-xl transition-all duration-300 hover:scale-105">
+                  Leave a Review
+                  <Star className="ml-2 w-5 h-5" />
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Final CTA Section */}
       <section className="py-28 bg-gradient-to-br from-slate-50 to-gray-100 relative overflow-hidden">
