@@ -18,6 +18,8 @@ import TermsAndConditions from "./pages/TermsAndConditions";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import AdminLogin from "./pages/AdminLogin";
 import AdminDashboard from "./pages/AdminDashboard";
+import Feedback from "./pages/Feedback";
+import Testimonials from "./pages/Testimonials";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -51,6 +53,8 @@ const App = () => (
           <Route path="/contact" element={<PublicLayout><Contact /></PublicLayout>} />
           <Route path="/terms-and-conditions" element={<PublicLayout><TermsAndConditions /></PublicLayout>} />
           <Route path="/privacy-policy" element={<PublicLayout><PrivacyPolicy /></PublicLayout>} />
+          <Route path="/feedback" element={<PublicLayout><Feedback /></PublicLayout>} />
+          <Route path="/testimonials" element={<PublicLayout><Testimonials /></PublicLayout>} />
           
           {/* Short Product URL Redirects - allows /product-name to work */}
           <Route path="/plain-labels" element={<Navigate to="/products/plain-labels" replace />} />

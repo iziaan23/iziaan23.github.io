@@ -114,6 +114,20 @@
     <priority>0.8</priority>
   </url>
   
+  <!-- Feedback & Testimonials -->
+  <url>
+    <loc>https://www.squarepack.net/feedback</loc>
+    <lastmod>2026-02-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.squarepack.net/testimonials</loc>
+    <lastmod>2026-02-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
   <!-- Legal Pages -->
   <url>
     <loc>https://www.squarepack.net/terms-and-conditions</loc>
